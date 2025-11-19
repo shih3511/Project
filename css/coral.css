@@ -1,0 +1,104 @@
+.coral {
+    background-image: url(../Mockup/bgcolor.png);
+    background-size: 5%;
+    background-repeat: repeat-y;
+
+    .container {
+        background-image: url(../Mockup/coral.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: 4.5%;
+
+        .top {
+            display: flex;
+            align-items: center;
+
+            .titleGroup {
+                .txt {
+                    margin: 0 auto;
+                    background-color: #ffffff90;
+                    padding: 1rem .8rem;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .list {
+            .card {
+                border-radius: 20px;
+                border: 2px solid #d3d3d3;
+                background-color: #fff;
+                margin: 1.5rem 0;
+                display: flex;
+
+                .content {
+                    position: relative;
+                    padding-left: 1rem;
+
+                    .subtitle {
+                        color: var(--color-primary);
+                        text-align: center;
+                        margin: 1rem 0;
+                    }
+
+                    .pTitle {
+                        color: var(--color-primary);
+                        font-weight: 500;
+                    }
+                }
+
+                .pic {
+                    position: relative;
+                    align-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .coral {
+        background-size: 10%;
+
+        .container {
+            background-size: 45%;
+
+            .top {
+
+                .titleGroup {
+                    .txt {
+                        background-color: #ffffff99;
+                        padding: .8rem .5rem .8rem 1rem;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+
+            .list {
+                .card {
+                    margin: 1.5rem 0;
+
+                    .content {
+                        position: relative;
+                        padding-left: 1.5rem;
+
+                        .subtitle {
+                            text-align: center;
+                            margin: 1.5rem 0;
+                        }
+
+                        .pTitle {
+                            font-weight: 600;
+                        }
+
+                        .pic {
+                            position: relative;
+                            align-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

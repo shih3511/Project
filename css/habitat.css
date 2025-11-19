@@ -1,0 +1,92 @@
+:root {
+    --color-primary: #330fba;
+    /* 主要強調色 (深藍/紫色) */
+    --color-accent: #ff6f61;
+    /* 次要強調色/危險色 (橙紅) */
+    --color-text-dark: #001f3f;
+    --color-background-light: #f5f5f5;
+    --color-white: #ffffff;
+    --color-lifhtBlue: #78B6CE;
+    --color-gray: #C5C2C2;
+    /* --color-border-light: #eee; */
+    --spacing-medium: 30px;
+    --spacing-large: 50px;
+    --font-size-title-desktop: 48px;
+    --font-size-title-mobile: 36px;
+}
+
+.partTitle {
+    padding-bottom: 1.25rem;
+}
+
+.habiTat a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+
+    .habitat {
+        display: flex;
+        position: relative;
+        flex-direction: column-reverse;
+        margin: 1.5rem 0;
+        background-color: var(--color-lifhtBlue);
+        padding: 1.5rem;
+        border-radius: 10px;
+        color: #f5f5f5;
+        align-items: center;
+
+        .content {
+            .groupT {
+                .subTitle {
+                    font-size: 1.5rem;
+                }
+
+                .pTitle {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .txt {
+                font-size: 1rem;
+                color: var(--color-background-light);
+            }
+
+            .txtTitle {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            .txtP {
+                font-size: 1rem;
+            }
+
+        }
+    }
+}
+
+
+.habiTat a:nth-child(2n+1) .habitat {
+    background-color: #C5C2C2;
+    color: var(--color-text-dark);
+}
+
+.habiTat a:nth-child(2n+1) .habitat .content {
+    color: var(--color-text-dark);
+    margin-left: 2rem;
+}
+
+.habiTat a:nth-child(2n+1) .habitat .txt {
+    color: var(--color-text-dark);
+}
+
+
+@media screen and (min-width: 768px) {
+    .habiTat a .habitat {
+        flex-direction: row;
+    }
+
+    .habiTat a:nth-child(2n+1) .habitat {
+        flex-direction: row-reverse;
+    }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>潮覓 : 生物圖鑑</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/biology.css">
+    <link rel="stylesheet" href="css/nav-footer.css">
+    <script src="https://kit.fontawesome.com/b7830aaef2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+</head>
+
+<body>
+    <header>
+        <div class="main-header">
+            <div class="logo">
+                <a href="#">
+                    <img src="Mockup/LOGO_final-removebg-preview.png" width="100px" height="50px">
+                </a>
+            </div>
+            <label class="hb">
+                <input type="checkbox" class="menu-switch">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </label>
+
+            <nav class="main-menu">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#">首頁</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">生物圖鑑</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">棲地探索</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">資源中心</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">關於我們</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="container col-12 col-md-12">
+            <div class="search col-8 col-md-8">
+                <div class="partTitle">
+                    <h3>海洋物種圖鑑</h3>
+                </div>
+                <div class="search_bar">
+                    <input type="text" placeholder="搜尋：生物名稱、棲地或保育狀態..." />
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                </div>
+                <div class="hot">
+                    <p>熱門搜索 :</p>
+                    <button type="button">潮間帶</button>
+                    <button type="button">石斑魚</button>
+                    <button type="button">鯨魚</button>
+                </div>
+            </div>
+            <input type="checkbox" id="fishToggle" class="bioCheckedInput" hidden>
+            <div class="bioCardList col-12 col-md-12">
+                
+                <label for="fishToggle" class="bioChecked col-4 col-md-4">
+                    <div class="bioCard ">
+                        <div class="title">
+                            <h3 class="chTitle">魚類</h3>
+                            <h3 class="enTitle">(Fishes)</h3>
+                        </div>
+                    </div>
+                </label>
+
+                <div class="bioCard col-4 col-md-4">
+                    <div class="title">
+                        <h3 class="chTitle">甲殼類</h3>
+                        <h3 class="enTitle">(Crustaceans) </h3>
+                    </div>
+                </div>
+                <div class="bioCard col-4 col-md-4">
+                    <div class="title">
+                        <h3 class="chTitle">頭足類</h3>
+                        <h3 class="enTitle">(Cephalopods) </h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wholeBio">
+                <div class="subtitle">
+                    <div class="chTitle"> 魚類</div>
+                    <div class="enTitle">(Fishes)</div>
+                    <div class="txt">具有脊椎、鰓和鰭，是種類最豐富的海洋脊椎動物 </div>
+                </div>
+                <div class="content col-12 col-md-12">
+                    <a href="#" class="card-link col-12 col-md-6">
+                        <div class="card ">
+                            <div class="cardPic">
+                                <img src="Mockup/fish1-1.png" />
+                            </div>
+                            <div class="title">
+                                <h3>石斑魚</h3>
+                            </div>
+                            <div class="tag">#變性大師</div>
+                            <div class="txt">
+                                <p>
+                                    廣泛分佈於熱帶礁區，是重要的經濟魚類。石斑魚以其多變的體色與獨特的變性繁殖習性...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card-link col-12 col-md-6">
+                        <div class="card ">
+                            <div class="cardPic">
+                                <img src="Mockup/shark.png" />
+                            </div>
+                            <div class="title">
+                                <h3>大白鯊</h3>
+                            </div>
+                            <div class="tag">#頂級掠食者</div>
+                            <div class="txt">
+                                <p>
+                                    大白鯊是地球上最大的掠食性魚類，成年個體身長可輕鬆超過6米，體重超過2噸...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card-link col-12 col-md-6">
+                        <div class="card">
+                            <div class="cardPic">
+                                <img src="Mockup/nemo.png" />
+                            </div>
+                            <div class="title">
+                                <h3>小丑魚</h3>
+                            </div>
+                            <div class="tag">#雌雄同體</div>
+                            <div class="txt">
+                                <p>小丑魚以其鮮豔的色彩和與海葵的獨特共生關係而聞名。海葵的刺細胞對牠們無效，因此海...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card-link col-12 col-md-6">
+                        <div class="card">
+                            <div class="cardPic">
+                                <img src="Mockup/tuna.png" />
+                            </div>
+                            <div class="title">
+                                <h3>鮪魚</h3>
+                            </div>
+                            <div class="tag">#遠洋高速</div>
+                            <div class="txt">
+                                <p>
+                                    鮪魚是流線型的遠洋魚類，以其游泳速度和長距離遷徙能力著稱。牠們是少數能維持體溫高...
+                                </p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </a>
+            <div class="bioCardList ">
+                <div class="bioCard List2 col-4 col-md-4">
+                    <div class="title">
+                        <h3 class="chTitle">貝類</h3>
+                        <h3 class="enTitle">(Bivalves)</h3>
+                    </div>
+                </div>
+                <div class="bioCard List2 col-4 col-md-4">
+                    <div class="title">
+                        <h3 class="chTitle">棘皮動物</h3>
+                        <h3 class="enTitle">(Echinoderms)</h3>
+                    </div>
+                </div>
+                <div class="bioCard List2 col-4 col-md-4">
+                    <div class="title">
+                        <div class="chTitle">海洋哺乳類</div>
+                        <div class="enTitle">(Marine Mammals)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="foot col-12 col-md-12">
+            <div class="footerPageLink col-6 col-md-8 row">
+                <div class="list col-12 col-md-3">
+                    <div class="subTitle">
+                        <p>探索</p>
+                    </div>
+                    <div class="txt">
+                        <a href="#">物種圖鑑</a>
+                        <a href="#">棲地生態</a>
+                    </div>
+                </div>
+                <div class="list col-12 col-md-3">
+                    <div class="subTitle">
+                        <p>行動</p>
+                    </div>
+                    <div class="txt">
+                        <a href="#">全球守護</a>
+                        <a href="#">資源中心</a>
+                    </div>
+                </div>
+                <div class="list col-12 col-md-3">
+                    <div class="subTitle">
+                        <p>關於</p>
+                    </div>
+                    <div class="txt">
+                        <a href="#">關於我們</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="socialLink col-5 col-md-3">
+                <div class="logo">
+                    <a href="#">
+                        <img src="Mockup/LOGO_final-removebg-preview.png" alt="">
+                    </a>
+                </div>
+                <div class="socialMedia">
+                    <a href="#">
+                        <img src="Mockup/soc1.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="Mockup/soc2.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="Mockup//soc3.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="Mockup/soc4.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

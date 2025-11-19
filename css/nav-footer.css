@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Crimson Pro', "Noto Sans TC", "Inter", serif, sans-serif;
+    line-height: 1.6;
+    letter-spacing: .45rem;
+    color: #001f3f;
+    background-color: #f5f5f5;
+    /* 輕柔的淺灰色背景 */
+}
+
+:root {
+    --color-primary: #330fba;
+    /* 主要強調色 (深藍/紫色) */
+    --color-accent: #ff6f61;
+    /* 次要強調色/危險色 (橙紅) */
+    --color-text-dark: #001f3f;
+    --color-background-light: #f5f5f5;
+    --color-white: #ffffff;
+    --color-lifhtBlue: #78B6CE;
+    --color-gray: #C5C2C2;
+    /* --color-border-light: #eee; */
+    --spacing-medium: 30px;
+    --spacing-large: 50px;
+    --font-size-title-desktop: 48px;
+    --font-size-title-mobile: 36px;
+}
+
+/* -------------------nav--------------------- */
+.main-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px;
+
+}
+
+.logo img {
+    display: block;
+}
+
+.menu-switch {
+    display: none;
+}
+
+@media screen and (width < 768px) {
+
+    .main-menu {
+        position: absolute;
+        display: none;
+        background-color: #330fba55;
+        height: calc(100svh - 70px);
+        width: 50%;
+        top: 100%;
+        left: 50%;
+
+
+    }
+
+    .main-menu>ul {
+        list-style: none;
+        padding: 15px 0;
+    }
+
+    .main-header:has(.menu-switch:checked) .main-menu {
+        display: block;
+    }
+
+    .hb {
+        border: 1px solid #330fba77;
+        border-radius: 5px;
+        width: 60px;
+        height: 40px;
+        position: relative;
+    }
+
+    .hb .bar {
+        display: block;
+        width: 80%;
+        height: 2px;
+        background-color: #330fba;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        border-radius: 10px;
+
+    }
+
+    .bar1 {
+        top: 6px;
+    }
+
+    .bar2 {
+        top: 18px;
+    }
+
+    .bar3 {
+        top: 30px;
+    }
+
+    .main-menu a {
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px;
+        transition: all 0.3;
+    }
+
+
+
+
+
+}
+
+@media screen and (width >=768px) {
+    .main-menu {
+        height: 60px;
+        font-size: 20px;
+        align-content: center;
+
+
+        >ul {
+            display: flex;
+            list-style: none;
+        }
+
+    }
+
+    .main-menu a {
+        z-index: 99;
+        color: var(--color-text-dark);
+        display: block;
+        position: relative;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 5px 10px;
+        /* 確保 a 標籤上的過渡效果存在 */
+        transition: all 0.3;
+    }
+
+    .main-menu a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 90%;
+        border-radius: 20px;
+        background: linear-gradient(135deg,
+                #330fba,
+                #f5f5f5,
+                #78b6ce,
+                #330fba,
+                #f5f5f5);
+        background-size: 100% auto;
+        transition: transform 0.5s ease-out, opacity 0.2s;
+        transform: translateY(0%);
+        opacity: 0;
+    }
+
+    .main-menu a:hover::after {
+        transform: translateY(0%);
+        opacity: 1;
+        animation: wave 1s ease-in infinite alternate;
+    }
+
+    .logo a::after {
+        background: none;
+        transform: none;
+    }
+
+
+
+}
+
+/* -------    nav   --------- */
+
+/* -------    footer   --------- */
+
+.foot {
+    display: flex;
+    background-color: #EDF5FF;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+
+.footerPageLink {
+    .subTitle {
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+
+    .txt {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.socialLink {
+    margin: auto;
+}
+
+.socialLink .logo img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.socialMedia {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.socialMedia a {
+    background-color: #0f52ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.socialMedia a img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .footerPageLink {
+        display: flex;
+        justify-content: space-around;
+
+        .list {
+            margin: 0 20px;
+        }
+
+        .txt {
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    }
+}
+
+/* -------    footer   --------- */
+
+/* --------------------------------- */
+.title {
+    /* 區塊標題 */
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.subTitle,
+.subtitle {
+    /* 內文標題 */
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.partTitle {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    padding: 0 0 40px 0;
+    font-weight: 800;
+}
+
+.txt {
+    /* 內文 */
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    padding-bottom: 20px;
+    letter-spacing: .55rem;
+    line-height: 200%;
+
+}
+
+.container {
+    margin: 0;
+    padding: 2rem 5%;
+    /* width: 100%; */
+}
+
+.pic img {
+    display: block;
+    /* 確認 */
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+}
+
+
+.pTitle {
+    color: var(--color-primary);
+    font-weight: 500;
+    margin: 5px 0;
+    padding: 5px 0;
+    font-size: 1rem;
+}
+
+
+/* ----------------------------------- */
+
+
+@media screen and (min-width: 768px) {
+
+    /* ---------- 文字大小 ----------*/
+
+    .partTitle {
+        /* 段落title */
+        font-size: 1.75rem;
+    }
+
+    .title {
+        /* 區塊標題 */
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .subTitle {
+        /* 內文標題 */
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: 0.5rem;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .txt {
+        /* 內文 */
+        letter-spacing: .6rem;
+    }
+
+
+    /* --------------------------------------------- */
+
+
+    .sub_title {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    .search {
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+
+    .container {
+        margin: 0;
+        padding: 3rem 15.625%;
+        /* width: 100%; */
+    }
+
+
+
+
+}

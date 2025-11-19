@@ -1,0 +1,530 @@
+:root {
+    --color-primary: #330fba;
+    /* 主要強調色 (深藍/紫色) */
+    --color-accent: #ff6f61;
+    /* 次要強調色/危險色 (橙紅) */
+    --color-text-dark: #001f3f;
+    --color-background-light: #f5f5f5;
+    --color-white: #ffffff;
+    --color-lifhtBlue: #78B6CE;
+    --color-gray: #C5C2C2;
+    /* --color-border-light: #eee; */
+    --spacing-medium: 30px;
+    --spacing-large: 50px;
+    --font-size-title-desktop: 48px;
+    --font-size-title-mobile: 36px;
+}
+
+
+
+/* -------------------hero--------------------- */
+.hero {
+    /* margin-top: 80px; */
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+    background-image: url(../Mockup/main-bg.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+}
+
+.mask {
+    grid-row: 1/6;
+    grid-column: 1/4;
+    background: #150a4250 no-repeat top center;
+    background-size: cover;
+    /* mask: url(Mockup/Rectangle\ 15.png) no-repeat center center; */
+}
+
+.hero .maintitle {
+    z-index: 10;
+    /* grid-row: 2/3; */
+    /* grid-column: 2/3; */
+    grid-row: 2/3;
+    grid-column: 1/4;
+    letter-spacing: 0.6rem;
+    align-content: end;
+    color: #f6fffe;
+    font-size: 2.25rem;
+}
+
+.sub_title {
+    z-index: 10;
+    /* grid-row: 3/4;
+    grid-column: 2/3; */
+    grid-row: 3/4;
+    grid-column: 1/4;
+    align-content: space-around;
+    letter-spacing: 0.5rem;
+    color: #f6fffe;
+    font-size: 1.6rem;
+}
+
+.search {
+    z-index: 10;
+    display: inline-block;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    grid-row: 4/5;
+    grid-column: 1/4;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.search .search_bar input {
+    text-indent: 23px;
+    width: 100%;
+    border: 3px solid #0f52ba;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+i {
+    width: 50px;
+    color: #ffffff;
+}
+
+.search_bar i {
+    position: absolute;
+    left: 10px;
+    /* Adjust horizontal position */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Fine-tune vertical alignment */
+    color: #aaa;
+    /* Customize icon color */
+}
+
+.search_bar {
+    display: flex;
+    position: relative;
+}
+
+.search_bar a {
+    text-decoration: none;
+    right: 30px;
+    top: 3px;
+    position: relative;
+}
+
+.search .hot {
+    display: flex;
+    margin-top: 1rem;
+    color: #f6fffe;
+}
+
+.search .hot p {
+    margin-right: 10px;
+}
+
+.search .hot button {
+    padding: 0 5px;
+    border: 0;
+    background-color: #78b6ce;
+    color: #f6fffe;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    height: 30px;
+    margin: 0 1%;
+    text-align: center;
+}
+
+.search .hot button:hover {
+    background-color: #0f52ba;
+    box-shadow: inset;
+}
+
+/* --------------------------------------- */
+
+
+
+button {
+    border-radius: 40px;
+    cursor: pointer;
+    border: 3px solid var(--color-primary);
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    /* box-shadow: rgb(93 24 220) 0px 7px 29px 0px; */
+}
+
+.joinBtn {
+    padding: 17px 40px;
+}
+
+.joinBtn button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(3px);
+    transition: 100ms;
+}
+
+
+/* ----------------------------------- */
+/* ----------------   about    ---------------------- */
+.about .container {
+     
+    background-image: url(../Mockup/main.jpg);
+    background-size: cover;
+    position: relative;
+    padding: 2rem 5%  ;
+}
+
+.about .partTitle {
+    color: #fff;
+}
+
+.about .content {
+    /* overflow: auto; */
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(8 , 12.5%) ;
+    grid-template-rows: auto;
+}
+
+.about .txt {
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 2rem;
+    grid-column: 1/9;
+    grid-row: 2/5;
+}
+
+.whale {
+    width: 150%;
+    z-index: 10;
+    position: relative;
+    grid-column: 6/8;
+    grid-row: 4/6;
+    /* bottom: 5rem; */
+}
+
+.turtle {
+    z-index: 10;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.about .pic{
+    box-shadow: none;
+}
+
+
+/* -------------------- Week Hot ---------------------- */
+.hot .container {
+    padding: 2rem 5% 0;
+}
+
+.card {
+    /* width: 100%; */
+
+    border-radius: 20px;
+    border: 2px solid #d3d3d3;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr;
+    grid-template-rows: auto;
+    margin: 1.5rem 0;
+
+}
+.bioList a{
+    transition: none;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.card .cardPic {
+    margin: .5rem;
+    grid-column: 1/5;
+    grid-row: 1/5;
+    width: 100%;
+}
+
+.cardPic img {
+    width: 100%;
+}
+
+.card .title {
+    writing-mode: vertical-lr;
+    letter-spacing: 1rem;
+    grid-column: 5/6;
+    grid-row: 1/3;
+    margin: 1rem;
+}
+
+.card .tag {
+    grid-column: 5/7;
+    grid-row: 3/4;
+    background-color: #330fba;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    margin: .5rem .3rem;
+    padding: .3rem;
+    overflow: hidden;
+    letter-spacing: 0rem;
+}
+    
+
+.card .txt {
+    color: #fff;
+    padding: .8rem;
+    background-color: #330fba90;
+    grid-column: 1/7;
+    grid-row: 4/6;
+    border-radius: 0 0 20px 20px;
+}
+
+.card::before {
+    content: "";
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.start .title {
+    grid-row: 1/5;
+    grid-column: 5/7;
+    letter-spacing: 1rem;
+    margin: auto 0;
+    align-content: center;
+    color: var(--color-primary);
+}
+
+/* --------------Challenge ----------------- */
+.news {
+    border: 3px solid #0f52ba;
+    border-radius: 20px;
+    padding: 1rem 2rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.newstop {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.info {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.allTag {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.allTag .tag {
+    background-color: #0f52ba70;
+    letter-spacing: normal;
+    color: #f5f5f5;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.dangerous {
+    margin-bottom: 50px;
+    border: 3px solid var(--color-accent);
+}
+
+.dangerous .tag {
+    background-color: #ff6f6170;
+}
+
+/* --------------   Challenge ----------------- */
+/* --------------   action    ------------------*/
+/* .action .content {
+    padding-left: 20px;
+} */
+
+.action .subTitle {
+    align-content: end;
+}
+
+.action .content {
+    padding-left: 1rem;
+}
+
+.action .btn {
+    margin: auto;
+    /* justify-content: center; */
+}
+
+
+/* --------------   action    ------------------*/
+
+/* ----------------   Footer   ------------------- */
+.foot {
+    display: flex;
+    background-color: #EDF5FF;
+    padding: 3%;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.footerPageLink {
+    display: flex;
+}
+
+/* .socialLink {
+    display: flex;
+} */
+.socialLink .logo img {
+    width: 85%;
+}
+
+.socialMedia {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.socialMedia a {
+    background-color: #0f52ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    /* Example size */
+    height: 50px;
+    /* Example size */
+    border-radius: 50%;
+    overflow: hidden;
+    /* Important if the image might exceed bounds */
+    margin: 5%;
+}
+
+
+
+.socialMedia a img {
+    padding: 10px;
+    object-fit: contain;
+
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+
+    /* ---------- 文字大小 ----------*/
+    .hero .maintitle {
+        /* .hero .maintitle */
+        font-size: 3.5rem;
+    }
+
+    .sub_title {
+        /* .hero .sub_title */
+        font-size: 2.5rem;
+    }
+
+    
+    .txt {
+        /* 內文 */
+        font-size: 1rem;
+        color: var(--color-text-dark);
+        padding: 20px 20px 20px 0;
+        letter-spacing: .6rem;
+        line-height: 200%;
+    }
+
+    .hot {
+        /* 標籤 按鈕 */
+        font-size: 1rem;
+    }
+
+    /* --------------------------------------------- */
+
+    .hero .maintitle {
+        grid-row: 2/3;
+        grid-column: 2/3;
+
+    }
+
+    .sub_title {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    .search {
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+
+    
+    .about .txt {
+        margin: 1rem;
+        padding: 2rem;
+        grid-column: 2/8;
+        grid-row: 2/5;
+    }
+
+    .hot .container {
+        padding: 3rem 15.625% 0;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .part {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .hot .content,
+    .start .content {
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .start .card {
+        margin: 0;
+    }
+
+    .socialLink {
+        /* display: flex; */
+    }
+
+    .card .txt-bg .txt {
+        padding: 1rem;
+    }
+
+
+
+}
