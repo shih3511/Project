@@ -15,14 +15,12 @@
         .card {
             position: relative;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             margin: 5rem 0;
 
             .pic {
                 padding: 10px;
-                position: absolute;
-                left: 5%;
-                width: 80%;
+                margin: 0 auto;
 
             }
 
@@ -30,9 +28,10 @@
                 background-color: var(--color-white);
                 height: 70%;
                 border-radius: 20px;
+                padding: 5px;
 
                 .inner {
-                    margin-left: auto;
+                    margin: 5px;
 
                     .pTitle {}
 
@@ -45,8 +44,6 @@
         .card:nth-child(2) {
             .pic {
                 padding: 10px;
-                position: absolute;
-                left: 4%;
             }
         }
 

@@ -56,13 +56,12 @@ body {
     .main-menu {
         position: absolute;
         display: none;
-        background-color: #330fba55;
+        background-color: #330fba;
         height: calc(100svh - 70px);
         width: 50%;
         top: 100%;
         left: 50%;
-
-
+        color: var(--color-background-light);
     }
 
     .main-menu>ul {
@@ -113,6 +112,7 @@ body {
         font-size: 18px;
         padding: 8px;
         transition: all 0.3;
+        color: var(--color-white);
     }
 }
 
@@ -303,7 +303,7 @@ body {
 
 .container {
     margin: 0;
-    padding: 2rem 5%;
+    padding: 5rem 5%;
     /* width: 100%; */
 }
 
