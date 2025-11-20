@@ -79,10 +79,6 @@
     padding: 5px;
 }
 
-i {
-    width: 50px;
-    color: #ffffff;
-}
 
 .search_bar i {
     position: absolute;
@@ -250,7 +246,8 @@ button:hover {
 
 }
 
-.bioList a {
+.bioList a ,
+.start a{
     transition: none;
     text-decoration: none;
     display: block;
@@ -444,57 +441,6 @@ button:hover {
 .action .btn{
     margin:  0 auto;
 }
-
-/* ----------------   Footer   ------------------- */
-.foot {
-    display: flex;
-    background-color: #EDF5FF;
-    padding: 3%;
-    align-content: space-around;
-    justify-content: space-evenly;
-}
-
-.footerPageLink {
-    display: flex;
-}
-
-/* .socialLink {
-    display: flex;
-} */
-.socialLink .logo img {
-    width: 85%;
-}
-
-.socialMedia {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.socialMedia a {
-    background-color: #0f52ba;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    /* Example size */
-    height: 50px;
-    /* Example size */
-    border-radius: 50%;
-    overflow: hidden;
-    /* Important if the image might exceed bounds */
-    margin: 5%;
-}
-
-
-
-.socialMedia a img {
-    padding: 10px;
-    object-fit: contain;
-
-}
-
-
 
 
 

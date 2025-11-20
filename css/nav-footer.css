@@ -227,10 +227,11 @@ body {
 }
 
 .socialMedia a {
-    background-color: #0f52ba;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: #001f3fdd;
     width: 40px;
     height: 40px;
     border-radius: 50%;
