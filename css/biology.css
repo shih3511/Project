@@ -401,13 +401,13 @@ button:hover {
 
     100% {
         /* 將圖片定位在右上角 */
-        top: 0;
+        /* top: 0;
         right: 0;
         
         left: auto;
         bottom: auto;
     }
-} */
+} */ */
 
     .content {
         display: flex;
