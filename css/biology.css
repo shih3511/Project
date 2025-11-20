@@ -377,42 +377,37 @@ button:hover {
     .moveTurtle{
         width: 50%;
         position: absolute;
-        bottom: -50%;
-        left: -100%;
-        animation: slide-diag 10s ease-in-out forwards;
+        bottom: 50%;
+        left: 50%;
+        /* animation: slide-diag 5s ease-in forwards; */
         z-index: -1;
 
     }
     .moveTurtle img{
         width: 100%;
     }
-    @keyframes slide-diag {
-    /* 0%：動畫起始點 (左下角) */
+    /* @keyframes slide-diag {
+    
     0% {
-        /* 將圖片定位在左下角 */
-        bottom: -10%;
-        left: -30%;
-        /* 避免使用 top/left 同時定位，容易造成計算錯誤 */
-    }
-
-    /* 50%：可選的中途點 (例如畫面中央) */
-    50% {
-        bottom: 50%;
+        bottom: 40%;
         left: 50%;
+        
+    }
+    50% {
+        bottom: 60%;
+        right: 20%;
+        
     }
 
-    /* 100%：動畫終點 (右上角) */
     100% {
         /* 將圖片定位在右上角 */
         top: 0;
         right: 0;
-        /* 使用 top/right 來讓圖片停在右上方 */
         
-        /* 確保 left/bottom 屬性被移除或設為 auto */
         left: auto;
         bottom: auto;
     }
-}
+} */
 
     .content {
         display: flex;
