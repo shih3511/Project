@@ -1,125 +1,144 @@
+.pTitle {
+    color: var(--color-primary);
+    font-weight: 500;
+    margin: 5px 0;
+    padding: 5px 0;
+}
 
-    .pTitle {
-        color: var(--color-primary);
-        font-weight: 500;
-        margin: 5px 0;
-        padding: 5px 0;
+.jelly {
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    top: 1%;
+    z-index: -1;
+}
+
+.jelly img {
+    width: 100%;
+}
+
+.container {
+    .top {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .titleGroup {
+            .partTitle {
+                padding-bottom: 10px;
+            }
+
+
+
+        }
     }
 
-    .container {
-        .top {
+    .content {
+        margin: 4rem 0;
+
+        .subtitle {
+            width: fit-content;
+            color: var(--color-primary);
+            border-bottom: 4px solid var(--color-primary);
+        }
+
+        .pTitle {
+            font-weight: 600;
+
+            margin: auto;
+        }
+    }
+
+    .firstPart {
+
+        .subtitle {
+            color: var(--color-accent);
+            border-bottom: 4px solid var(--color-accent);
+        }
+
+        .accpTitle {
+            display: block;
+            user-select: none;
+
+            i {
+                transform: rotate(0deg);
+                transition: all .3s;
+            }
+        }
+
+        .pTitle {
+            color: var(--color-accent);
+            border-bottom: 2px solid var(--color-accent);
+            margin: 10px 0;
+        }
+
+        .acctxt {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease;
+            padding: 0 15px;
+            background-color: var(--color-gray);
+            border-radius: 10px;
+
+            p {
+                padding: 0 10px;
+            }
+        }
+
+        input[type="checkbox"]:checked~.acctxt {
+            max-height: 500px;
+        }
+
+        input[type="checkbox"]:checked~.accpTitle i {
+            transform: rotate(180deg);
+
+        }
+
+    }
+
+    .secondPart {
+
+        .list {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
-            .titleGroup {
-                .partTitle {
-                    padding-bottom: 10px;
-                }
-                
+            .card {
+                border-radius: 20px;
+                border: 2px solid #d3d3d3;
+                background-color: #fff;
+                margin: .5rem 0;
+                position: relative;
+                padding-left: 1rem;
 
-                /* .subtitle {} */
-            }
-        }
-        .content{
-            margin: 4rem 0;
-            .subtitle{
-                width: fit-content;
-                color: var(--color-primary);
-                border-bottom: 4px solid var(--color-primary);
-            }
-            .pTitle{
-                font-weight: 600;
+                .step {
+                    display: flex;
 
-                margin: auto ;
-            }
-        }
-
-        .firstPart {
-
-            .subtitle {
-                color: var(--color-accent);
-                border-bottom: 4px solid var(--color-accent);
-            }
-            .accpTitle{
-                display: block;
-                user-select: none;
-                i{
-                    transform: rotate(0deg);
-                    transition: all .3s;
-                }
-            }
-
-            .pTitle {
-                color: var(--color-accent);
-                border-bottom: 2px solid var(--color-accent);
-                margin: 10px 0;
-            }
-            
-            .acctxt {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height .3s ease;
-                padding: 0 15px;
-                background-color: var(--color-gray);
-                border-radius: 10px;
-
-                p{
-                    padding: 0 10px;
-                }
-            }
-            input[type="checkbox"]:checked ~ .acctxt{
-                max-height: 500px;
-            }
-            input[type="checkbox"]:checked ~ .accpTitle i{
-                transform: rotate(180deg);
-                
-            }
-
-        }
-
-        .secondPart {
-
-            .list {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-
-                .card {
-                    border-radius: 20px;
-                    border: 2px solid #d3d3d3;
-                    background-color: #fff;
-                    margin: .5rem 0 ;
-                    position: relative;
-                    padding-left: 1rem;
-
-                    .step {
-                        display: flex;
-
-                        .pic {
-                            margin: .1rem 0;
-                            position: relative;
-                            align-content: center;
-                            width: 15%;
-                        }
-
-                        .pTitle {
-                            color: var(--color-primary);
-                            font-size: 1.1rem;
-                        }
-
-                        .txt {}
+                    .pic {
+                        margin: .1rem 0;
+                        position: relative;
+                        align-content: center;
+                        width: 15%;
                     }
 
+                    .pTitle {
+                        color: var(--color-primary);
+                        font-size: 1.1rem;
+                    }
+
+                    .txt {}
                 }
+
             }
         }
-
-        .thirdPart {
-            .pTitle {}
-
-            .txt {}
-        }
     }
+
+    .thirdPart {
+        .pTitle {}
+
+        .txt {}
+    }
+}
 
 
 @media screen and (min-width: 768px) {

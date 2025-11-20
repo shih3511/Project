@@ -176,7 +176,7 @@ h5{
         background-size: 10% ;
         background-repeat: repeat-y;
     }
-
+    
 
     .card .txt-bg .txt {
         padding: 1rem;
@@ -194,6 +194,17 @@ h5{
     }
     .wholeBio{
         padding-top: 2rem ;
+        position: relative;
+    }
+    .bgim{
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        bottom: 68.5%;
+        left: 55%;
+    }
+    .bgim img{
+        width: 100%;
     }
 
 
