@@ -32,12 +32,14 @@ body {
 
 /* -------------------nav--------------------- */
 .main-header {
-    position: relative;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    padding: 5px;
+    padding: 5px 10px;
 
 }
 
@@ -112,16 +114,10 @@ body {
         padding: 8px;
         transition: all 0.3;
     }
-
-
-
-
-
 }
 
 @media screen and (width >=768px) {
     .main-menu {
-        height: 60px;
         font-size: 20px;
         align-content: center;
 
@@ -269,6 +265,8 @@ body {
 
 /* -------    footer   --------- */
 
+
+
 /* --------------------------------- */
 .title {
     /* 區塊標題 */
@@ -333,6 +331,12 @@ body {
 
 @media screen and (min-width: 768px) {
 
+    .container {
+        margin: 0;
+        padding: 4.5rem 15.625%;
+        /* width: 100%; */
+    }
+
     /* ---------- 文字大小 ----------*/
 
     .partTitle {
@@ -377,13 +381,6 @@ body {
         grid-column: 2/3;
     }
 
-    .container {
-        margin: 0;
-        padding: 3rem 15.625%;
-        /* width: 100%; */
-    }
-
-
-
+    
 
 }
