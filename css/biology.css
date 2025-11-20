@@ -140,6 +140,7 @@ button:hover {
     grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr;
     grid-template-rows: auto;
     margin: 1.5rem 0;
+    transition: all .5s;
 
 }
 
@@ -187,7 +188,7 @@ button:hover {
 .card::before,
 .bioCard::before {
     content: "";
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
     opacity: 0;
 }
 
@@ -196,8 +197,8 @@ button:hover {
 }
 .bioCard:hover {
     border: 5px solid #78B6CE;
-    transform: scale(1.05);
-    background-size: 90%;
+    transform: scale(1.03);
+    background-size: 70%;
     cursor: pointer;
 }
 
@@ -224,6 +225,7 @@ button:hover {
     border-radius: 20px;
     overflow: hidden;
     padding: 3rem 0;
+    transition: all .5s ;
 }
 
 .bioCard:nth-child(2) {

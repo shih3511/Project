@@ -5,13 +5,14 @@
 }
 
 body {
-    font-family: 'Crimson Pro', "Noto Sans TC", "Inter", serif, sans-serif;
+    font-family: 'chiron-goround-tc','Crimson Pro', "Noto Sans TC", "Inter", serif, sans-serif;
     line-height: 1.6;
     letter-spacing: .45rem;
     color: #001f3f;
     background-color: #f5f5f5;
     /* 輕柔的淺灰色背景 */
 }
+
 
 :root {
     --color-primary: #330fba;
@@ -119,6 +120,7 @@ body {
 @media screen and (width >=768px) {
     .main-menu {
         font-size: 20px;
+        letter-spacing: normal;
         align-content: center;
 
 
@@ -333,7 +335,7 @@ body {
 
     .container {
         margin: 0;
-        padding: 4.5rem 15.625%;
+        padding: 4.5rem 15.625% 2rem;
         /* width: 100%; */
     }
 
