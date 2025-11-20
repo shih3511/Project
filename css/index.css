@@ -8,11 +8,6 @@
     --color-white: #ffffff;
     --color-lifhtBlue: #78B6CE;
     --color-gray: #C5C2C2;
-    /* --color-border-light: #eee; */
-    --spacing-medium: 30px;
-    --spacing-large: 50px;
-    --font-size-title-desktop: 48px;
-    --font-size-title-mobile: 36px;
 }
 
 
@@ -157,17 +152,26 @@ button {
     transition: all 0.5s ease;
 }
 
+.news button {
+    width: 30%;
+    padding: 10px;
+    margin: 20px 0;
+}
+
 button:hover {
     background-color: hsl(261deg 80% 48%);
     color: hsl(0, 0%, 100%);
     /* box-shadow: rgb(93 24 220) 0px 7px 29px 0px; */
 }
 
-.joinBtn {
+
+.joinBtn,
+.moreBtn {
     padding: 17px 40px;
 }
 
-.joinBtn button:active {
+.joinBtn button:active,
+.moreBtn button:active {
     letter-spacing: 3px;
     background-color: hsl(261deg 80% 48%);
     color: hsl(0, 0%, 100%);
@@ -180,11 +184,11 @@ button:hover {
 /* ----------------------------------- */
 /* ----------------   about    ---------------------- */
 .about .container {
-     
+
     background-image: url(../Mockup/main.jpg);
     background-size: cover;
     position: relative;
-    padding: 2rem 5%  ;
+    padding: 2rem 5%;
 }
 
 .about .partTitle {
@@ -195,7 +199,7 @@ button:hover {
     /* overflow: auto; */
     border-radius: 20px;
     display: grid;
-    grid-template-columns: repeat(8 , 12.5%) ;
+    grid-template-columns: repeat(8, 12.5%);
     grid-template-rows: auto;
 }
 
@@ -222,7 +226,8 @@ button:hover {
     grid-column: 1/3;
     grid-row: 1/3;
 }
-.about .pic{
+
+.about .pic {
     box-shadow: none;
 }
 
@@ -244,11 +249,12 @@ button:hover {
     margin: 1.5rem 0;
 
 }
-.bioList a{
+
+.bioList a {
     transition: none;
     text-decoration: none;
     display: block;
-    
+
 }
 
 .card .cardPic {
@@ -283,7 +289,7 @@ button:hover {
     overflow: hidden;
     letter-spacing: 0rem;
 }
-    
+
 
 .card .txt {
     color: #fff;
@@ -314,74 +320,130 @@ button:hover {
 }
 
 /* --------------Challenge ----------------- */
-.news {
-    border: 3px solid #0f52ba;
-    border-radius: 20px;
-    padding: 1rem 2rem 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+.challenge {
+    .container {
+        .news {
+            border: 3px solid #0f52ba;
+            border-radius: 20px;
+            padding: 1rem 2rem 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+
+            .newstop {
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 15px;
+
+                .newsDate {
+                    text-align: right;
+                }
+            }
+
+            .part {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .info {
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .allTag {
+                        display: flex;
+                        gap: 10px;
+                        margin-bottom: 15px;
+
+                        .tag {
+                            background-color: #0f52baaa;
+                            letter-spacing: normal;
+                            color: #f5f5f5;
+                            padding: 5px;
+                            border-radius: 5px;
+                            font-size: 1rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        .whole {
+            display: none;
+        }
+
+        .dangerous {
+            margin-bottom: 50px;
+            border: 3px solid var(--color-accent);
+
+            .part {
+                .info {
+                    .allTag {
+                        .tag {
+                            background-color: #ff6f61aa;
+                        }
+                    }
+                }
+            }
+
+            button {
+                border: 3px solid var(--color-accent);
+            }
+
+            button:hover {
+                background-color: #ff6f61cc;
+                color: var(--color-white);
+            }
+
+        }
+
+        .news.expanded .read-more-btn {
+            display: none;
+        }
+
+        .news.expanded .whole {
+            display: block;
+        }
+
+        .news button {
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
 }
 
-.newstop {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 15px;
+@media screen and (min-width: 768px) {
+    .challenge {
+        .container {
+            .news {
+                .part {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                button {
+                    width: 40%;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
 }
 
-.info {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
 
-.allTag {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.allTag .tag {
-    background-color: #0f52ba70;
-    letter-spacing: normal;
-    color: #f5f5f5;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.dangerous {
-    margin-bottom: 50px;
-    border: 3px solid var(--color-accent);
-}
-
-.dangerous .tag {
-    background-color: #ff6f6170;
-}
-
-/* --------------   Challenge ----------------- */
 /* --------------   action    ------------------*/
-/* .action .content {
-    padding-left: 20px;
-} */
-
-.action .subTitle {
-    align-content: end;
+.action .content{
+    padding-left: 5px;
 }
-
-.action .content {
-    padding-left: 1rem;
+.action .btn{
+    margin:  0 auto;
 }
-
-.action .btn {
-    margin: auto;
-    /* justify-content: center; */
-}
-
-
-/* --------------   action    ------------------*/
 
 /* ----------------   Footer   ------------------- */
 .foot {
@@ -451,7 +513,7 @@ button:hover {
         font-size: 2.5rem;
     }
 
-    
+
     .txt {
         /* 內文 */
         font-size: 1rem;
@@ -484,7 +546,7 @@ button:hover {
         grid-column: 2/3;
     }
 
-    
+
     .about .txt {
         margin: 1rem;
         padding: 2rem;

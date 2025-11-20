@@ -206,7 +206,7 @@
           <h3>海洋面臨的挑戰</h3>
         </div>
 
-        <div class="news dangerous col-12 col-md-12">
+        <div class="news dangerous col-12 col-md-12" id="news-coral">
           <div class="newstop col-12 col-md-12">
             <div class="title col-8 col-lg-8">
               <h3>珊瑚礁拉警報：全球第四次大規模白化危機</h3>
@@ -216,7 +216,7 @@
             </div>
           </div>
           <div class="part col-12 row-cols-lg-2">
-            <div class="content col-12 col-md-6">
+            <div class="content col-12 col-md-8">
               <div class="subTitle">
                 <p>白化現象的機制</p>
               </div>
@@ -253,8 +253,15 @@
               </div>
             </div>
           </div>
+
+          <div class="btn">
+            <button class="moreBtn read-more-btn" data-target="news-coral">
+              <p>查看更多</p>
+            </button>
+          </div>
+
         </div>
-        <div class="news col-12 col-md-12">
+        <div class="news col-12 col-md-12" id="news-mining">
           <div class="newstop col-12 row.cols-lg-6">
             <div class="title col-8 col-lg-8">
               <h3>警惕：深海採礦熱潮威脅未知生態系統</h3>
@@ -264,16 +271,19 @@
             </div>
           </div>
           <div class="part col-12 col-md-12">
-            <div class="content col-12 col-md-6">
+            <div class="content col-12 col-md-8">
               <div class="subTitle">
                 <p>對極端生態的威脅</p>
               </div>
               <div class="txt">
                 <p>
-                  隨著全球對電動車電池所需的鈷、鎳、銅、錳等稀有金屬需求急劇增長，一場「深海淘金熱」正在醞釀。深海採礦的目標是從深海海底（通常是超過
-                  1,000 公尺的區域）收集富含這些關鍵礦物的多金屬結核
-                  (Polymetallic Nodules)、熱液噴口硫化物或鈷殼。
-                  深海是地球上最古老、最未被探索的生態系統之一，居住著許多代謝緩慢、壽命極長的獨特生物。深海熱泉周圍的化學合成生態系統，更是完全獨立於地表陽光的生命形態。由於深海環境穩定且缺乏食物，一旦棲地遭到破壞，這些生物群落需要數百年甚至數千年才能恢復，許多物種在科學家正式紀錄前就可能滅絕。
+                  隨著全球對電動車電池所需的鈷、鎳、銅、錳等稀有金屬需求急劇增長，一場「深海淘金熱」正在醞釀。
+                </p>
+                <p>
+                  深海採礦的目標是從深海海底（超過1,000 公尺）收集富含這些關鍵礦物的多金屬結核、熱液噴口硫化物或鈷殼。
+                </p>
+                <p>
+                  而深海是地球上最古老、最未被探索的生態系統。它居住著許多代謝緩慢、壽命極長的獨特生物。由於深海環境穩定且缺乏食物，一旦棲地遭到破壞，這些生物群落需要數百年甚至數千年才能恢復，許多物種可能在科學家正式紀錄前就滅絕。
                 </p>
               </div>
             </div>
@@ -288,6 +298,7 @@
               </div>
             </div>
           </div>
+
           <div class="whole col-12 col-md-12 ">
             <div class="content col-12 col-md-12">
               <div class="subTitle">
@@ -300,9 +311,34 @@
               </div>
             </div>
           </div>
+
+          <div class="btn">
+            <button class="moreBtn read-more-btn" data-target="news-mining">
+              <p>查看更多</p>
+            </button>
+          </div>
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        //查看更多的按鈕被點按，區分按鈕
+        const buttons = document.querySelectorAll(".read-more-btn");
+        buttons.forEach(button => {
+          button.addEventListener("click", function () {
+
+            const targetId = this.getAttribute("data-target");
+            const newsCard = document.getElementById(targetId);
+            if (newsCard) {
+              newsCard.classList.toggle("expanded");
+
+            }
+
+          });
+        });
+      });
+    </script>
     <!-- 加入我們 -->
     <section class="action col-12 col-md-12">
       <div class="container col-12 col-md-12">
@@ -326,9 +362,11 @@
               </p>
             </div>
             <div class="btn">
+              <a href="https://shih3511.github.io/Project/action.html">
               <button class="joinBtn">
                 <p>立即加入海洋守護者行列</p>
               </button>
+            </a>
             </div>
           </div>
         </div>
