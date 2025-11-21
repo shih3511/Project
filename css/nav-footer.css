@@ -211,9 +211,12 @@ body {
 .socialLink {
     margin: auto;
 }
+.socialLink .logo{
+    padding: 0 4.5rem;
+}
 
 .socialLink .logo img {
-    width: 70%;
+    width: 350%;
     height: auto;
     display: block;
     margin: 0 auto;
