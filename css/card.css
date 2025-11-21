@@ -1,0 +1,72 @@
+:root {
+    --color-primary: #330fba;
+    /* 主要強調色 (深藍/紫色) */
+    --color-accent: #ff6f61;
+    /* 次要強調色/危險色 (橙紅) */
+    --color-text-dark: #001f3f;
+    --color-background-light: #f5f5f5;
+    --color-white: #ffffff;
+    --color-lifhtBlue: #78B6CE;
+    --color-gray: #C5C2C2;
+}
+.card {
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 20px;
+    border: .5px solid #d3d3d3;
+    background-color: #fff;
+    margin: 1.5rem ;
+    transition: all .5s;
+    padding-bottom: 2.5rem ;
+
+}
+.card .cardPic {
+    margin: .5rem;
+    width: 60%;
+}
+
+.cardPic img {
+    width: 100%;
+}
+
+.card .title {
+    height: 100px;
+    writing-mode: vertical-lr;
+    letter-spacing: .5rem;
+    margin: 1rem .25rem;
+}
+
+.card .tag {
+    border-radius: 5px;
+    border: 1px solid #330fba99;
+    text-align: center;
+    align-content: center;
+    color: var(--color-text-dark);
+    margin: .5rem .3rem;
+    padding: .3rem;
+    overflow: hidden;
+    letter-spacing: 0rem;
+}
+
+
+.card .txt {
+    position: absolute;
+    bottom: -0%;
+    color: var(--color-background-light);
+    padding: .8rem;
+    background-color: #330fbabb;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid #d3d3d3;
+}
+
+.card::before {
+    content: "";
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
