@@ -89,6 +89,7 @@
     justify-content: space-between;
     min-height:auto;
     flex-direction: column;
+    position: relative;
 }
 
 .infomation {
@@ -151,6 +152,17 @@ h5{
     display: flex;
     justify-content: space-around;
 }
+/* -------------     coral     -------------- */
+.bgim{
+        position: absolute;
+        z-index: -1;
+        width: 60%;
+        bottom: -10%;
+        left: -133%;
+    }
+    .bgim img{
+        width: 100%;
+    }
 /* --------------------------*/
 
 
@@ -202,9 +214,6 @@ h5{
         width: 50%;
         bottom: 68.5%;
         left: 55%;
-    }
-    .bgim img{
-        width: 100%;
     }
 
 

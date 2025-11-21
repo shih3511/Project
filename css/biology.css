@@ -204,8 +204,19 @@ button:hover {
 
 /* --------------   action    ------------------*/
 
-/* ----------------   Footer   ------------------- */
+/* ----------------   turtle  ------------------- */
+    .moveTurtle{
+        width: 60%;
+        position: absolute;
+        bottom: 53%;
+        left: 55%;
+        /* animation: slide-diag 5s ease-in forwards; */
+        z-index: -1;
 
+    }
+    .moveTurtle img{
+        width: 100%;
+    }
 
 /* ------------------------------------------------------------------------- */
 
@@ -377,7 +388,7 @@ button:hover {
     .moveTurtle{
         width: 50%;
         position: absolute;
-        bottom: 50%;
+        bottom: 53%;
         left: 50%;
         /* animation: slide-diag 5s ease-in forwards; */
         z-index: -1;
