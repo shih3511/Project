@@ -7,7 +7,7 @@
 body {
     font-family: 'chiron-goround-tc','Crimson Pro', "Noto Sans TC", "Inter", serif, sans-serif;
     line-height: 1.6;
-    letter-spacing: .45rem;
+    letter-spacing: .2rem;
     color: #001f3f;
     background-color: #f5f5f5;
     /* 輕柔的淺灰色背景 */
@@ -283,7 +283,7 @@ body {
     /* 內文標題 */
     font-size: 1.25rem;
     font-weight: 600;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     margin-bottom: 10px;
 }
 
@@ -299,7 +299,6 @@ body {
     font-size: 1rem;
     color: var(--color-text-dark);
     padding-bottom: 20px;
-    letter-spacing: .55rem;
     line-height: 200%;
 
 }
@@ -345,6 +344,7 @@ body {
     .partTitle {
         /* 段落title */
         font-size: 1.75rem;
+        letter-spacing: .4rem;
     }
 
     .title {
@@ -357,7 +357,7 @@ body {
         /* 內文標題 */
         font-size: 1.25rem;
         font-weight: 800;
-        letter-spacing: 0.5rem;
+        letter-spacing: 0.3rem;
         margin-bottom: 15px;
     }
 
@@ -367,7 +367,7 @@ body {
 
     .txt {
         /* 內文 */
-        letter-spacing: .6rem;
+        letter-spacing: .2rem;
     }
 
 
