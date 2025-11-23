@@ -30,6 +30,12 @@ body {
     --font-size-title-desktop: 48px;
     --font-size-title-mobile: 36px;
 }
+a {
+        transition: none;
+        text-decoration: none;
+        display: block;
+        margin: 0 auto;
+    }
 
 /* -------------------nav--------------------- */
 .main-header {
