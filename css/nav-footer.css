@@ -187,9 +187,15 @@ a {
 
 }
 
-/* -------    nav   --------- */
+/* ==================     
+nav    
+ ================= */
 
-/* -------    footer   --------- */
+
+
+/* ==================     
+footer    
+ ================= */
 
 .foot {
     display: flex;
@@ -218,11 +224,11 @@ a {
     margin: auto;
 }
 .socialLink .logo{
-    padding: 0 4.5rem;
+    padding: 0;
 }
 
 .socialLink .logo img {
-    width: 350%;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
