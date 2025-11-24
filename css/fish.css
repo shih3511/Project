@@ -16,126 +16,139 @@
 }
 
 
-/* -------------------------- */
 
+/* ======= 介紹的資訊內容  ========= */
 .top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    min-height:auto;
+    min-height: auto;
     flex-direction: column;
     position: relative;
 }
 
+/* ======= 左邊  ========= */
+/* ======= 照片，名稱跟框框資訊  ========= */
 .infomation {
     padding: .5rem;
     background-color: #fff;
     border-radius: 20px;
+    margin-bottom: 1rem;
 }
+
+/* ======= 名稱  ========= */
 .infomation .sub {
     text-align: center;
     font-size: 1.25rem;
 }
+
+/* ======= 框框資訊群組  ========= */
 .infoPart {
     display: flex;
     flex-wrap: wrap;
 }
-.info{
+
+/* ======= 框框資訊  ========= */
+.info {
     border: 2px solid #00478F;
     border-radius: 5px;
     margin: .5rem auto;
     padding: .5rem;
+    letter-spacing: normal;
     align-items: anchor-center;
 
-    
-}
-.top .content{
-    line-height: 220%;
-}
-.content h3 {
-    font-size: 1.25rem;
-}
-h5{
-    width: 100%;
+
 }
 
-.subtitle{
-    text-align: center;
+.info .pTitle {
+    width: 100%;
+    padding: 0;
 }
-.info:nth-child(3){
+
+.info:nth-child(3) {
     display: flex;
     flex-wrap: wrap;
 }
-.iucn{
+
+.iucn {
     width: 60%;
     margin: 0 auto;
 }
-.dangerous{         
+
+/* ======= 易危顏色警示  ========= */
+.dangerous {
     background-color: var(--color-accent);
     border-radius: 20px;
-    color:var(--color-background-light);
+    color: var(--color-background-light);
     padding: .5em;
     text-align: center;
-} 
+}
 
-/* -------------     coral     -------------- */
-.bgim{
-        position: absolute;
-        z-index: -1;
-        width: 60%;
-        bottom: -10%;
-        left: -133%;
+/* ======= 文字介紹內容  ========= */
+.content p {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
     }
-    .bgim img{
-        width: 100%;
+}
+
+
+/* --------     背景圖片coral 定位     ----------- */
+.wholeBio {
+        position: relative;
     }
-/* --------------------------*/
+.bgim {
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+    top: -4%;
+    left: 55%;
+}
+
+.bgim img {
+    width: 100%;
+}
+
+/* ---------推薦生物-----------------*/
+
+.subtitle {
+    text-align: center;
+    padding: 1rem 0;
+}
 
 
 
 @media screen and (min-width: 768px) {
 
-   
-    /* --------------------------------------------- */
-
-
-    .sub_title {
-        grid-row: 3/4;
-        grid-column: 2/3;
-    }
-
-    .search {
-        grid-row: 4/5;
-        grid-column: 2/3;
-    }
-
+    /* =====背景色塊定位*/
     .container {
         background-image: url(../Mockup/bgcolor.png);
-        background-size: 10% ;
+        background-size: 8%;
         background-repeat: repeat-y;
     }
-    
 
-    .card .txt-bg .txt {
-        padding: 1rem;
-    }
-    .content h3 {
-        font-size: 1.rem;
-    }
-    .sub h3 {
-        font-size: 1.5rem;
-        margin: 0 .5rem;
-    }
+    /* ======= 資訊、文字 上下排列  ====== */
     .top {
         flex-direction: row;
     }
-    .top .content{
+
+    /* ======= 右邊 文字內容  ========= */
+    .top .content {
         padding-left: 1.5rem;
+        margin: auto 0;
     }
-    .wholeBio{
-        padding-top: 2rem ;
+
+    /* --------     背景圖片定位點     ----------- */
+    .wholeBio {
         position: relative;
     }
-    .bgim{
+
+    /* --------     背景圖片coral 定位     ----------- */
+    .bgim {
         position: absolute;
         z-index: -1;
         width: 50%;

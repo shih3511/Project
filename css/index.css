@@ -185,7 +185,6 @@ button:hover {
     background-image: url(../Mockup/main.jpg);
     background-size: cover;
     position: relative;
-    padding: 6rem 2% 5rem;
 }
 
 .about .partTitle {

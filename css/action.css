@@ -7,10 +7,11 @@
 
 .jelly {
     position: fixed;
-    width: 80%;
-    left: 50%;
-    top: 1%;
+    width: 40%;
+    right: 3%;
+    top: 6%;
     z-index: -1;
+    opacity: .8;
 }
 
 .jelly img {
@@ -86,7 +87,7 @@
         }
 
         input[type="checkbox"]:checked~.acctxt {
-            max-height: 500px;
+            max-height: 520px;
         }
 
         input[type="checkbox"]:checked~.accpTitle i {
@@ -107,9 +108,9 @@
                 border-radius: 20px;
                 border: 2px solid #d3d3d3;
                 background-color: #fff;
-                margin: .5rem 0;
+                margin: .5rem 1.5rem;
                 position: relative;
-                padding-left: 1rem;
+                padding: .3rem .5rem;
 
                 .step {
                     display: flex;
@@ -120,15 +121,20 @@
                         align-content: center;
                         width: 15%;
                     }
+                    .pic img{
+                        border-radius: 0;
+                    }
 
                     .pTitle {
                         color: var(--color-primary);
                         font-size: 1.1rem;
                     }
 
-                    .txt {}
+                    
                 }
-
+                .txt {
+                        padding-bottom: 0;
+                    }
             }
         }
     }
@@ -150,9 +156,44 @@
         .secondPart {
             .list {
                 flex-direction: row;
+                .card{
+                    margin: .5rem 0;
+                }
             }
+            
         }
 
         /* .thirdPart {    } */
+    }
+
+    .jelly {
+    position: fixed;
+    width: 30%;
+    right: 0%;
+    top: 5%;
+    
+}
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+       /* /* .content{        } */
+
+        /* .firstPart {    } */
+
+        .secondPart {
+            .list {
+                .card{
+                }
+            }
+            
+        }
+        /* .thirdPart {    } */
+    } */ 
+    
+
+    .jelly {
+    right: 0%;
+    top: 2%;
     }
 }

@@ -10,14 +10,9 @@
     --color-gray: #C5C2C2;
 }
 
-/*本周焦點物種 、 開始您的探索之旅的.container */
-.hot .container,
-.start .container {
-    padding: 2rem 5% 0;
-}
-
-.hot .partTitle {
-    padding-bottom: 20px;
+/* ========  卡片  =======*/
+.card-link {
+    padding: 0 8px;
 }
 
 .card {
@@ -26,15 +21,42 @@
     position: relative;
     border-radius: 20px;
     background-color: #fff;
-    margin: 1.5rem 0 3rem;
+    margin: 1.5rem 0 ;
     transition: all .5s;
     padding-bottom: 2.5rem;
 
+    /* ========  卡片照片  =======*/
+    .cardPic {
+        margin-top: .5rem;
+        margin-left: .5rem;
+        width: 55%;
+    }
 
-    .title {
-        height: 82px;
-        writing-mode: vertical-lr;
-        margin: .75rem;
+    .cardPic img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    /* ========  卡片名 , tag  =======*/
+    .cardTopRight {
+        position: relative;
+
+        .title {
+            writing-mode: vertical-lr;
+            margin: .75rem;
+            height: 80px;
+        }
+
+        .tag {
+            text-align: right;
+            position: absolute;
+            bottom: 12%;
+            left: 40%;
+            width: fit-content;
+            color: var(--color-text-dark);
+            font-weight: 450;
+            letter-spacing: 0rem;
+        }
     }
 
     .txt {
@@ -52,26 +74,7 @@
         -webkit-box-orient: vertical;
     }
 
-    .tag {
-        width: fit-content;
-        text-align: right;
-        color: var(--color-text-dark);
-        font-weight: 450;
-        margin-left: auto;
-        letter-spacing: 0rem;
-        border-radius: 20px;
-    }
 
-    .cardPic {
-        margin-top: .5rem;
-        margin-left: .5rem;
-        width: 55%;
-    }
-
-    .cardPic img {
-        width: 100%;
-        border-radius: 20px;
-    }
 }
 
 .card::before {
@@ -80,6 +83,44 @@
     opacity: 0;
 }
 
+.cardPic:hover {
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .card {
+        .cardTopRight {
+            .title {
+                height: 93px;
+            }
+
+            .tag {
+                bottom: 11%;
+                left: 42%;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .card {
+        .cardTopRight {
+            .tag {
+                bottom: 15%;
+                left: 35%;
+            }
+        }
+
+    }
+}
+
+/* =============  卡片  ==============*/
+
+/* =============  index 開始探索的卡片  ==============*/
 .start {
     .content {
         display: flex;
@@ -103,121 +144,8 @@
     }
 }
 
-.wholeBio {
-    padding: .5rem;
-
-    .content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .card{
-        margin: .5rem 0 ;
-    }
-    .title
-    {
-        margin-bottom: 0;
-    }
-
-    /* 內縮 */
-    .txt {
-        padding:  2px 10px;
-        overflow: hidden;
-        bottom: 0;
-    }
-
-}
-
 @media screen and (min-width: 768px) {
-
-    /* biology 類別生物區塊 */
-    .wholeBio {
-        margin: 2rem 0;
-        padding: 1.5rem;
-
-        /* 內縮 */
-        .txt {
-            padding: 20px;
-        }
-    }
-
-    /* fish 類別生物區塊 */
-    .wholeBioFish {
-        margin: 0;
-        padding: 0;
-
-        .txt {
-            padding: 20px;
-        }
-
-        .content {
-            display: flex;
-            justify-content: space-around;
-        }
-    }
-
-    .hot,
-    .wholeBio {
-        .container {
-            padding: 3rem 15.625% 0;
-        }
-
-        .content {
-            margin: auto;
-            justify-content: space-between;
-
-            .card-link {
-                margin: 0 -8px;
-
-                .card {
-                    flex-wrap: nowrap;
-                    transition: all .5s;
-
-                    .cardPic {
-                        margin: 0;
-                        width: 70%;
-                        padding: .5rem;
-                    }
-
-                    .cardTopRight {
-                        .title {
-                            height: 90px;
-                            margin: .5rem .4rem 0;
-                        }
-
-                        .tag {
-                            padding: 0;
-                            border-radius: 5px;
-                            text-align: center;
-                            align-content: center;
-                        }
-                    }
-
-                    .txt {
-                        bottom: 0%;
-                        padding: .3rem .8rem;
-                    }
-                }
-            }
-        }
-    }
-
-
-
-    .card::before {
-        content: "";
-        transition: all 0.5s ease;
-        opacity: 0;
-    }
-
-    .cardPic:hover {
-        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    }
-
     .start {
-        .container {
-            padding: 3rem 15.625% 0;
-        }
 
         .content {
             margin: auto;
@@ -229,7 +157,6 @@
         }
 
         .title {
-            height: 130px;
             margin: auto;
         }
 
@@ -239,3 +166,89 @@
         }
     }
 }
+
+/* =============  index 開始探索的卡片  ==============*/
+
+/* =============  biology頁面的卡片  ==============*/
+.wholeBio {
+    margin: 2rem 0;
+    padding: 1.5rem;
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .card-link {
+            margin: 0 -8px;
+            padding: 0 5px;
+
+            .card {
+                margin: .5rem 0;
+                flex-wrap: nowrap;
+                transition: all .5s;
+
+                .cardPic {
+                    margin: 0;
+                    width: 70%;
+                    padding: .5rem;
+                }
+
+                .cardTopRight {
+                    .title {
+                        margin: .5rem .4rem 0;
+
+                    }
+
+                    .tag {
+                        bottom: 22%;
+                        left: 17%;
+                        padding: 0;
+                    }
+                }
+
+                .txt {
+                    bottom: 0%;
+                    padding: .3rem .8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wholeBio {
+        .content {
+            .card-link {
+                .card {
+                    .cardTopRight {
+                        .tag {
+                            bottom: 22%;
+                            left: 8%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =============  biology頁面的卡片  ==============*/
+
+/* =============  fish 頁面的卡片  ==============*/
+.wholeBioFish {
+    margin: 0;
+    padding: 0;
+
+    .txt {
+        padding: 20px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* =============  fish 頁面的卡片  ==============*/

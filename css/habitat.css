@@ -15,19 +15,12 @@
     --font-size-title-mobile: 36px;
 }
 
-.partTitle {
-    padding-bottom: 1.25rem;
-}
-
 .habiTat a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-
 
     .habitat {
         display: flex;
         position: relative;
+        /* ======= 卡片內容上下排序 ========= */
         flex-direction: column-reverse;
         margin: 1.5rem 0;
         background-color: var(--color-lifhtBlue);
@@ -37,35 +30,20 @@
         align-items: center;
 
         .content {
-            .groupT {
-                .subTitle {
-                    font-size: 1.5rem;
-                }
-
-                .pTitle {
-                    font-size: 1.25rem;
-                }
-            }
-
             .txt {
-                font-size: 1rem;
+                /* ======= 顯眼的顏色，避免被背景色吃掉 ========= */
                 color: var(--color-background-light);
             }
 
-            .txtTitle {
-                font-size: 1rem;
-                font-weight: 600;
+            .txt.txtTitle {
+                font-weight: 500;
+                padding-bottom: 0px;
             }
-
-            .txtP {
-                font-size: 1rem;
-            }
-
         }
     }
 }
 
-
+/* ======= 第二跟第四個 字的顏色改變========= */
 .habiTat a:nth-child(2n+1) .habitat {
     background-color: #C5C2C2;
     color: var(--color-text-dark);
@@ -80,8 +58,13 @@
     color: var(--color-text-dark);
 }
 
-
+/* ======= 第二跟第四個 的左右排序相反 ========= */
 @media screen and (min-width: 768px) {
+    .txt.txtTitle {
+                font-weight: 500;
+                padding-bottom: 0px;
+            }
+
     .habiTat a .habitat {
         flex-direction: row;
     }
