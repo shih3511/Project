@@ -115,7 +115,7 @@
                     display: flex;
 
                     .pic {
-                        margin: .1rem 0;
+                        margin: .5rem ;
                         position: relative;
                         align-content: center;
                         width: 15%;

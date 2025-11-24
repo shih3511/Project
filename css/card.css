@@ -1,5 +1,5 @@
 :root {
-    --color-primary: #330fba;
+    --color-primary: #00478F;
     /* 主要強調色 (深藍/紫色) */
     --color-accent: #ff6f61;
     /* 次要強調色/危險色 (橙紅) */
@@ -42,7 +42,7 @@
         bottom: -8.25%;
         color: var(--color-background-light);
         padding: .3rem;
-        background-color: #330fbabb;
+        background-color: #00478Fbb;
         border-radius: 0 0 20px 20px;
         border: 1px solid #d3d3d3;
 

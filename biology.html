@@ -2,458 +2,578 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>潮覓 : 生物圖鑑</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/biology.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/nav-footer.css">
-    <script src="https://kit.fontawesome.com/b7830aaef2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
-    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>潮覓 : 生物圖鑑</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/biology.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/nav-footer.css">
+  <script src="https://kit.fontawesome.com/b7830aaef2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+  <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="main-header">
-            <div class="logo">
-                <a href="https://shih3511.github.io/Project/">
-                    <img src="Mockup/logoMain.svg" width="150px" height="50px">
-                </a>
-            </div>
-            <label class="hb">
-                <input type="checkbox" class="menu-switch">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-            </label>
+  <header>
+    <div class="main-header">
+      <div class="logo">
+        <a href="https://shih3511.github.io/Project/">
+          <img src="Mockup/logoMain.svg" width="150px" height="50px">
+        </a>
+      </div>
+      <label class="hb">
+        <input type="checkbox" class="menu-switch">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </label>
 
-            <nav class="main-menu">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="https://shih3511.github.io/Project/">首頁</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="https://shih3511.github.io/Project/biology.html">生物圖鑑</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="https://shih3511.github.io/Project/habitat.html">棲地探索</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="https://shih3511.github.io/Project/action.html">全球守護</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="https://shih3511.github.io/Project/resource.html">資源中心</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="https://shih3511.github.io/Project/about.html">關於我們</a>
-                    </li>
-                </ul>
-            </nav>
+      <nav class="main-menu">
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="https://shih3511.github.io/Project/biology.html">生物圖鑑</a>
+          </li>
+          <li class="menu-item">
+            <a href="https://shih3511.github.io/Project/habitat.html">棲地探索</a>
+          </li>
+          <li class="menu-item">
+            <a href="https://shih3511.github.io/Project/action.html">全球守護</a>
+          </li>
+          <li class="menu-item">
+            <a href="https://shih3511.github.io/Project/resource.html">資源中心</a>
+          </li>
+          <li class="menu-item">
+            <a href="https://shih3511.github.io/Project/about.html">關於我們</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <div class="container col-12 col-md-12">
+      <div class="search col-12 col-md-8">
+        <div class="partTitle">
+          <h3>海洋物種圖鑑</h3>
         </div>
-    </header>
-    <section>
-        <div class="container col-12 col-md-12">
-            <div class="search col-12 col-md-8">
-                <div class="partTitle">
-                    <h3>海洋物種圖鑑</h3>
-                </div>
-                <div class="search_bar">
-                    <input type="text" placeholder="搜尋：生物名稱、棲地或保育狀態..." />
-                    <i class="fa-solid fa-magnifying-glass "></i>
-                </div>
-                <div class="hot">
-                    <p>熱門搜索 :</p>
-                    <button type="button">潮間帶</button>
-                    <button type="button">石斑魚</button>
-                    <button type="button">鯨魚</button>
-                </div>
-            </div>
-
-
-            <div class="bioCardList col-12 col-md-12">
-                <input type="radio" id="fishToggle" class="bioCheckedInput" name="bioGroup" hidden>
-                <label for="fishToggle" class="bioChecked col-6 col-md-4">
-                    <div class="bioCard ">
-                        <div class="title">
-                            <h3 class="chTitle">魚類</h3>
-                            <h3 class="enTitle">(Fishes)</h3>
-                        </div>
-                    </div>
-                </label>
-
-                <div class="wholeBio">
-                    <div class="subtitle">
-                        <div class="chTitle"> 魚類</div>
-                        <div class="enTitle">(Fishes)</div>
-                        <div class="txt">具有脊椎、鰓和鰭，是種類最豐富的海洋脊椎動物 </div>
-                    </div>
-                    <div class="content col-12 col-md-12">
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/fish1-1.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>石斑魚</h3>
-                                    </div>
-                                    <div class="tag">#變性大師</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        由數百萬個微小的珊瑚蟲群體組成，是地球上最具生物多樣性的生態系統基石。雖然外觀像植物，但其實是動物。牠們面臨著海洋暖化和白化的巨大威脅。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/shark.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>大白鯊</h3>
-                                    </div>
-                                    <div class="tag">#頂級掠食者</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        海洋中最令人敬畏的掠食者之一，在食物鏈中扮演關鍵的平衡角色。大白鯊是溫暖水域中的長距離遷徙者，雖然強大，但因人類活動而被列為易危物種。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/nemo.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>小丑魚</h3>
-                                    </div>
-                                    <div class="tag">#雌雄同體</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        這種鮮豔的魚類生活在海葵的觸手中，形成著名的共生關係。海葵保護牠們免受掠食者侵害，小丑魚則清潔海葵並帶來養分。牠們是珊瑚礁生態指標。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/tuna.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>鮪魚</h3>
-                                    </div>
-                                    <div class="tag">#遠洋高速</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        鮪魚是海洋中的「溫血運動員」，能夠通過特殊的熱交換系統將游泳肌肉產生的熱量保留在體內，使其在廣闊的海洋中保持高代謝率和高速游泳的能力。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/fish1-1.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>石斑魚</h3>
-                                    </div>
-                                    <div class="tag">#變性大師</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        由數百萬個微小的珊瑚蟲群體組成，是地球上最具生物多樣性的生態系統基石。雖然外觀像植物，但其實是動物。牠們面臨著海洋暖化和白化的巨大威脅。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/shark.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>大白鯊</h3>
-                                    </div>
-                                    <div class="tag">#頂級掠食者</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        海洋中最令人敬畏的掠食者之一，在食物鏈中扮演關鍵的平衡角色。大白鯊是溫暖水域中的長距離遷徙者，雖然強大，但因人類活動而被列為易危物種。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-
-
-                <input type="radio" id="carbToggle" class="bioCheckedInput" name="bioGroup" hidden>
-                <label for="carbToggle" class="bioChecked col-6 col-md-4">
-                    <div class="bioCard ">
-                        <div class="title">
-                            <h3 class="chTitle">甲殼類</h3>
-                            <h3 class="enTitle">(Crustaceans)</h3>
-                        </div>
-                    </div>
-                </label>
-
-                <div class="wholeBio">
-                    <div class="subtitle">
-                        <div class="chTitle"> 魚類</div>
-                        <div class="enTitle">(Fishes)</div>
-                        <div class="txt">具有脊椎、鰓和鰭，是種類最豐富的海洋脊椎動物 </div>
-                    </div>
-                    <div class="content col-12 col-md-12">
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/fish1-1.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>石斑魚</h3>
-                                    </div>
-                                    <div class="tag">#變性大師</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        由數百萬個微小的珊瑚蟲群體組成，是地球上最具生物多樣性的生態系統基石。雖然外觀像植物，但其實是動物。牠們面臨著海洋暖化和白化的巨大威脅。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/shark.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>大白鯊</h3>
-                                    </div>
-                                    <div class="tag">#頂級掠食者</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        海洋中最令人敬畏的掠食者之一，在食物鏈中扮演關鍵的平衡角色。大白鯊是溫暖水域中的長距離遷徙者，雖然強大，但因人類活動而被列為易危物種。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/nemo.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>小丑魚</h3>
-                                    </div>
-                                    <div class="tag">#雌雄同體</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        這種鮮豔的魚類生活在海葵的觸手中，形成著名的共生關係。海葵保護牠們免受掠食者侵害，小丑魚則清潔海葵並帶來養分。牠們是珊瑚礁生態指標。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/tuna.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>鮪魚</h3>
-                                    </div>
-                                    <div class="tag">#遠洋高速</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        鮪魚是海洋中的「溫血運動員」，能夠通過特殊的熱交換系統將游泳肌肉產生的熱量保留在體內，使其在廣闊的海洋中保持高代謝率和高速游泳的能力。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/fish1-1.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>石斑魚</h3>
-                                    </div>
-                                    <div class="tag">#變性大師</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        由數百萬個微小的珊瑚蟲群體組成，是地球上最具生物多樣性的生態系統基石。雖然外觀像植物，但其實是動物。牠們面臨著海洋暖化和白化的巨大威脅。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
-                            <div class="card col-12 col-md-12">
-                                <div class="cardPic col-7 col-md-7">
-                                    <img src="Mockup/shark.png" />
-                                </div>
-                                <div class="cardTopRight  col-5 col-md-5">
-                                    <div class="title ">
-                                        <h3>大白鯊</h3>
-                                    </div>
-                                    <div class="tag">#頂級掠食者</div>
-                                </div>
-                                <div class="txt">
-                                    <p>
-                                        海洋中最令人敬畏的掠食者之一，在食物鏈中扮演關鍵的平衡角色。大白鯊是溫暖水域中的長距離遷徙者，雖然強大，但因人類活動而被列為易危物種。
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-
-
-                <input type="radio" id="cephaToggle" class="bioCheckedInput" name="bioGroup" hidden>
-                <label for="cephaToggle" class="bioChecked col-6 col-md-4">
-                    <div class="bioCard ">
-                        <div class="title">
-                            <h3 class="chTitle">頭足類</h3>
-                            <h3 class="enTitle">(Cephalopods)</h3>
-                        </div>
-                    </div>
-                </label>
-                <div class="wholeBio"> </div>
-
-                <input type="radio" id="shellToggle" class="bioCheckedInput" name="bioGroup" hidden>
-                <label for="shellToggle" class="bioChecked col-6 col-md-4">
-                    <div class="bioCard ">
-                        <div class="title">
-                            <h3 class="chTitle">貝類</h3>
-                            <h3 class="enTitle">(Bivalves)</h3>
-                        </div>
-                    </div>
-                </label>
-                <div class="wholeBio"> </div>
-                
-                <input type="radio" id="echToggle" class="bioCheckedInput" name="bioGroup" hidden>
-                <label for="echToggle" class="bioChecked col-6 col-md-4">
-                    <div class="bioCard ">
-                        <div class="title">
-                            <h3 class="chTitle">棘皮動物</h3>
-                            <h3 class="enTitle">(Echinoderms)</h3>
-                        </div>
-                    </div>
-                </label>
-                <div class="wholeBio"> </div>
-
-
-                <input type="radio" id="mammToggle" class="bioCheckedInput" name="bioGroup" hidden>
-                <label for="mammToggle" class="bioChecked col-6 col-md-4">
-                    <div class="bioCard ">
-                        <div class="title">
-                            <h3 class="chTitle">海洋哺乳類</h3>
-                            <h3 class="enTitle">(Marine Mammals)</h3>
-                        </div>
-                    </div>
-                </label>
-                <div class="wholeBio"> </div>
-
-            </div>
-
-            <div class="moveTurtle">
-                <img src="Mockup/t1.png" alt="">
-            </div>
-            
+        <div class="search_bar">
+          <input type="text" placeholder="搜尋：生物名稱、棲地或保育狀態..." />
+          <i class="fa-solid fa-magnifying-glass "></i>
         </div>
+        <div class="hot">
+          <p>熱門搜索 :</p>
+          <button type="button">潮間帶</button>
+          <button type="button">石斑魚</button>
+          <button type="button">鯨魚</button>
         </div>
-    </section>
+      </div>
 
 
-    <footer>
-        <div class="foot col-12 col-md-12">
-            <div class="footerPageLink col-6 col-md-8 row">
-                <div class="list col-12 col-md-3">
-                    <div class="subTitle">
-                        <p>探索</p>
-                    </div>
-                    <div class="txt">
-                        <a href="https://shih3511.github.io/Project/biology.html">物種圖鑑</a>
-                        <a href="https://shih3511.github.io/Project/habitat.html">棲地生態</a>
-                    </div>
-                </div>
-                <div class="list col-12 col-md-3">
-                    <div class="subTitle">
-                        <p>行動</p>
-                    </div>
-                    <div class="txt">
-                        <a href="https://shih3511.github.io/Project/action.html">全球守護</a>
-                        <a href="https://shih3511.github.io/Project/resource.html">資源中心</a>
-                    </div>
-                </div>
-                <div class="list col-12 col-md-3">
-                    <div class="subTitle">
-                        <p>關於</p>
-                    </div>
-                    <div class="txt">
-                        <a href="https://shih3511.github.io/Project/about.html">關於我們</a>
-                    </div>
-                </div>
+      <div class="bioCardList col-12 col-md-12">
+        <input type="radio" id="fishToggle" class="bioCheckedInput" name="bioGroup" hidden>
+        <label for="fishToggle" class="bioChecked col-6 col-md-4">
+          <div class="bioCard ">
+            <div class="title">
+              <h3 class="chTitle">魚類</h3>
+              <h3 class="enTitle">(Fishes)</h3>
             </div>
+          </div>
+        </label>
 
-            <div class="socialLink col-5 col-md-3">
-                <div class="logo">
-                    <a href="https://shih3511.github.io/Project/">
-                        <img src="Mockup/logoUpdown.svg" alt="" width="100px">
-                    </a>
+        <div class="wholeBio">
+          <div class="subtitle">
+            <div class="chTitle"> 魚類</div>
+            <div class="enTitle">(Fishes)</div>
+            <div class="txt">具有脊椎、鰓和鰭，是種類最豐富的海洋脊椎動物 </div>
+          </div>
+          <div class="content col-12 col-md-12">
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/fish1-1.png" />
                 </div>
-                <div class="socialMedia">
-                    <a href="#">
-                        <i class="fa-brands fa-twitter fa-2xl"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-youtube fa-2xl"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-square-threads fa-2xl"></i>
-                    </a>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>石斑魚</h3>
+                  </div>
+                  <div class="tag">#變性大師</div>
                 </div>
-            </div>
+                <div class="txt">
+                  <p>
+                    由數百萬個微小的珊瑚蟲群體組成，是地球上最具生物多樣性的生態系統基石。雖然外觀像植物，但其實是動物。牠們面臨著海洋暖化和白化的巨大威脅。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/shark.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>大白鯊</h3>
+                  </div>
+                  <div class="tag">#頂級掠食者</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    海洋中最令人敬畏的掠食者之一，在食物鏈中扮演關鍵的平衡角色。大白鯊是溫暖水域中的長距離遷徙者，雖然強大，但因人類活動而被列為易危物種。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/nemo.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>小丑魚</h3>
+                  </div>
+                  <div class="tag">#雌雄同體</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    這種鮮豔的魚類生活在海葵的觸手中，形成著名的共生關係。海葵保護牠們免受掠食者侵害，小丑魚則清潔海葵並帶來養分。牠們是珊瑚礁生態指標。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/tuna.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>鮪魚</h3>
+                  </div>
+                  <div class="tag">#遠洋高速</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    鮪魚是海洋中的「溫血運動員」，能夠通過特殊的熱交換系統將游泳肌肉產生的熱量保留在體內，使其在廣闊的海洋中保持高代謝率和高速游泳的能力。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/fish1-1.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>蝠鱝</h3>
+                  </div>
+                  <div class="tag">#海洋紳士</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    蝠鱝是體型最大的魟魚，主要以浮游生物為食。牠們溫順優雅，在水中滑翔的姿態如同飛翔。牠們的「頭鰭」用來引導食物進入口中。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/shark.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>海馬</h3>
+                  </div>
+                  <div class="tag">#雄性育兒</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    海馬是唯一由雄性懷孕和分娩後代的魚類。牠們的身體結構獨特，垂直游泳，並使用捲曲的尾巴抓住海草或珊瑚來固定自己。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+          </div>
         </div>
-    </footer>
+
+
+        <input type="radio" id="carbToggle" class="bioCheckedInput" name="bioGroup" hidden>
+        <label for="carbToggle" class="bioChecked col-6 col-md-4">
+          <div class="bioCard ">
+            <div class="title">
+              <h3 class="chTitle">甲殼類</h3>
+              <h3 class="enTitle">(Crustaceans)</h3>
+            </div>
+          </div>
+        </label>
+
+        <div class="wholeBio">
+          <div class="subtitle">
+            <div class="chTitle"> 甲殼類 </div>
+            <div class="enTitle">(Crustaceans)</div>
+            <div class="txt">是由非常大的一組的節肢動物門形成的，通常被當作是一個亞門，例如螃蟹、蝦等等。 </div>
+          </div>
+          <div class="content col-12 col-md-12">
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/fish1-1.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>蝦 </h3>
+                  </div>
+                  <div class="tag">#清潔工</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    蝦是小型甲殼類動物，許多種類在珊瑚礁中扮演「清潔工」的角色，幫助魚類清除寄生蟲。牠們通常成群生活，是許多海洋生物的重要食物來源。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/shark.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>帝王蟹</h3>
+                  </div>
+                  <div class="tag">#深海冷水</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    帝王蟹因其巨大的體型和長長的腳而得名。牠們通常生活在寒冷的深海或大陸架上，是極具經濟價值的甲殼類。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/nemo.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>寄居蟹 </h3>
+                  </div>
+                  <div class="tag">#螺殼共生</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    寄居蟹不會自己長出堅硬的殼，而是尋找廢棄的螺殼來保護柔軟的腹部。隨著成長，牠們必須不斷尋找更大、更合適的「新家」。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/tuna.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>美國龍蝦 </h3>
+                  </div>
+                  <div class="tag">#硬殼保護</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    美國龍蝦是夜行性底棲動物，以其強大的螯肢和持續生長的能力聞名。牠們必須透過蛻殼來增大體型，理論上不會因衰老而死亡。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/fish1-1.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>椰子蟹 </h3>
+                  </div>
+                  <div class="tag">#強力攀爬</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    椰子蟹是世界上最大的陸生節肢動物，雖然生活在陸地上，但仍屬於寄居蟹的親戚。牠們的螯肢力量強大，能輕鬆打開椰子殼，並擅長爬樹。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/shark.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>藤壺</h3>
+                  </div>
+                  <div class="tag">#固著生活</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    藤壺是一種在成長過程中固著於岩石或船體上的甲殼類動物。牠們使用特化的腿部（蔓足）過濾水中的食物，是典型的濾食性生物。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+
+        <input type="radio" id="cephaToggle" class="bioCheckedInput" name="bioGroup" hidden>
+        <label for="cephaToggle" class="bioChecked col-6 col-md-4">
+          <div class="bioCard ">
+            <div class="title">
+              <h3 class="chTitle">頭足類</h3>
+              <h3 class="enTitle">(Cephalopods)</h3>
+            </div>
+          </div>
+        </label>
+
+        <div class="wholeBio">
+          <div class="subtitle">
+            <div class="chTitle"> 頭足類  </div>
+            <div class="enTitle">(Cephalopods)</div>
+            <div class="txt">頭足綱動物全部為海生，肉食性，身體兩側對稱，分頭、足、軀幹三部分。</div>
+          </div>
+          <div class="content col-12 col-md-12">
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/fish1-1.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>大王烏賊 </h3>
+                  </div>
+                  <div class="tag">#深海巨獸</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    大王烏賊是世界上最大的無脊椎動物之一，生活在深海中，身長可達13米以上。牠們的眼睛是動物界中最大的，對深海昏暗的光線有極高的適應性。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/shark.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>鸚鵡螺</h3>
+                  </div>
+                  <div class="tag">#活化石</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    鸚鵡螺被稱為「活化石」，因為牠們的外形在數億年間幾乎沒有變化。牠們的外殼具有多個氣室，通過調節氣體和液體的比例來控制浮力。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/nemo.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>太平洋巨型章魚 </h3>
+                  </div>
+                  <div class="tag">#偽裝大師</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    太平洋巨型章魚是世界上最大的章魚，擁有驚人的智商和解決問題的能力。牠們能通過改變皮膚顏色和紋理，達到近乎完美的偽裝。生命週期通常短暫但複雜。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/tuna.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>烏賊 </h3>
+                  </div>
+                  <div class="tag">#變色專家</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    烏賊以其令人難以置信的快速變色能力而著稱，用於偽裝、交流和求偶。牠們體內有獨特的骨質結構「海螵蛸」，用於調節浮力。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/fish1-1.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>紋狀章魚 </h3>
+                  </div>
+                  <div class="tag">#模仿高手</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    這種章魚是最近才被發現的物種，以其複雜的模仿行為聞名。牠們可以在沙質底部模仿其他有毒生物（如海蛇或蓑鲉）。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://shih3511.github.io/Project/fish.html" class="card-link col-10 col-md-4">
+              <div class="card col-12 col-md-12">
+                <div class="cardPic col-7 col-md-7">
+                  <img src="Mockup/shark.png" />
+                </div>
+                <div class="cardTopRight  col-5 col-md-5">
+                  <div class="title ">
+                    <h3>吸血鬼烏賊</h3>
+                  </div>
+                  <div class="tag">#傘狀腕足</div>
+                </div>
+                <div class="txt">
+                  <p>
+                    吸血鬼烏賊生活在極深的海洋中，那裡的氧氣含量極低。牠們有八條腕足，其間由一層蹼連接，形狀像斗篷，使其看起來像吸血鬼。
+                  </p>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <input type="radio" id="shellToggle" class="bioCheckedInput" name="bioGroup" hidden>
+        <label for="shellToggle" class="bioChecked col-6 col-md-4">
+          <div class="bioCard ">
+            <div class="title">
+              <h3 class="chTitle">貝類</h3>
+              <h3 class="enTitle">(Bivalves)</h3>
+            </div>
+          </div>
+        </label>
+        <div class="wholeBio"> </div>
+
+        <input type="radio" id="echToggle" class="bioCheckedInput" name="bioGroup" hidden>
+        <label for="echToggle" class="bioChecked col-6 col-md-4">
+          <div class="bioCard ">
+            <div class="title">
+              <h3 class="chTitle">棘皮動物</h3>
+              <h3 class="enTitle">(Echinoderms)</h3>
+            </div>
+          </div>
+        </label>
+        <div class="wholeBio"> </div>
+
+
+        <input type="radio" id="mammToggle" class="bioCheckedInput" name="bioGroup" hidden>
+        <label for="mammToggle" class="bioChecked col-6 col-md-4">
+          <div class="bioCard ">
+            <div class="title">
+              <h3 class="chTitle">海洋哺乳類</h3>
+              <h3 class="enTitle">(Marine Mammals)</h3>
+            </div>
+          </div>
+        </label>
+        <div class="wholeBio"> </div>
+
+      </div>
+
+      <div class="moveTurtle">
+        <img src="Mockup/t1.png" alt="">
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="foot col-12 col-md-12">
+      <div class="footerPageLink col-6 col-md-8 row">
+        <div class="list col-12 col-md-3">
+          <div class="subTitle">
+            <p>探索</p>
+          </div>
+          <div class="txt">
+            <a href="https://shih3511.github.io/Project/biology.html">物種圖鑑</a>
+            <a href="https://shih3511.github.io/Project/habitat.html">棲地生態</a>
+          </div>
+        </div>
+        <div class="list col-12 col-md-3">
+          <div class="subTitle">
+            <p>行動</p>
+          </div>
+          <div class="txt">
+            <a href="https://shih3511.github.io/Project/action.html">全球守護</a>
+            <a href="https://shih3511.github.io/Project/resource.html">資源中心</a>
+          </div>
+        </div>
+        <div class="list col-12 col-md-3">
+          <div class="subTitle">
+            <p>關於</p>
+          </div>
+          <div class="txt">
+            <a href="https://shih3511.github.io/Project/about.html">關於我們</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="socialLink col-5 col-md-3">
+        <div class="logo">
+          <a href="https://shih3511.github.io/Project/">
+            <img src="Mockup/logoUpdown.svg" alt="" width="100px">
+          </a>
+        </div>
+        <div class="socialMedia">
+          <a href="#">
+            <i class="fa-brands fa-twitter fa-2xl"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-square-facebook fa-2xl"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-youtube fa-2xl"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-square-threads fa-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
