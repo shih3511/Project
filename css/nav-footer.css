@@ -29,6 +29,7 @@ a {
         text-decoration: none;
         display: block;
         margin: 0 auto;
+        color: var(--color-primary);
     }
 
 /* -------------------nav--------------------- */
@@ -137,7 +138,6 @@ a {
 
     .main-menu a {
         z-index: 99;
-        color: var(--color-text-dark);
         display: block;
         position: relative;
         text-decoration: none;
@@ -268,8 +268,6 @@ footer
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    color: #001f3fdd;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -297,7 +295,6 @@ footer
         }
 
         a {
-            display: block;
             margin: 15px 0;
         }
     }

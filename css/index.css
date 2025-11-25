@@ -1,17 +1,3 @@
-:root {
-    --color-primary: #330fba;
-    /* 主要強調色 (深藍/紫色) */
-    --color-accent: #ff6f61;
-    /* 次要強調色/危險色 (橙紅) */
-    --color-text-dark: #001f3f;
-    --color-background-light: #f5f5f5;
-    --color-white: #ffffff;
-    --color-lifhtBlue: #78B6CE;
-    --color-gray: #C5C2C2;
-}
-
-
-
 /* -------------------hero--------------------- */
 .hero {
     /* margin-top: 80px; */
@@ -32,7 +18,6 @@
     grid-column: 1/4;
     background: #150a4250 no-repeat top center;
     background-size: cover;
-    /* mask: url(Mockup/Rectangle\ 15.png) no-repeat center center; */
 }
 
 .hero .maintitle {
@@ -109,7 +94,7 @@
 .search .hot {
     display: flex;
     margin-top: 1rem;
-    color: #f6fffe;
+    color: var(--color-white);
 }
 
 .search .hot p {
@@ -119,8 +104,8 @@
 .search .hot button {
     padding: 0 5px;
     border: 0;
-    background-color: #78b6ce;
-    color: #f6fffe;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 2px;
     transition: all 0.5s ease;
@@ -149,6 +134,7 @@ button {
     text-transform: uppercase;
     font-size: 1rem;
     transition: all 0.5s ease;
+    color: #013569;
 }
 
 .news button {
@@ -158,7 +144,7 @@ button {
 }
 
 button:hover {
-    background-color: hsl(261deg 80% 48%);
+    background-color: #013569;
     color: hsl(0, 0%, 100%);
     /* box-shadow: rgb(93 24 220) 0px 7px 29px 0px; */
 }
@@ -225,47 +211,129 @@ button:hover {
     top: -2%;
 }
 
-.about .pic {
-    /* box-shadow: none; */
+@keyframes floatTurtle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        /* 向上浮動並稍微旋轉 */
+        transform: translateY(-15px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
+
+@keyframes floatWhale {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        /* 向上浮動並稍微旋轉 */
+        transform: translateY(-25px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.about .pic.turtle {
+    opacity: 0;
+    transform: translateX(-50px);
+    /* 向左偏移 */
+    transition: all1.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* 鯨魚：初始位置在右邊外面一點，透明度 0 */
+.about .pic.whale {
+    opacity: 0;
+    transform: translateX(50px);
+    /* 向右偏移 */
+    transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition-delay: 0.3s;
+    /* 比海龜慢一點點進場 */
+}
+
+/* --- 設定圖片持續浮動效果 --- */
+
+.about .pic.turtle img {
+    animation: floatTurtle 6s ease-in-out infinite;
+}
+
+.about .pic.whale img {
+    animation: floatWhale 8s ease-in-out infinite;
+    /* 鯨魚動得比較慢 */
+}
+
+
+/* --- 當 JavaScript 加上 .active class 時的狀態 (進場後) --- */
+
+.about .pic.turtle.active,
+.about .pic.whale.active {
+    opacity: 1;
+    transform: translateX(0);
+    /* 回到原本 CSS 設定的定位點 */
+}
+
 
 @media screen and (min-width: 768px) {
 
     .about {
 
         .container {
-            padding: 4.5rem 15.625%;
-
             .content {
                 margin: 2rem 0 5rem;
             }
         }
 
         .partTitle {
-            padding: 0 1rem;
+            text-align: center;
         }
 
         .txt {
-            margin: 2rem 1rem;
+            margin: 1rem 1rem 2rem;
             padding: 1rem;
         }
 
         .whale {
-            width: 40%;
+            width: 60%;
             z-index: 10;
             bottom: 0%;
-            right: 2%;
+            right: 0%;
         }
 
         .turtle {
-            width: 30%;
+            width: 45%;
             z-index: 10;
-            left: 1%;
-            top: 5.5%;
+            left: -5%;
+            top: -5%;
+
         }
     }
 }
 
+@media screen and (min-width: 1024px) {
+
+    .about {
+        .whale {
+            width: 45%;
+            z-index: 10;
+            bottom: -5%;
+            right: 2%;
+        }
+
+        .turtle {
+            width: 35%;
+            z-index: 10;
+            left: 1%;
+            top: 5.8%;
+        }
+    }
+}
 
 /* --------------Challenge ----------------- */
 .challenge {
@@ -280,7 +348,6 @@ button:hover {
                 margin-bottom: 30px;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
                 padding-bottom: 15px;
 
                 .newsDate {
@@ -334,6 +401,7 @@ button:hover {
             display: none;
         }
 
+        /* ===== 設定 dangerous 的 顏色 =====*/
         .dangerous {
             margin-bottom: 50px;
             border: 3px solid var(--color-accent);
@@ -348,6 +416,7 @@ button:hover {
                 }
             }
 
+            /* ===== 設定 dangerous button 的 顏色 =====*/
             button {
                 border: 3px solid var(--color-accent);
             }
@@ -391,6 +460,7 @@ button:hover {
     .challenge {
         .container {
             .news {
+
                 .part {
                     display: flex;
                     flex-direction: row;
