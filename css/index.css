@@ -197,7 +197,7 @@ button:hover {
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
     align-content: space-around;
 
 }
@@ -232,19 +232,21 @@ button:hover {
 @media screen and (min-width: 768px) {
 
     .about {
-        
-        .container{
-            padding: 4.5rem 15.625% ;
-            .content{
+
+        .container {
+            padding: 4.5rem 15.625%;
+
+            .content {
                 margin: 2rem 0 5rem;
             }
         }
+
         .partTitle {
             padding: 0 1rem;
         }
 
         .txt {
-            margin:2rem 1rem;
+            margin: 2rem 1rem;
             padding: 1rem;
         }
 
@@ -284,6 +286,20 @@ button:hover {
                 .newsDate {
                     text-align: right;
                 }
+            }
+
+            .txt {
+                /* 避免干擾行數的顯示 */
+                padding: 0;
+                margin: 20px 20px 20px 0;
+                /* --- 設定預設狀態：只顯示 8 行 --- */
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 8;
+                /*  設定 Box 的排列方向為垂直 (這樣才能算行數) */
+                -webkit-box-orient: vertical;
+                /* (選用) 修正文字被截斷的視覺效果，確保不會只顯示半行 */
+                text-overflow: ellipsis;
             }
 
             .part {
@@ -349,6 +365,14 @@ button:hover {
 
         .news.expanded .whole {
             display: block;
+        }
+
+        .news.expanded .txt {
+            /* 取消行數限制 */
+            -webkit-line-clamp: unset;
+
+            /* 顯示溢出的內容 */
+            overflow: visible;
         }
 
         .news button {
@@ -453,5 +477,5 @@ button:hover {
         flex-direction: row;
     }
 
-    
+
 }

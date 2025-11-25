@@ -56,8 +56,6 @@
     padding: .5rem;
     letter-spacing: normal;
     align-items: anchor-center;
-
-
 }
 
 .info .pTitle {
@@ -104,24 +102,22 @@
 .bgim {
     position: absolute;
     z-index: -1;
-    width: 60%;
+    width: 45%;
     top: -4%;
-    left: 55%;
+    left: 60%;
 }
 
 .bgim img {
     width: 100%;
 }
 
-/* ---------推薦生物-----------------*/
+/* ---------  推薦生物 -----------------*/
 
 .subtitle {
     text-align: center;
     padding: 1rem 0;
 }
-
-
-
+/* ============   RWD   ============   RWD   ============   RWD   ============ */
 @media screen and (min-width: 768px) {
 
     /* =====背景色塊定位*/
@@ -139,7 +135,6 @@
     /* ======= 右邊 文字內容  ========= */
     .top .content {
         padding-left: 1.5rem;
-        margin: auto 0;
     }
 
     /* --------     背景圖片定位點     ----------- */
@@ -149,12 +144,15 @@
 
     /* --------     背景圖片coral 定位     ----------- */
     .bgim {
-        position: absolute;
-        z-index: -1;
-        width: 50%;
-        bottom: 59.5%;
-        left: 65%;
+        width: 32%;
+        top: -28%;
+        left: 72%;
     }
-
-
+}
+@media screen and (min-width: 1024px){
+    .bgim {
+        width: 36%;
+        top: -40%;
+        left: 68%;
+    }
 }

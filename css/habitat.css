@@ -30,6 +30,9 @@
         align-items: center;
 
         .content {
+            .subtitle{
+                margin: 15px 0;
+            }
             .txt {
                 /* ======= 顯眼的顏色，避免被背景色吃掉 ========= */
                 color: var(--color-background-light);
@@ -51,7 +54,6 @@
 
 .habiTat a:nth-child(2n+1) .habitat .content {
     color: var(--color-text-dark);
-    margin-left: 2rem;
 }
 
 .habiTat a:nth-child(2n+1) .habitat .txt {
@@ -72,4 +74,7 @@
     .habiTat a:nth-child(2n+1) .habitat {
         flex-direction: row-reverse;
     }
+    .habiTat a:nth-child(2n+1) .habitat .content {
+    margin-left: 2rem;
+}
 }
