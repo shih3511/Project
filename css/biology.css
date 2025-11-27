@@ -178,6 +178,24 @@ button:hover {
     /* 加入手型游標提示可點擊 */
 }
 
+.bioCard:hover {
+    background-size: 65%;
+}
+
+
+
+/* ---------- 重點：PC 版卡片排序邏輯 ---------- */
+    /* 這裡利用 Flexbox 的 order 屬性重新洗牌 */
+
+    /* 邏輯說明：
+        - 第一排是前 2 個 label (Order 1)
+        - 第一排內容是前 2 個 wholeBio (Order 2) -> 設為 100% 寬度強迫換行
+        - 第二排是後續3.4的 label (Order 3)
+        - 第二排內容是後續3.4的 wholeBio (Order 4)
+        - 第三排是後續的 label (Order 5)
+        - 第三排內容是後續的 wholeBio (Order 6)
+    */
+
 label:nth-of-type(2) .bioCard {
     background-image: url(../Mockup/bio-crab.svg);
 }
@@ -298,31 +316,6 @@ label:nth-of-type(2n) .bioCard{
     .moveTurtle img {
         width: 100%;
     }
-
-    /* @keyframes slide-diag {
-    
-    0% {
-        bottom: 40%;
-        left: 50%;
-        
-    }
-    50% {
-        bottom: 60%;
-        right: 20%;
-        
-    }
-
-    100% {
-         /* 將圖片定位在右上角 *//*
-    top: 0;
-        right: 0;
-        
-        left: auto;
-        bottom: auto;
-    }
-    
-} */
-
 
 
 
