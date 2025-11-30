@@ -158,7 +158,73 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // ==========================================
+    // 功能五：Chart.js 圓餅圖 (Coral 頁面專用)
+    // ==========================================
 
+    // 檢查頁面上是否有這些元素，避免在其他頁面報錯
+    const coralChart1 = document.getElementById('chartCoralArea');
+    const coralChart2 = document.getElementById('chartCoralHome');
+    
+    // 如果找到了這些畫布，才執行 Chart.js
+    if (coralChart1 && coralChart2) {
+        
+        // 定義共用設定
+        const commonOptions = {
+            cutout: '75%', // 甜甜圈厚度 (越大越細)
+            animation: { duration: 2000, easing: 'easeOutQuart' },
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false }
+            }
+        };
+
+        // 1. 建立第一個圖表 (全球海洋面積 < 1%)
+        // 使用 IntersectionObserver 確保滑到了才開始跑動畫
+        const coralObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    
+                    // 產生圖表 1
+                    new Chart(coralChart1, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['海洋面積', '其他'],
+                            datasets: [{
+                                data: [1, 99],
+                                backgroundColor: ['#00478F', '#e0e0e0'], // 深藍 vs 灰
+                                borderWidth: 0
+                            }]
+                        },
+                        options: commonOptions
+                    });
+
+                    // 產生圖表 2 (生物家園 > 25%)
+                    new Chart(coralChart2, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['生物家園', '其他'],
+                            datasets: [{
+                                data: [25, 75],
+                                backgroundColor: ['#ff6f61', '#e0e0e0'], // 珊瑚紅 vs 灰
+                                borderWidth: 0
+                            }]
+                        },
+                        options: commonOptions
+                    });
+
+                    // 任務完成，停止觀察
+                    coralObserver.disconnect(); 
+                }
+            });
+        }, { threshold: 0.5 }); // 看到 50% 時觸發
+
+        // 開始監視包含圖表的容器 (選取 .stats-container)
+        const statsContainer = document.querySelector('.stats-container');
+        if (statsContainer) {
+            coralObserver.observe(statsContainer);
+        }
+    }
 });
 
 

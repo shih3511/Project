@@ -28,11 +28,13 @@
         border-radius: 10px;
         color: #f5f5f5;
         align-items: center;
+        transition: all .5s ease-in;
 
         .content {
-            .subtitle{
+            .subtitle {
                 margin: 15px 0;
             }
+
             .txt {
                 /* ======= 顯眼的顏色，避免被背景色吃掉 ========= */
                 color: var(--color-background-light);
@@ -42,8 +44,23 @@
                 font-weight: 500;
                 padding-bottom: 0px;
             }
+
+            .pic {
+                transition: all 0.5s ease;
+            }
         }
     }
+
+    .habitat:hover {
+        box-shadow: 0 15px 30px rgba(0, 71, 143, 0.2);
+        background-color: rgb(142, 173, 205);
+    }
+    
+}
+
+/* 淺灰色卡片 Hover */
+.habiTat a:nth-child(2n+1) .habitat:hover {
+    background-color: #b0b0b0; /* 稍微變深一點的灰色 */
 }
 
 /* ======= 第二跟第四個 字的顏色改變========= */
@@ -63,9 +80,9 @@
 /* ======= 第二跟第四個 的左右排序相反 ========= */
 @media screen and (min-width: 768px) {
     .txt.txtTitle {
-                font-weight: 500;
-                padding-bottom: 0px;
-            }
+        font-weight: 500;
+        padding-bottom: 0px;
+    }
 
     .habiTat a .habitat {
         flex-direction: row;
@@ -74,7 +91,8 @@
     .habiTat a:nth-child(2n+1) .habitat {
         flex-direction: row-reverse;
     }
+
     .habiTat a:nth-child(2n+1) .habitat .content {
-    margin-left: 2rem;
-}
+        margin-left: 2rem;
+    }
 }

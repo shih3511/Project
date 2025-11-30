@@ -102,3 +102,91 @@
         }
     }
 }
+
+
+
+/* =========================================
+   圓餅圖專用樣式 (左右並排 + 上下凸顯版)
+   ========================================= */
+
+/* 1. 整體容器：維持直向排列 (上 -> 箭頭 -> 下) */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 上下區塊的間距 */
+    padding: 1rem 0;
+    width: 100%;
+}
+
+/* 2. 個別圖表區塊：改為「橫向」排列 (圖在左，文在右) */
+.chart-box {
+    display: flex;            /* 讓內部的 Canvas 和 p 並排 */
+    flex-direction: row;      /* 橫向 */
+    align-items: center;      /* 垂直置中 */
+    justify-content: center;  /* 水平置中 */
+    gap: 15px;                /*圖與文的距離 */
+    
+    width: 100%;              /* 佔滿寬度 */
+    max-width: 350px;         /* 限制最大寬度，避免分太開 */
+    transition: all 0.3s ease;
+}
+
+/* 3. 圖表包覆層 (Chart.js) */
+.chart-wrapper {
+    position: relative;
+    flex-shrink: 0; /* 防止圖表被文字擠壓變形 */
+}
+
+/* --- 上方區塊 (1%) --- */
+.small-box .chart-wrapper {
+    width: 70px;
+    height: 70px;
+}
+.small-box .center-text {
+    font-size: 0.9rem;
+    color: #888;
+}
+/* 上方文字 */
+.small-box p.desc {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: left; /* 改為靠左對齊 */
+    line-height: 1.4;
+    margin: 0;        /* 移除原本的上方間距 */
+}
+
+
+/* --- 下方區塊 (25%) 強調 --- */
+.highlight-box .chart-wrapper {
+    width: 100px; /* 圖表放大 */
+    height: 100px;
+}
+.highlight-box .center-text {
+    font-size: 1.4rem;
+    color: #ff6f61; /* 數字變紅 */
+}
+/* 下方文字 (強調) */
+.highlight-box p.desc {
+    font-size: 1.1rem;
+    color: #001f3f;   /* 深藍色強調 */
+    text-align: left; /* 改為靠左對齊 */
+    line-height: 1.4;
+    margin: 0;
+}
+.highlight-box p.desc strong {
+    color: #ff6f61;
+    font-size: 1.6rem; /* 數字再放大 */
+}
+
+
+/* Chart.js 內部文字定位 (維持不變) */
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    pointer-events: none;
+}
