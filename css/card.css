@@ -12,7 +12,7 @@
 
 /* ========  卡片  =======*/
 .card-link {
-    padding: 0 8px;
+    padding: 3px 8px;
 }
 
 .card {
@@ -23,7 +23,7 @@
     opacity: 0;
     transform:perspective(10000px) rotateY(90deg) translateY(50px);
     transform-origin: center center;
-    transition: all .8s  ease-out;
+    transition: all 1s  ease-out;
     
     display: flex;
     flex-wrap: wrap;
@@ -85,20 +85,8 @@
         -webkit-box-orient: vertical;
     }
 }
-/* .bioList .card-link:nth-child(2) .card{
-    transition: all .8s .2s ease-out;
-}
-.bioList .card-link:nth-child(3) .card{
-    transition: all .8s .4s ease-out;
-}
 
-.bioList .card-link:nth-child(5) .card{
-    transition: all .8s .2s ease-out;
-}
-.bioList .card-link:nth-child(6) .card{
-    transition: all .8s .4s ease-out;
-} */
-.card.visible {
+.card-link .card.visible {
     opacity: 1;
     /* 回復原狀：
     rotateY(0deg): 轉回正面
@@ -117,9 +105,12 @@
             }
 
             .tag {
-                bottom: 11%;
-                left: 42%;
+                bottom: 13%;
+                left: 10%;
             }
+        }
+        .txt {
+            bottom: 0%;
         }
 
     }
@@ -147,13 +138,14 @@
             margin: 0 -2px;
 
             .tag {
-                bottom: 5%;
-                left: 15%;
+                bottom: 7%;
+                left: 0%;
             }
         }
 
         .txt {
             transition: all .5s ease;
+            bottom: -5%;
         }
 
     }
@@ -225,7 +217,6 @@
             .card {
                 margin: .5rem 0;
                 flex-wrap: nowrap;
-                transition: all .5s;
 
                 .cardPic {
                     margin: 0;
@@ -240,7 +231,7 @@
                     }
 
                     .tag {
-                        bottom: 22%;
+                        bottom: 14%;
                         left: 17%;
                         padding: 0;
                     }
@@ -262,7 +253,7 @@
                 .card {
                     .cardTopRight {
                         .tag {
-                            bottom: 22%;
+                            bottom: 14%;
                             left: 8%;
                             padding: 0;
                         }

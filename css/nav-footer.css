@@ -24,13 +24,14 @@ body {
     --font-size-title-desktop: 48px;
     --font-size-title-mobile: 36px;
 }
+
 a {
-        transition: none;
-        text-decoration: none;
-        display: block;
-        margin: 0 auto;
-        color: var(--color-primary);
-    }
+    transition: none;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    color: var(--color-primary);
+}
 
 /* -------------------nav--------------------- */
 .main-header {
@@ -45,7 +46,8 @@ a {
     padding: 5px 10px;
 
 }
-.logo{
+
+.logo {
     display: flex;
 }
 
@@ -193,6 +195,7 @@ container
     padding: 5rem 5%;
     /* width: 100%; */
 }
+
 /* 2. 平板 / 小筆電 (Tablet, >= 768px)
    目標：增加呼吸感，但不要壓縮太多內容 */
 @media screen and (min-width: 768px) {
@@ -203,9 +206,10 @@ container
         /* width: 100%; */
     }
 }
+
 /* 3. 桌機 / 大螢幕 (Desktop, >= 1024px)
    目標：集中視覺焦點，避免單行文字過長 */
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .container {
         margin: 0;
         padding: 4.5rem 15.625% 2rem;
@@ -222,7 +226,7 @@ footer
 .foot {
     display: flex;
     background-color: #EDF5FF;
-    padding: 0 5%;
+    padding: 5%;
     justify-content: space-between;
 }
 
@@ -236,16 +240,18 @@ footer
         margin: 10px;
         padding: 10px;
     }
+}
 
-    a {
-        color: inherit;
-    }
+.txt a:hover {
+    text-decoration-line: underline;
+    border-radius: 2px solid var(--color-primary);
 }
 
 .socialLink {
     margin: auto;
 }
-.socialLink .logo{
+
+.socialLink .logo {
     padding: 0;
 }
 
@@ -281,9 +287,12 @@ footer
 }
 
 @media screen and (min-width: 768px) {
+    .foot {
+        padding: 3%;
+    }
+
     .footerPageLink {
         display: flex;
-        justify-content: space-around;
 
         .list {
             margin: 0 20px;
@@ -408,6 +417,6 @@ footer
         grid-column: 2/3;
     }
 
-    
+
 
 }

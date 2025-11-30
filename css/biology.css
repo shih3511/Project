@@ -1,101 +1,101 @@
 :root {
-    --color-primary: #00478F;
-    /* 主要強調色 (深藍/紫色) */
-    --color-accent: #ff6f61;
-    /* 次要強調色/危險色 (橙紅) */
-    --color-text-dark: #001f3f;
-    --color-background-light: #f5f5f5;
-    --color-white: #ffffff;
-    --color-lightBlue: #78B6CE;
-    --color-gray: #C5C2C2;
-    /* --color-border-light: #eee; */
-    --spacing-medium: 30px;
-    --spacing-large: 50px;
-    --font-size-title-desktop: 48px;
-    --font-size-title-mobile: 36px;
+  --color-primary: #00478F;
+  /* 主要強調色 (深藍/紫色) */
+  --color-accent: #ff6f61;
+  /* 次要強調色/危險色 (橙紅) */
+  --color-text-dark: #001f3f;
+  --color-background-light: #f5f5f5;
+  --color-white: #ffffff;
+  --color-lightBlue: #78B6CE;
+  --color-gray: #C5C2C2;
+  /* --color-border-light: #eee; */
+  --spacing-medium: 30px;
+  --spacing-large: 50px;
+  --font-size-title-desktop: 48px;
+  --font-size-title-mobile: 36px;
 }
 
 
 .container {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* -------------------         search         --------------------- */
 
 
 .search {
-    display: inline-block;
-    flex-wrap: wrap;
-    grid-row: 4/5;
-    grid-column: 1/4;
-    margin: 2rem 0;
-    /* 拉大距離 */
-    position: relative;
-    /* 讓i標籤可以定位 */
+  display: inline-block;
+  flex-wrap: wrap;
+  grid-row: 4/5;
+  grid-column: 1/4;
+  margin: 2rem 0;
+  /* 拉大距離 */
+  position: relative;
+  /* 讓i標籤可以定位 */
 }
 
 .search .search_bar input {
-    text-indent: 23px;
-    background-image: url('');
-    width: 100%;
-    border: 3px solid #0f52ba;
-    border-radius: 40px;
-    padding: 5px;
+  text-indent: 23px;
+  background-image: url('');
+  width: 100%;
+  border: 3px solid #0f52ba;
+  border-radius: 40px;
+  padding: 5px;
 }
 
 i {
-    width: 50px;
-    color: var(--color-text-dark);
+  width: 50px;
+  color: var(--color-text-dark);
 }
 
 .search_bar i {
-    position: absolute;
-    left: 10px;
-    /* 調整水平位置 */
-    top: 50%;
-    /* 垂直居中 */
-    transform: translateY(-50%);
-    /* 垂直置中微調 */
-    color: var(--color-gray);
+  position: absolute;
+  left: 10px;
+  /* 調整水平位置 */
+  top: 50%;
+  /* 垂直居中 */
+  transform: translateY(-50%);
+  /* 垂直置中微調 */
+  color: var(--color-gray);
 }
 
 .search_bar {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 .search_bar a {
-    text-decoration: none;
-    right: 30px;
-    top: 3px;
-    position: relative;
+  text-decoration: none;
+  right: 30px;
+  top: 3px;
+  position: relative;
 }
 
 .search .hot {
-    display: flex;
-    margin-top: 1rem;
-    color: var(--color-text-dark);
+  display: flex;
+  margin-top: 1rem;
+  color: var(--color-text-dark);
 }
 
 .search .hot p {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .search .hot button {
-    padding: 0 10px;
-    border: 0;
-    background-color: #78b6ce;
-    color: #f6fffe;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 0;
-    transition: all 0.5s ease;
-    margin: 0 1%;
-    text-align: center;
+  padding: 0 10px;
+  border: 0;
+  background-color: #78b6ce;
+  color: #f6fffe;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 0;
+  transition: all 0.5s ease;
+  margin: 0 1%;
+  text-align: center;
 }
 
 .search .hot button:hover {
-    background-color: #0f52ba;
-    box-shadow: inset;
+  background-color: #0f52ba;
+  box-shadow: inset;
 }
 
 /* =========================================
@@ -103,38 +103,38 @@ i {
    ========================================= */
 
 button {
-    border-radius: 40px;
-    cursor: pointer;
-    border: 3px solid var(--color-primary);
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 1rem;
-    transition: all 0.5s ease;
+  border-radius: 40px;
+  cursor: pointer;
+  border: 3px solid var(--color-primary);
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all 0.5s ease;
 }
 
 button:hover {
-    background-color: hsl(261deg 80% 48%);
-    color: hsl(0, 0%, 100%);
-    /* box-shadow: rgb(93 24 220) 0px 7px 29px 0px; */
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  /* box-shadow: rgb(93 24 220) 0px 7px 29px 0px; */
 }
 
 /* =========================================
    裝飾與動畫 (Turtle)
    ========================================= */
 .moveTurtle {
-    width: 33.33333%;
-    position: absolute;
-    top: 11%;
-    right: 8%;
-    /* animation: slide-diag 5s ease-in forwards; */
-    z-index: -1;
+  width: 33.33333%;
+  position: absolute;
+  top: 11%;
+  right: 8%;
+  /* animation: slide-diag 5s ease-in forwards; */
+  z-index: -1;
 
 }
 
 .moveTurtle img {
-    width: 100%;
+  width: 100%;
 }
 
 /* =========================================
@@ -142,52 +142,53 @@ button:hover {
    ========================================= */
 
 .bioCardList {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-.enTitle{
-    letter-spacing: 0;
+
+.enTitle {
+  letter-spacing: 0;
 }
 
 /* 手機版維持：卡片 -> 內容 -> 卡片 -> 內容  */
 .bioCheckedInput {
-    display: none;
-    /* 隱藏 checkbox 本體 */
+  display: none;
+  /* 隱藏 checkbox 本體 */
 }
 
 /* 當 checkbox 被勾選時，顯示它緊鄰的 label 後面的 .wholeBio */
 .bioCheckedInput:checked+label+.wholeBio {
-    display: block;
+  display: block;
 }
 
 
 .bioCard {
-    background-image: url(../Mockup/bio-fish.svg);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    /* background-position-x: right; */
-    background-position: right center;
-    display: flex;
-    margin: .3rem;
-    border: 2px solid var(--color-lifhtBlue);
-    border-radius: 20px;
-    overflow: hidden;
-    padding: 3rem 0;
-    transition: all .5s;
-    cursor: pointer;
-    /* 加入手型游標提示可點擊 */
+  background-image: url(../Mockup/bio-fish.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  /* background-position-x: right; */
+  background-position: right center;
+  display: flex;
+  margin: .3rem;
+  border: 2px solid var(--color-lifhtBlue);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 3rem 0;
+  transition: all .5s;
+  cursor: pointer;
+  /* 加入手型游標提示可點擊 */
 }
 
 .bioCard:hover {
-    background-size: 65%;
+  background-size: 65%;
 }
 
 
 
 /* ---------- 重點：PC 版卡片排序邏輯 ---------- */
-    /* 這裡利用 Flexbox 的 order 屬性重新洗牌 */
+/* 這裡利用 Flexbox 的 order 屬性重新洗牌 */
 
-    /* 邏輯說明：
+/* 邏輯說明：
         - 第一排是前 2 個 label (Order 1)
         - 第一排內容是前 2 個 wholeBio (Order 2) -> 設為 100% 寬度強迫換行
         - 第二排是後續3.4的 label (Order 3)
@@ -197,171 +198,172 @@ button:hover {
     */
 
 label:nth-of-type(2) .bioCard {
-    background-image: url(../Mockup/bio-crab.svg);
+  background-image: url(../Mockup/bio-crab.svg);
 }
 
 label:nth-of-type(3) .bioCard {
-    background-image: url(../Mockup/bio-oct.svg);
+  background-image: url(../Mockup/bio-oct.svg);
 }
 
 label:nth-of-type(4) .bioCard {
-    background-image: url(../Mockup/bio-shell.png);
+  background-image: url(../Mockup/bio-shell.png);
 }
 
 label:nth-of-type(5) .bioCard {
-    background-image: url(../Mockup/bio-urchin.svg);
+  background-image: url(../Mockup/bio-urchin.svg);
 }
 
-label:nth-of-type(6) .bioCard{
-    background-image: url(../Mockup/bio-whale.svg);
+label:nth-of-type(6) .bioCard {
+  background-image: url(../Mockup/bio-whale.svg);
 }
-label:nth-of-type(2n) .bioCard{
-    border: 2px solid var(--color-gray);
+
+label:nth-of-type(2n) .bioCard {
+  border: 2px solid var(--color-gray);
 }
 
 
 .wholeBio {
-    display: none;
-    /* 預設隱藏 */
-    padding: 2rem 1%;
-    border-radius: 20px;
-    border-radius: 20px;
-    background-color: #78B6CE;
-    width: 100%;
-    /* 手機版展開時佔滿寬度 */
-    flex-basis: 100%;
-    margin-bottom: 1rem;
-    /* 區隔下方的卡片 */
+  display: none;
+  /* 預設隱藏 */
+  padding: 2rem 1%;
+  border-radius: 20px;
+  border-radius: 20px;
+  background-color: #78B6CE;
+  width: 100%;
+  /* 手機版展開時佔滿寬度 */
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+  /* 區隔下方的卡片 */
 }
 
 .wholeBio .subtitle {
-    text-align: center;
+  text-align: center;
 }
 
 .title {
-    z-index: 10;
-    font-size: 1.2rem;
-    font-weight: 700;
-    position: relative;
-    justify-content: start;
-    align-content: start;
+  z-index: 10;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: relative;
+  justify-content: start;
+  align-content: start;
 }
 
 /* 1. 第一排卡片 (第 1~2 個 Label) */
-    /* nth-of-type(-n+2) 代表選取同類型中的前 3 個 */
-    .bioCardList>label.bioChecked:nth-of-type(-n+2) {
-        order: 1;
-    }
+/* nth-of-type(-n+2) 代表選取同類型中的前 3 個 */
+.bioCardList > label.bioChecked:nth-of-type(-n+2) {
+  order: 1;
+}
 
-    /* 2. 第一排展開內容 (第 1~3 個 wholeBio) */
-    .bioCardList>.wholeBio:nth-of-type(-n+2) {
-        order: 2;
-        width: 100%;
-        /* 強制換行，讓它獨佔一列，產生「插入中間」的效果 */
-    }
+/* 2. 第一排展開內容 (第 1~3 個 wholeBio) */
+.bioCardList > .wholeBio:nth-of-type(-n+2) {
+  order: 2;
+  width: 100%;
+  /* 強制換行，讓它獨佔一列，產生「插入中間」的效果 */
+}
 
-    /* 3. 第二排卡片 (第 3.4 個 Label) */
-    .bioCardList>label.bioChecked:nth-of-type(3),
-    .bioCardList>label.bioChecked:nth-of-type(4) {
-        order: 3;
-    }
+/* 3. 第二排卡片 (第 3.4 個 Label) */
+.bioCardList > label.bioChecked:nth-of-type(3),
+.bioCardList > label.bioChecked:nth-of-type(4) {
+  order: 3;
+}
 
-    /* 4. 第二排展開內容 (第 3,4 個的 wholeBio) */
-    .bioCardList>.wholeBio:nth-of-type(3),
-    .bioCardList>.wholeBio:nth-of-type(4) {
-        order: 4;
-        width: 100%;
-    }
+/* 4. 第二排展開內容 (第 3,4 個的 wholeBio) */
+.bioCardList > .wholeBio:nth-of-type(3),
+.bioCardList > .wholeBio:nth-of-type(4) {
+  order: 4;
+  width: 100%;
+}
 
-    /* 3. 第三排卡片 (第 5 個以後的 Label) */
-    /* nth-of-type(n+5) 代表選取同類型中第 4 個以後的所有元素 */
-    .bioCardList>label.bioChecked:nth-of-type(n+5){
-        order: 3;
-    }
+/* 3. 第三排卡片 (第 5 個以後的 Label) */
+/* nth-of-type(n+5) 代表選取同類型中第 4 個以後的所有元素 */
+.bioCardList>label.bioChecked:nth-of-type(n+5) {
+  order: 5;
+}
 
-    /* 4. 第二排展開內容 (第 5 個以後的 wholeBio) */
-    .bioCardList>.wholeBio:nth-of-type(n+5) {
-        order: 4;
-        width: 100%;
-    }
+/* 4. 第二排展開內容 (第 5 個以後的 wholeBio) */
+.bioCardList>.wholeBio:nth-of-type(n+5) {
+  order: 6;
+  width: 100%;
+}
 
 /* ----------------------------------------------------------------- */
 @media screen and (min-width: 768px) {
 
 
-    /* --------------------------------------------- */
+  /* --------------------------------------------- */
 
-    .search {
-        grid-row: 4/5;
-        grid-column: 2/3;
-    }
+  .search {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
 
-    .container {
-        position: relative;
+  .container {
+    position: relative;
 
-    }
+  }
 
-    /* ---------- 海龜動畫位置 ---------- */
-    .moveTurtle {
-        rotate: 10deg;
-        width: 25%;
-        position: absolute;
-        top: 20px;
-        right: 3%;
-        /* animation: slide-diag 5s ease-in forwards; */
-        z-index: -1;
+  /* ---------- 海龜動畫位置 ---------- */
+  .moveTurtle {
+    rotate: 10deg;
+    width: 25%;
+    position: absolute;
+    top: 20px;
+    right: 3%;
+    /* animation: slide-diag 5s ease-in forwards; */
+    z-index: -1;
 
-    }
+  }
 
-    .moveTurtle img {
-        width: 100%;
-    }
+  .moveTurtle img {
+    width: 100%;
+  }
 
 
 
-    /* ---------- 重點：PC 版卡片排序邏輯 ---------- */
-    /* 這裡利用 Flexbox 的 order 屬性重新洗牌 */
+  /* ---------- 重點：PC 版卡片排序邏輯 ---------- */
+  /* 這裡利用 Flexbox 的 order 屬性重新洗牌 */
 
-    /* 邏輯說明：
+  /* 邏輯說明：
         - 第一排是前 3 個 label (Order 1)
         - 第一排內容是前 3 個 wholeBio (Order 2) -> 設為 100% 寬度強迫換行
         - 第二排是後續的 label (Order 3)
         - 第二排內容是後續的 wholeBio (Order 4)
     */
 
-    /* 1. 第一排卡片 (第 1~3 個 Label) */
-    /* nth-of-type(-n+3) 代表選取同類型中的前 3 個 */
-    .bioCardList>label.bioChecked:nth-of-type(-n+3) {
-        order: 1;
-    }
+  /* 1. 第一排卡片 (第 1~3 個 Label) */
+  /* nth-of-type(-n+3) 代表選取同類型中的前 3 個 */
+  .bioCardList>label.bioChecked:nth-of-type(-n+3) {
+    order: 1;
+  }
 
-    /* 2. 第一排展開內容 (第 1~3 個 wholeBio) */
-    .bioCardList>.wholeBio:nth-of-type(-n+3) {
-        order: 2;
-        width: 100%;
-        /* 強制換行，讓它獨佔一列，產生「插入中間」的效果 */
-    }
+  /* 2. 第一排展開內容 (第 1~3 個 wholeBio) */
+  .bioCardList>.wholeBio:nth-of-type(-n+3) {
+    order: 2;
+    width: 100%;
+    /* 強制換行，讓它獨佔一列，產生「插入中間」的效果 */
+  }
 
-    /* 3. 第二排卡片 (第 4 個以後的 Label) */
-    /* nth-of-type(n+4) 代表選取同類型中第 4 個以後的所有元素 */
-    .bioCardList>label.bioChecked:nth-of-type(n+4) {
-        order: 3;
-    }
+  /* 3. 第二排卡片 (第 4 個以後的 Label) */
+  /* nth-of-type(n+4) 代表選取同類型中第 4 個以後的所有元素 */
+  .bioCardList>label.bioChecked:nth-of-type(n+4) {
+    order: 3;
+  }
 
-    /* 4. 第二排展開內容 (第 4 個以後的 wholeBio) */
-    .bioCardList>.wholeBio:nth-of-type(n+4) {
-        order: 4;
-        width: 100%;
-    }
+  /* 4. 第二排展開內容 (第 4 個以後的 wholeBio) */
+  .bioCardList>.wholeBio:nth-of-type(n+4) {
+    order: 4;
+    width: 100%;
+  }
 
-    
-    .content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 
-    .start .card {
-        margin: 0;
-    }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .start .card {
+    margin: 0;
+  }
 }

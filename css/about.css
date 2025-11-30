@@ -1,8 +1,7 @@
 .container {
-    .top {
-        display: flex;
-        align-items: center;
 
+    /* 標題 */
+    .top {
         .titleGroup {
             .partTitle {
                 padding-bottom: 10px;
@@ -12,46 +11,43 @@
 
     .list {
 
+        /* 三區上下排放 */
         .card {
             position: relative;
             display: flex;
             flex-direction: column;
             margin: 5rem 0;
 
+            /* 照片部分 */
             .pic {
                 padding: 10px;
                 margin: 0 auto;
-
-            }
-            .slide-in{
-                opacity:1;
-                transform: translate(0%,0%) scale(1);
             }
 
+            /* 背景部分 */
             .cardContent {
                 background-color: var(--color-white);
                 height: 70%;
                 border-radius: 20px;
                 padding: 5px;
 
+                /* 文字部分 */
                 .inner {
                     margin: 5px;
-
-                    .pTitle {}
-
-                    .txt {}
                 }
 
             }
         }
 
-        .card:nth-child(2) {
+        /* 第二區圖片位置調整 */
+        .card:nth-child(even) {
             .pic {
                 padding: 10px;
             }
         }
 
-        .card:nth-child(2) .cardContent .inner {
+        /* 第二區背井位置調整 */
+        .card:nth-child(even) .cardContent .inner {
             margin-left: 0;
             padding-left: 2rem;
         }
@@ -59,99 +55,101 @@
 }
 
 
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .container {
-        /* .top {
-            .titleGroup {
-                .partTitle {
-                }
-            }
-        } */
-
         .list {
 
+            /* 三區左右排放 */
             .card {
                 flex-wrap: wrap;
                 margin: 1rem;
 
+                /* 照片部分位置調整 */
                 .pic {
                     padding: 10px;
                     position: absolute;
-                    left: -15%;
-                    bottom: 20%;
-                    width: 50%;
-
+                    left: -6%;
+                    bottom: 6%;
+                    width: 45%;
                 }
 
+                /* 背景部分位置調整 */
                 .cardContent {
                     height: 70%;
                     margin: 1rem 0;
 
+                    /* 文字部分位置調整 */
                     .inner {
                         margin-left: auto;
-/* 
-                        .pTitle {}
-
-                        .txt {} */
                     }
-
                 }
             }
 
+            /* 第二區順序相反 */
             .card:nth-child(2) {
                 .pic {
                     position: absolute;
                     left: 60%;
                 }
             }
-
-            /* .card:nth-child(2) .cardContent .inner {
-            } */
         }
     }
-} 
+}
 
 @media screen and (min-width: 1024px) {
     .container {
-        /* .top {
-            .titleGroup {
-                .partTitle {
-                }
-            }
-        } */
 
         .list {
-
             .card {
                 margin: 2rem;
 
+                /* 照片部分位置調整 */
                 .pic {
                     left: -15%;
                     bottom: 0%;
                     width: 50%;
-
                 }
 
+                /* 背景部分位置調整 */
                 .cardContent {
                     margin: 3rem 0;
-
-                    .inner {
-
-                        /* .pTitle {}
-
-                        .txt {} */
-                    }
-
                 }
             }
-
-            .card:nth-child(2) {
-                .pic {
-                    left: 60%;
-                }
-            }
-            /* .card:nth-child(2) .cardContent .inner {
-            } */
         }
     }
+}
+
+/* 動畫 圖片初始位置在右邊外面一點*/
+
+.pic,
+.cardContent .inner {
+    opacity: 0;
+/* 一開始是透明的 */
+    transition: all 1s ease;
+/* 設定動畫時間 */
+}
+/* 圖片在左邊，從左邊滑進來 */
+&:nth-child(odd) .pic {
+    transform: translateX(-50px) translateY(-50px);
+}
+
+/* 文字在右邊，從右邊滑進來 */
+&:nth-child(odd) .cardContent .inner {
+    transform: translateX(50px) translateY(50px);
+}
+/* 圖片在右邊，從右邊滑進來 */
+&:nth-child(even) .pic {
+    transform: translateX(50px);
+}
+
+/* 文字在左邊，從左邊滑進來 */
+&:nth-child(even) .cardContent .inner {
+    transform: translateX(-50px);
+}
+
+/* === 2. 設定進場後的狀態 (active) === */
+.pic.active,
+.cardContent .inner.active {
+    opacity: 1;
+    transform: translateX(0);
 }
