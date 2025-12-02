@@ -4,7 +4,7 @@
     margin: 5px 0;
     padding: 5px 0;
 }
-
+/* ======= 背景水母 ========= */
 .jelly {
     position: fixed;
     width: 40%;
@@ -17,7 +17,7 @@
 .jelly img {
     width: 100%;
 }
-
+/* ======= 每頁標題 ========= */
 .container {
     .top {
         display: flex;
@@ -28,9 +28,6 @@
             .partTitle {
                 padding-bottom: 10px;
             }
-
-
-
         }
     }
 
@@ -45,7 +42,6 @@
 
         .pTitle {
             font-weight: 600;
-
             margin: auto;
         }
     }
@@ -92,13 +88,10 @@
 
         input[type="checkbox"]:checked~.accpTitle i {
             transform: rotate(180deg);
-
         }
-
     }
 
     .secondPart {
-
         .list {
             display: flex;
             flex-wrap: wrap;
@@ -116,12 +109,13 @@
                     display: flex;
 
                     .pic {
-                        margin: .5rem ;
+                        margin: .5rem;
                         position: relative;
                         align-content: center;
                         width: 15%;
                     }
-                    .pic img{
+
+                    .pic img {
                         border-radius: 0;
                     }
 
@@ -129,12 +123,11 @@
                         color: var(--color-primary);
                         font-size: 1.1rem;
                     }
-
-                    
                 }
+
                 .txt {
-                        padding-bottom: 0;
-                    }
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -156,44 +149,44 @@
         .secondPart {
             .list {
                 flex-direction: row;
-                .card{
+
+                .card {
                     margin: .5rem 0;
                 }
             }
-            
+
         }
 
         /* .thirdPart {    } */
     }
 
     .jelly {
-    position: fixed;
-    width: 30%;
-    right: 0%;
-    top: 5%;
-    
-}
+        position: fixed;
+        width: 30%;
+        right: 0%;
+        top: 5%;
+
+    }
 }
 
 @media screen and (min-width: 768px) {
     .container {
-       /* /* .content{        } */
+        /* /* .content{        } */
 
         /* .firstPart {    } */
 
         .secondPart {
             .list {
-                .card{
-                }
+                .card {}
             }
-            
-        }
-        /* .thirdPart {    } */
-    } */ 
-    
 
-    .jelly {
-    right: 0%;
-    top: 2%;
+        }
+
+        /* .thirdPart {    } */
+    }
+
+    */ .jelly {
+        right: 0%;
+        top: 2%;
     }
 }

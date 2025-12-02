@@ -59,14 +59,16 @@
         }
 
         .tag {
-            text-align: right;
+            text-align: left;
             position: absolute;
             bottom: 12%;
-            left: 40%;
-            width: fit-content;
+            /* left: 40%; */
+            width: 100%;
             color: var(--color-text-dark);
-            font-weight: 450;
-            letter-spacing: 0rem;
+            font-weight: 500;
+            opacity: 0.6;
+            margin-left: .75rem;
+            letter-spacing: 0.2rem;
         }
     }
 
@@ -106,7 +108,7 @@
 
             .tag {
                 bottom: 13%;
-                left: 10%;
+                /* left: 10%; */
             }
         }
         .txt {
@@ -139,7 +141,7 @@
 
             .tag {
                 bottom: 7%;
-                left: 0%;
+                /* left: 0%; */
             }
         }
 
