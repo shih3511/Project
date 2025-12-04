@@ -63,9 +63,11 @@ i {
   display: flex;
   position: relative;
 }
+
 .searchBar {
   font-size: 16px;
 }
+
 .searchBar.-on {
   box-shadow: 0 0 5px gray;
   transform: scale(1.01);
@@ -173,6 +175,7 @@ button:hover {
 .bioCard:hover {
   background-size: 65%;
 }
+
 /*==========   背景換圖   =========== */
 label:nth-of-type(2) .bioCard {
   background-image: url(../Mockup/bio-crab.svg);
@@ -215,6 +218,10 @@ label:nth-of-type(2n) .bioCard {
 
 .wholeBio .subtitle {
   text-align: center;
+
+  .txt {
+    padding-bottom: 3px;
+  }
 }
 
 .title {
@@ -225,30 +232,73 @@ label:nth-of-type(2n) .bioCard {
   justify-content: start;
   align-content: start;
 }
+
+/* =========================================
+  手機版左右滑動 ( Scroll Snap)
+   ========================================= */
+/* 1. 設定容器為橫向滑動 */
+.wholeBio .content {
+    display: grid;        
+    grid-template-rows: 1fr 1fr;/* 設定為「兩列」 (上下各一張) 高度平分*/
+    grid-auto-flow: column;
+    grid-auto-columns: 85%;
+  overflow-x: auto;
+    /* 捲動吸附功能*/
+    scroll-snap-type: x mandatory; 
+    
+    gap: 10px; 
+    /* 卡片之間的間距 */
+    padding: 10px 5px 20px 5px;
+    /* 下方留一點空間給 scrollbar (如果有的話) */
+    
+    /* 隱藏醜醜的捲軸 (選用) */
+    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+}
+
+/* Chrome/Safari 隱藏捲軸 */
+.wholeBio .content::-webkit-scrollbar {
+    display: none;
+}
+
+/* 2. 設定卡片寬度 (一次顯示約兩張) */
+.wholeBio .content .card-link {
+    scroll-snap-align: start;  /* 滑動停止時，卡片的左邊對齊容器左邊 */
+    width: 100%;
+    margin: 0;                 /* 移除原本可能有的 margin */
+}
+
+/* 3. 調整卡片內部樣式 (適應變窄的寬度) */
+.wholeBio .content .card {
+    height: 100%;              /* 讓所有卡片等高 */
+    margin: 0;                 /* 清除多餘邊距 */
+}
+
 /* ---------- 手機版卡片排序邏輯 ---------- */
 /* 利用 Flexbox 的 order 屬性重新洗牌 */
 
 /* 1. 第一排卡片 (第 1~2 個 Label) */
 /* nth-of-type(-n+2) 代表選取同類型中的前 2 個 */
-.bioCardList > label.bioChecked:nth-of-type(-n+2) {
+.bioCardList>label.bioChecked:nth-of-type(-n+2) {
   order: 1;
 }
+
 /* 2. 第一排展開內容 (第 1~3 個 wholeBio) */
-.bioCardList > .wholeBio:nth-of-type(-n+2) {
+.bioCardList>.wholeBio:nth-of-type(-n+2) {
   order: 2;
   width: 100%;
   /* 設為 100% 寬度強制換行，讓它獨佔一列，產生「插入中間」的效果 */
 }
 
 /* 3. 第二排卡片 (第 3.4 個 Label) */
-.bioCardList > label.bioChecked:nth-of-type(3),
-.bioCardList > label.bioChecked:nth-of-type(4) {
+.bioCardList>label.bioChecked:nth-of-type(3),
+.bioCardList>label.bioChecked:nth-of-type(4) {
   order: 3;
 }
 
 /* 4. 第二排展開內容 (第 3,4 個的 wholeBio) */
-.bioCardList > .wholeBio:nth-of-type(3),
-.bioCardList > .wholeBio:nth-of-type(4) {
+.bioCardList>.wholeBio:nth-of-type(3),
+.bioCardList>.wholeBio:nth-of-type(4) {
   order: 4;
   width: 100%;
 }
@@ -277,11 +327,33 @@ label:nth-of-type(2n) .bioCard {
     position: relative;
 
   }
+
+  /*==================================
+  電腦版：還原成網格排列
+  ======================================*/
+  .wholeBio .content {
+    display: flex;
+        flex-wrap: wrap;       /* 恢復換行 */
+        /* 重置 Grid 相關設定，避免干擾 */
+        grid-template-rows: none;
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
+
+        overflow-x: visible;   /* 取消捲動 */
+        scroll-snap-type: none;/* 取消吸附 */
+        padding: 0;            /* 恢復原本 padding */
+    }
+
+    .wholeBio .content .card-link {
+        width: auto;           /* 或者設回原本 grid 系統的寬度 */
+    }
+
   /* ---------- PC 版卡片排序邏輯 ---------- */
   /* 1. 第一排卡片 (第 1~3 個 Label) */
   .bioCardList>label.bioChecked:nth-of-type(-n+3) {
     order: 1;
   }
+
   /* 2. 第一排展開內容 (第 1~3 個 wholeBio) */
   .bioCardList>.wholeBio:nth-of-type(-n+3) {
     order: 2;
@@ -292,6 +364,7 @@ label:nth-of-type(2n) .bioCard {
   .bioCardList>label.bioChecked:nth-of-type(n+4) {
     order: 3;
   }
+
   /* 4. 第二排展開內容 (第 4 個以後的 wholeBio) */
   .bioCardList>.wholeBio:nth-of-type(n+4) {
     order: 4;
@@ -321,11 +394,14 @@ label:nth-of-type(2n) .bioCard {
   z-index: -1;
 
 }
+
 .moveTurtle img {
   width: 100%;
 }
-@media screen and (min-width: 768px){
-   /* ---------- 海龜動畫位置 ---------- */
+
+@media screen and (min-width: 768px) {
+
+  /* ---------- 海龜動畫位置 ---------- */
   .moveTurtle {
     right: -50%;
     top: -10%;

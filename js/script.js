@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const accordionItem = document.querySelectorAll(".accordion-item");
-    // console.log(accordionItem);
-    accordionItem.forEach(item => {
-        item.addEventListener("click" , function(){
-            if(item){
-                item.classList.toggle("show");
+    const pTitles = document.querySelectorAll(".accordion-item .pTitle");
+    console.log(pTitles);
+    pTitles.forEach(pTitle => {
+        pTitle.addEventListener("click" , function(){
+            if(pTitle){
+                pTitle.classList.toggle("show");
             }
         })
     });
@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
     // 功能三：卡片翻轉進場動畫
     // ==========================================
-
     // 1. 選取所有需要翻轉效果的卡片
     const cards = document.querySelectorAll(".card");
     cards.forEach((card, index) => {
@@ -389,12 +388,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bubble.style.width = `${size}px`;
             bubble.style.height = `${size}px`;
             // 向左偏移
-            const left = Math.random() * 40 + 10;
+            const left = Math.random() * 80 + 10;
             bubble.style.left = `${left}%`;
 
-            //  泡泡上升速度 (8秒 ~ 16秒)
+            //  泡泡上升速度 (10秒 ~ 20秒)
             // 泡泡越小通常飄越慢，也可以設成反比，這裡先用純隨機
-            const duration = Math.random() * 8 + 8;
+            const duration = Math.random() * 10 + 10;
             bubble.style.setProperty('--duration', `${duration}s`);
 
             //  加入容器
@@ -408,7 +407,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // 每 300 毫秒產生一顆泡泡 (數字越小泡泡越多)
-        setInterval(createBubble, 3000);
+        setInterval(createBubble, 5000);
     }
 
 
@@ -424,7 +423,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
-
     
 });
 

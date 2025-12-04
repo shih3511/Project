@@ -53,46 +53,41 @@
             border-bottom: 4px solid var(--color-accent);
         }
 
-        .accpTitle {
+        .pTitle {
             display: block;
-            user-select: none;
+            color: var(--color-accent);
+            border-bottom: 2px solid var(--color-accent);
+            padding: 10px 0;
+            cursor: pointer;
 
             i {
-                transform: rotate(0deg);
-                transition: all .3s;
+                transform: rotateY(0deg);
+                transition: all .5s ease;
             }
         }
 
-        .pTitle {
-            color: var(--color-accent);
-            border-bottom: 2px solid var(--color-accent);
-            margin: 10px 0;
-        }
-
         .acctxt {
-            /* max-height: 0; */
-            /* overflow: hidden; */
             display: none;
-            transition: max-height .3s ease;
+            transition: all .5s ease;
             padding: 15px;
             background-color: #e6e4e4;
             border-radius: 10px;
+            margin-top: 10px ;
+            
 
             p {
                 padding: 2px 0;
             }
         }
-        .accordion-item.show .acctxt {
+        
+        .pTitle.show  ~ .acctxt {
             display: block;
+            transition: showTxt .3s ease;
         }
-
-        /* input[type="checkbox"]:checked~.acctxt {
-            max-height: 520px;
-        }
-
-        input[type="checkbox"]:checked~.accpTitle i {
-            transform: rotate(180deg);
-        } */
+        .pTitle.show i {
+                transform: rotateX(180deg);
+                transition: all .5s ease;
+            }
     }
 
     .secondPart {

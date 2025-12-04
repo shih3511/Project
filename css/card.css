@@ -16,15 +16,15 @@
 }
 
 .card {
-    
+
     /* ========  卡片翻轉效果  
     1. 設定卡片的初始狀態 (還沒滑到的時候) 
     =======*/
     opacity: 0;
-    transform:perspective(10000px) rotateY(90deg) translateY(50px);
+    transform: perspective(10000px) rotateY(90deg) translateY(50px);
     transform-origin: center center;
-    transition: all 1s  ease-out;
-    
+    transition: all 1s ease-out;
+
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -33,7 +33,7 @@
     margin: 1.5rem 0;
     padding-bottom: 2.5rem;
 
-    
+
 
     /* ========  卡片照片  =======*/
     .cardPic {
@@ -53,7 +53,7 @@
 
         .title {
             writing-mode: vertical-lr;
-            margin:  .75rem .75rem 0;
+            margin: .75rem .75rem 0;
             max-height: 75%;
             color: var(--color-primary);
         }
@@ -111,6 +111,7 @@
                 /* left: 10%; */
             }
         }
+
         .txt {
             bottom: 0%;
         }
@@ -208,8 +209,6 @@
     padding: 1.5rem;
 
     .content {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
 
         .card-link {
@@ -217,6 +216,11 @@
             padding: 0 5px;
 
             .card {
+                /* 手機版：直接顯示，不要透明，也不要旋轉 */
+                opacity: 1;
+                transform: none;
+                transition: none;
+                /* 手機版不需要過渡動畫 */
                 margin: .5rem 0;
                 flex-wrap: nowrap;
 
@@ -248,17 +252,23 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .wholeBio {
         .content {
             .card-link {
                 .card {
-                    .cardTopRight {
-                        .tag {
-                            top: 70%;
-                            /* left: -15%; */
-                            /* padding: 0; */
-                        }
+                    opacity: 0;
+                    /* 這裡放回原本的 3D 翻轉設定 */
+                    transform: perspective(1000px) rotateY(90deg) translateY(50px);
+                    transform-origin: center center;
+                    transition: all 0.8s ease-out;
+                }
+
+                .cardTopRight {
+                    .tag {
+                        top: 70%;
+                        /* left: -15%; */
+                        /* padding: 0; */
                     }
                 }
             }
