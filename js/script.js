@@ -396,6 +396,20 @@ document.addEventListener("DOMContentLoaded", function () {
         // 每 300 毫秒產生一顆泡泡 (數字越小泡泡越多)
         setInterval(createBubble, 3000);
     }
+
+
+    // ==========================================
+    // 功能九： 漢堡動畫
+    // ==========================================
+    const hbSwitch = document.querySelector(".hb");
+    const mainMenu = document.querySelector(".main-menu");
+    if (hbSwitch) {
+        hbSwitch.addEventListener("click", function () {
+            hbSwitch.classList.toggle("switchFish");
+            mainMenu.classList.toggle("switchFish")
+
+        });
+    }
 });
 
 

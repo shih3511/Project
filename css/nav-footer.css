@@ -65,10 +65,10 @@ a {
         position: absolute;
         display: none;
         background-color: #00478F;
-        height: calc(100svh - 70px);
-        width: 90%;
+        height: calc(100svh - 30px);
+        width: 100%;
         top: 100%;
-        left: 50%;
+        left: 0;
         color: var(--color-background-light);
     }
 
@@ -77,16 +77,14 @@ a {
         padding: 15px 0;
     }
 
-    .main-header:has(.menu-switch:checked) .main-menu {
-        display: block;
-    }
-
     .hb {
         border: 1px solid #00478F77;
         border-radius: 5px;
         width: 60px;
         height: 40px;
         position: relative;
+        cursor: pointer;
+        transition: border-color 0.3s;
     }
 
     .hb .bar {
@@ -94,33 +92,87 @@ a {
         width: 80%;
         height: 2px;
         background-color: #00478F;
-        margin: auto;
         position: absolute;
         left: 0;
         right: 0;
-        border-radius: 10px;
+        margin: auto;
+        border-radius: 25px;
+
 
     }
 
-    .bar1 {
-        top: 6px;
+    .hb .bar1 {
+        top: 10px;
+        transform: rotate(0deg);
+        transition: top .5s ease, transform .5s ease-out;
     }
 
-    .bar2 {
+    .hb .bar2 {
         top: 18px;
+        transform: rotate(0deg);
+        transition: top .5s ease, transform .5s ease-out;
     }
 
-    .bar3 {
-        top: 30px;
+    .hb .bar3 {
+        top: 26px;
+        transform: rotate(0deg);
+        transition: top .5s ease, transform .5s ease-out;
+    }
+
+    .hb .bar4 {
+        opacity: 0;
+        transform: scaleX(0.5);
+    }
+
+    /* =========== */
+
+    .hb.switchFish .bar1 {
+        top: 14px;
+        width: 40%;
+        transform: translate(-15px, 0) rotate(-25deg);
+        transition: top .5s ease-in, transform .5s ease;
+    }
+
+    .hb.switchFish .bar2 {
+        top: 18px;
+        width: 60%;
+        transform: translate(11px, 0) rotate(30deg);
+        transition: top .5s ease-in, transform .5s ease;
+    }
+
+    .hb.switchFish .bar3 {
+        top: 24px;
+        width: 40%;
+        transform: translate(-15px, 0) rotate(25deg);
+        transition: top .5s ease-in, transform .5s ease;
+    }
+
+    .hb.switchFish .bar4 {
+        opacity: 1;
+        top: 20px;
+        width: 60%;
+        transform: translate(11px, 0) rotate(-30deg);
+        transition: top .5s ease-in, transform .5s ease;
+    }
+
+    .main-menu.switchFish {
+        display: block;
     }
 
     .main-menu a {
         display: block;
         text-decoration: none;
+        text-align: center;
         font-size: 18px;
-        padding: 8px;
+        padding: 20px 0;
         transition: all 0.3;
         color: var(--color-white);
+        border: 1px solid #001f3f11;
+    }
+
+    .logo_white {
+        margin: 0 auto;
+        text-align: center;
     }
 }
 
@@ -178,6 +230,10 @@ a {
     .logo a::after {
         background: none;
         transform: none;
+    }
+
+    .logo_white {
+        display: none;
     }
 
 
@@ -419,7 +475,7 @@ footer
 }
 
 /* =========   泡泡設定   ========= */
-.bubble-container{
+.bubble-container {
     position: fixed;
     width: 95%;
     height: 100%;
@@ -429,22 +485,46 @@ footer
     overflow: hidden;
     pointer-events: none;
 }
+
 .bubble {
     position: absolute;
     /* bottom: -50px; */
     background: radial-gradient(circle at 40% 50%, rgba(213, 236, 255, 0.8), rgba(161, 169, 254, 0.215));
-    box-shadow: 0 0 10px rgba(167, 160, 222, 0.2); /* 微微發光 */
+    box-shadow: 0 0 10px rgba(167, 160, 222, 0.2);
+    /* 微微發光 */
     border-radius: 50%;
-    animation:  rise var(--duration) linear forwards, 
-                sway 3s ease-in-out infinite alternate;
+    animation: rise var(--duration) linear forwards,
+        sway 3s ease-in-out infinite alternate;
 }
+
 @keyframes rise {
-    0%  {opacity:  0; bottom: -50px;  }
-    25% {opacity: .6; bottom: 25%;   }
-    75% {opacity: .6; bottom: 80%;   }
-    100%{opacity:  0; bottom: 110%;  }
+    0% {
+        opacity: 0;
+        bottom: -50px;
+    }
+
+    25% {
+        opacity: .6;
+        bottom: 25%;
+    }
+
+    75% {
+        opacity: .6;
+        bottom: 80%;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 110%;
+    }
 }
+
 @keyframes sway {
-    0%  {transform: translateY(-15px); }
-    100%{transform: translateY(15px);  }
+    0% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(15px);
+    }
 }
