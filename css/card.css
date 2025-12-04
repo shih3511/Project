@@ -53,16 +53,16 @@
 
         .title {
             writing-mode: vertical-lr;
-            margin: .75rem;
-            height: 80px;
+            margin:  .75rem .75rem 0;
+            max-height: 75%;
             color: var(--color-primary);
         }
 
         .tag {
             text-align: left;
             position: absolute;
-            bottom: 12%;
-            /* left: 40%; */
+            /* bottom: 13%; */
+            top: 75%;
             width: 100%;
             color: var(--color-text-dark);
             font-weight: 500;
@@ -74,7 +74,7 @@
 
     .txt {
         position: absolute;
-        bottom: -8.25%;
+        bottom: -0.25%;
         color: var(--color-background-light);
         padding: .3rem;
         background-color: #00478Fbb;
@@ -107,7 +107,7 @@
             }
 
             .tag {
-                bottom: 13%;
+                /* bottom: 12%; */
                 /* left: 10%; */
             }
         }
@@ -140,7 +140,7 @@
             margin: 0 -2px;
 
             .tag {
-                bottom: 7%;
+                /* bottom: 8%; */
                 /* left: 0%; */
             }
         }
@@ -233,7 +233,7 @@
                     }
 
                     .tag {
-                        bottom: 14%;
+                        /* bottom: 14%; */
                         /* left: 17%; */
                         margin-left: 0rem;
                     }
@@ -255,8 +255,8 @@
                 .card {
                     .cardTopRight {
                         .tag {
-                            bottom: 14%;
-                            /* left: 8%; */
+                            top: 70%;
+                            /* left: -15%; */
                             /* padding: 0; */
                         }
                     }
