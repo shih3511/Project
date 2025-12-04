@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // ==========================================
-    // 功能一：新聞區塊「查看更多」按鈕邏輯
+    // 功能一：新聞區塊「查看更多」按鈕邏輯、 Action 手風琴動畫
     // ==========================================
     // 1. 選取要觀察的按鈕
     const buttons = document.querySelectorAll(".read-more-btn");
@@ -16,9 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
             const newsCard = document.getElementById(targetId);
             if (newsCard) {
                 newsCard.classList.toggle("expanded");
-
+                if(button.innerText = "查看更多"){
+                    button.innerText = "收起";
+                }else{
+                    button.innerText = "查看更多"
+                }
             }
         });
+    });
+
+    const accordionItem = document.querySelectorAll(".accordion-item");
+    // console.log(accordionItem);
+    accordionItem.forEach(item => {
+        item.addEventListener("click" , function(){
+            if(item){
+                item.classList.toggle("show");
+            }
+        })
     });
 
 
@@ -134,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let isDumping = false; // 開關，避免重複啟動
     let dumpInterval;      // 計時器
 
-    const actionSection = document.querySelector('.action'); // 抓取 action 區塊
+    const actionSection = document.querySelector('.actionPart'); // 抓取 actionPart 區塊
 
     const trashObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -164,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
 
     const numberElement = document.querySelector('.count-number');
-    const actionSectionStat = document.querySelector('.action'); // 監聽整個 action 區塊
+    const actionSectionStat = document.querySelector('.actionPart'); // 監聽整個 action 區塊
     let hasCounted = false; // 開關：確保動畫只跑一次，不會重複跑
 
     // 定義動畫函式
@@ -410,6 +424,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
+
+    
 });
 
 

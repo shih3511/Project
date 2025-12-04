@@ -369,15 +369,18 @@ button:hover {
             .txt {
                 /* 避免干擾行數的顯示 */
                 padding: 0;
-                margin: 20px 20px 20px 0;
+                margin: 0 0 20px  0;
                 /* --- 設定預設狀態：只顯示 8 行 --- */
                 display: -webkit-box;
                 overflow: hidden;
-                -webkit-line-clamp: 8;
+                -webkit-line-clamp: 9;
                 /*  設定 Box 的排列方向為垂直 (這樣才能算行數) */
                 -webkit-box-orient: vertical;
                 /* (選用) 修正文字被截斷的視覺效果，確保不會只顯示半行 */
                 text-overflow: ellipsis;
+            }
+            .pic {
+                padding-bottom: 15px;
             }
 
             .part {
@@ -440,7 +443,7 @@ button:hover {
         }
 
         .news.expanded .read-more-btn {
-            display: none;
+            /* display: none; */
         }
 
         .news.expanded .whole {
@@ -617,20 +620,20 @@ div.pic img.trash-item {
     }
 }
 
-.action .content {
+.actionPart .content {
     padding-left: 10px;
 }
-.action .subTitle{
+.actionPart .subTitle{
     margin: 0 auto;
 }
-.action .txt{
+.actionPart .txt{
     padding-right: 0;
 }
 
-.action .btn {
+.actionPart .btn {
     margin: 0 auto;
 }
-.action .count-number {
+.actionPart .count-number {
     font-size: 2rem;
     font-weight: 900;
     color: var(--color-accent);

@@ -70,25 +70,29 @@
         }
 
         .acctxt {
-            max-height: 0;
-            overflow: hidden;
+            /* max-height: 0; */
+            /* overflow: hidden; */
+            display: none;
             transition: max-height .3s ease;
-            padding: 0 15px;
-            background-color: var(--color-gray);
+            padding: 15px;
+            background-color: #e6e4e4;
             border-radius: 10px;
 
             p {
-                padding: 0 10px;
+                padding: 2px 0;
             }
         }
+        .accordion-item.show .acctxt {
+            display: block;
+        }
 
-        input[type="checkbox"]:checked~.acctxt {
+        /* input[type="checkbox"]:checked~.acctxt {
             max-height: 520px;
         }
 
         input[type="checkbox"]:checked~.accpTitle i {
             transform: rotate(180deg);
-        }
+        } */
     }
 
     .secondPart {
