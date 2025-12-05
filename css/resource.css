@@ -78,6 +78,7 @@
                 margin: .5rem 0;
                 position: relative;
                 letter-spacing: .3rem;
+                min-height: -webkit-fill-available;;
             }
 
             .pic {
@@ -150,9 +151,9 @@
             & .newLink {
                 .pic {
                     padding: .5rem;
-                    width: 80%;
                 }
             }
         }
     }
 }
+

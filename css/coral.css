@@ -9,95 +9,75 @@
         background-repeat: no-repeat;
         background-position-x: right;
         background-position-y: 4.5%;
-
-        .top {
-            display: flex;
-            align-items: center;
-
-            .titleGroup {
-                .txt {
-                    margin: 0 auto;
-                    background-color: #ffffff90;
-                    padding: 1rem .8rem;
-                    border-radius: 20px;
-                }
-            }
-        }
-
-        .list {
-            .card {
-                border-radius: 20px;
-                border: 2px solid #d3d3d3;
-                background-color: #fff;
-                margin: 1.5rem 0;
-                display: flex;
-
-                .content {
-                    position: relative;
-                    padding-left: 1rem;
-
-                    .subtitle {
-                        color: var(--color-primary);
-                        text-align: center;
-                        margin: 1rem 0;
-                    }
-
-                    .pTitle {
-                        color: var(--color-primary);
-                        font-weight: 500;
-                    }
-                }
-
-                .pic {
-                    position: relative;
-                    align-content: center;
-                }
-            }
-        }
     }
+
+    .top {
+        display: flex;
+        align-items: center;
+    }
+
+    .top .titleGroup .txt {
+        margin: 0 auto;
+        background-color: #ffffff90;
+        padding: 1rem .8rem;
+        border-radius: 20px;
+    }
+
+    .list .card {
+        border-radius: 20px;
+        border: 2px solid #d3d3d3;
+        background-color: #fff;
+        margin: 1.5rem 0;
+        display: flex;
+    }
+
+    .list .content {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .subtitle {
+        color: var(--color-primary);
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .pTitle {
+        color: var(--color-primary);
+        font-weight: 500;
+    }
+
+    .pic {
+        position: relative;
+        align-content: center;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
     .coral {
-        background-size: 10%;
+        background-size: 5.5%;
 
         .container {
             background-size: 45%;
+        }
 
-            .top {
+        .top .titleGroup .txt {
+            background-color: #ffffff99;
+            padding: .8rem .5rem .8rem 1rem;
+            margin-right: 2rem;
+        }
 
-                .titleGroup {
-                    .txt {
-                        background-color: #ffffff99;
-                        padding: .8rem .5rem .8rem 1rem;
-                        margin-right: 2rem;
-                    }
-                }
-            }
+        .list {
+            .card {
+                margin: 1.5rem 0;
 
-            .list {
-                .card {
+                .content .subtitle {
                     margin: 1.5rem 0;
+                }
 
-                    .content {
-                        position: relative;
-                        padding: 0 1rem;
-
-                        .subtitle {
-                            text-align: center;
-                            margin: 1.5rem 0;
-                        }
-
-                        .pTitle {
-                            font-weight: 600;
-                        }
-
-                        .pic {
-                            position: relative;
-                            align-content: center;
-                            padding: 0 0.3rem;
-                        }
-                    }
+                .pic {
+                    margin: 0 .5rem;
                 }
             }
         }
@@ -116,28 +96,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* 上下區塊的間距 */
+    gap: 10px;
+    /* 上下區塊的間距 */
     padding: 1rem 0;
     width: 100%;
 }
 
 /* 2. 個別圖表區塊：改為「橫向」排列 (圖在左，文在右) */
 .chart-box {
-    display: flex;            /* 讓內部的 Canvas 和 p 並排 */
-    flex-direction: row;      /* 橫向 */
-    align-items: center;      /* 垂直置中 */
-    justify-content: center;  /* 水平置中 */
-    gap: 15px;                /*圖與文的距離 */
-    
-    width: 100%;              /* 佔滿寬度 */
-    max-width: 350px;         /* 限制最大寬度，避免分太開 */
+    display: flex;
+    /* 讓內部的 Canvas 和 p 並排 */
+    flex-direction: row;
+    /* 橫向 */
+    align-items: center;
+    /* 垂直置中 */
+    justify-content: center;
+    /* 水平置中 */
+    gap: 15px;
+    /*圖與文的距離 */
+
+    width: 100%;
+    /* 佔滿寬度 */
+    max-width: 350px;
+    /* 限制最大寬度，避免分太開 */
     transition: all 0.3s ease;
 }
 
 /* 3. 圖表包覆層 (Chart.js) */
 .chart-wrapper {
     position: relative;
-    flex-shrink: 0; /* 防止圖表被文字擠壓變形 */
+    flex-shrink: 0;
+    /* 防止圖表被文字擠壓變形 */
 }
 
 /* --- 上方區塊 (1%) --- */
@@ -145,40 +134,52 @@
     width: 70px;
     height: 70px;
 }
+
 .small-box .center-text {
     font-size: 0.9rem;
     color: #888;
 }
+
 /* 上方文字 */
 .small-box p.desc {
     font-size: 0.9rem;
     color: #666;
-    text-align: left; /* 改為靠左對齊 */
+    text-align: left;
+    /* 改為靠左對齊 */
     line-height: 1.4;
-    margin: 0;        /* 移除原本的上方間距 */
+    margin: 0;
+    /* 移除原本的上方間距 */
 }
 
 
 /* --- 下方區塊 (25%) 強調 --- */
 .highlight-box .chart-wrapper {
-    width: 100px; /* 圖表放大 */
+    width: 100px;
+    /* 圖表放大 */
     height: 100px;
 }
+
 .highlight-box .center-text {
     font-size: 1.4rem;
-    color: #ff6f61; /* 數字變紅 */
+    color: #ff6f61;
+    /* 數字變紅 */
 }
+
 /* 下方文字 (強調) */
 .highlight-box p.desc {
     font-size: 1.1rem;
-    color: #001f3f;   /* 深藍色強調 */
-    text-align: left; /* 改為靠左對齊 */
+    color: #001f3f;
+    /* 深藍色強調 */
+    text-align: left;
+    /* 改為靠左對齊 */
     line-height: 1.4;
     margin: 0;
 }
+
 .highlight-box p.desc strong {
     color: #ff6f61;
-    font-size: 1.6rem; /* 數字再放大 */
+    font-size: 1.6rem;
+    /* 數字再放大 */
 }
 
 

@@ -101,6 +101,7 @@
 @media screen and (min-width: 768px) {
 
     .card {
+
         .cardTopRight {
             .title {
                 height: 93px;
@@ -206,7 +207,6 @@
 /* =============  biology頁面的卡片  ==============*/
 .wholeBio {
     margin: 2rem 0;
-    padding: 1.5rem;
 
     .content {
         justify-content: space-around;
@@ -244,7 +244,8 @@
                 }
 
                 .txt {
-                    bottom: 0%;
+                    /* position: absolute; */
+                    /* bottom: 10%; */
                     padding: .3rem .8rem;
                 }
             }
@@ -262,19 +263,56 @@
                     transform: perspective(1000px) rotateY(90deg) translateY(50px);
                     transform-origin: center center;
                     transition: all 0.8s ease-out;
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    .cardPic {
+                        width: 60%;
+                        padding: 0;
+                        margin-top: .5rem;
+                        margin-left: .5rem;
+                    }
                 }
 
                 .cardTopRight {
-                    .tag {
-                        top: 70%;
-                        /* left: -15%; */
-                        /* padding: 0; */
+                    width: 35%;
+
+                    .title {
+                        margin: .75rem .75rem 0;
                     }
+
+                    .tag {
+                        letter-spacing: 1px;
+                        /* width: 100%; */
+                        padding-left: 5px;
+                        top: 68%;
+                    }
+                }
+
+                .txt {
+                    position: absolute;
+                    bottom: 0%;
+                    color: var(--color-background-light);
+                    padding: .3rem;
+                    background-color: #00478Fbb;
+                    border-radius: 0 0 20px 20px;
+                    /* border: 1px solid #d3d3d3; */
+
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                }
+
+                .card.visible {
+                    opacity: 1;
+                    transform: perspective(1000px) rotateY(0) translateY(0);
                 }
             }
         }
     }
 }
+
 
 /* =============  biology頁面的卡片  ==============*/
 
@@ -290,6 +328,16 @@
     .content {
         display: flex;
         justify-content: space-around;
+    }
+}
+@media screen and (min-width: 768px){
+    .wholeBioFish a.card-link:nth-of-type(3){
+        display: none;
+    }
+}
+@media screen and (min-width: 1024px){
+    .wholeBioFish a.card-link:nth-of-type(3){
+        display: block;
     }
 }
 

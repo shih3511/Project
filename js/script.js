@@ -14,13 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
             // getAttribute("data-target") 會去讀取 HTML 裡寫的 data-target屬性 
             const targetId = this.getAttribute("data-target");
             const newsCard = document.getElementById(targetId);
-            if (newsCard) {
-                newsCard.classList.toggle("expanded");
-                if(button.innerText = "查看更多"){
-                    button.innerText = "收起";
-                }else{
-                    button.innerText = "查看更多"
-                }
+
+            const btnText = button.querySelector("p");
+            if (newsCard.classList.contains("expanded")) {
+                // 執行「收起」動作
+                newsCard.classList.remove("expanded");
+                btnText.innerText = "查看更多"; // 改回查看更多
+            } else {
+                // 執行「展開」動作
+                newsCard.classList.add("expanded");
+                btnText.innerText = "收起"; // 改成收起
             }
         });
     });
