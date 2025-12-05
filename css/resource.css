@@ -77,13 +77,12 @@
                 background-color: var(--color-white);
                 margin: .5rem 0;
                 position: relative;
-                letter-spacing: .3rem;
-                min-height: -webkit-fill-available;;
+                min-height: 140px;
             }
 
             .pic {
                 padding: .1rem;
-                width: 40%;
+                width: 60%;
             }
 
             .rightTxt {
@@ -149,6 +148,9 @@
     .container {
         & .list {
             & .newLink {
+                .card {
+                    min-height: 150px;
+                }
                 .pic {
                     padding: .5rem;
                 }

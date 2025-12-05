@@ -186,7 +186,9 @@ button:hover {
 
 .about .partTitle {
     color: #fff;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    text-align: center;
+    z-index: 100;
 }
 
 .about .content {
@@ -207,19 +209,19 @@ button:hover {
 }
 
 .whale {
-    width: 80%;
+    width: 55%;
     z-index: 10;
     position: absolute;
-    right: -2%;
-    bottom: -5%;
+    right: 0px;
+    bottom: -65px;
 }
 
 .turtle {
     z-index: 10;
     position: absolute;
-    width: 60%;
-    left: -10%;
-    top: -2%;
+    width: 45%;
+    left: -10px;
+    top: 5px;
 }
 
 @keyframes floatTurtle {
@@ -311,17 +313,17 @@ button:hover {
         }
 
         .whale {
-            width: 60%;
+            width: 50%;
             z-index: 10;
-            bottom: 0%;
-            right: 0%;
+            bottom: -10px;
+            right: 0;
         }
 
         .turtle {
-            width: 45%;
+            width: 40%;
             z-index: 10;
-            left: -5%;
-            top: -5%;
+            left: -35px;
+            top: -25px;
 
         }
     }
@@ -333,15 +335,15 @@ button:hover {
         .whale {
             width: 45%;
             z-index: 10;
-            bottom: -5%;
-            right: 2%;
+            bottom: -50px;
+            right: 20px;
         }
 
         .turtle {
             width: 35%;
             z-index: 10;
-            left: 1%;
-            top: 5.8%;
+            left: 10px;
+            top: -20px;
         }
     }
 }
@@ -356,12 +358,11 @@ button:hover {
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 
             .newstop {
-                margin-bottom: 30px;
-                display: flex;
                 justify-content: space-between;
                 padding-bottom: 15px;
 
                 .newsDate {
+                    color: var(--color-gray);
                     text-align: right;
                 }
             }
@@ -396,7 +397,8 @@ button:hover {
                     .allTag {
                         width: 100%;
                         display: flex;
-                        gap: 5%;
+                        justify-content: end;
+                        gap: 2.5%;
                         margin-bottom: 15px;
 
                         .tag {
@@ -510,7 +512,6 @@ button:hover {
         font-size: 1rem;
         color: var(--color-text-dark);
         padding: 20px 20px 20px 0;
-        letter-spacing: .6rem;
         line-height: 200%;
     }
 
@@ -628,6 +629,7 @@ div.pic img.trash-item {
 }
 .actionPart .txt{
     padding-right: 0;
+    padding-left: 10px;
 }
 
 .actionPart .btn {

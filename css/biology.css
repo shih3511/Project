@@ -166,11 +166,11 @@ button:hover {
   border: 2px solid var(--color-lifhtBlue);
   border-radius: 20px;
   overflow: hidden;
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
   transition: all .5s;
   cursor: pointer;
   /* 加入手型游標提示可點擊 */
-  min-height: -webkit-fill-available;
+   min-height: 140px; 
 }
 
 .bioCard:hover {
@@ -196,7 +196,7 @@ label:nth-of-type(5) .bioCard {
 
 label:nth-of-type(6) .bioCard {
   background-image: url(../Mockup/bio-whale.svg);
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
 }
 
 label:nth-of-type(2n) .bioCard {
@@ -228,7 +228,8 @@ label:nth-of-type(2n) .bioCard {
   position: relative;
   justify-content: start;
   align-content: start;
-  padding-left: 1.5rem;
+  /* padding-left: 1.5rem; */
+  margin: auto 10px;
 }
 
 /* =========================================
@@ -393,7 +394,7 @@ label:nth-of-type(2n) .bioCard {
 
 @media screen and (min-width: 1024px) {
   .wholeBio .content .card-link {
-    width: calc(33.333% - 14px);
+    width: 33.333333%;
   }
 }
   
