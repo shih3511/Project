@@ -116,8 +116,13 @@
 
         .item {
             display: flex;
+            flex-wrap: wrap;
             margin: auto 0;
             padding: 10px 0;
+
+            .txt {
+                padding-left: 20%;
+            }
 
             a {
             transition: none;
@@ -156,6 +161,15 @@
                 }
             }
         }
+        .secondPart {
+            .item {
+                flex-wrap: nowrap;
+                .txt {
+                    padding-left: 0%;
+                }
+            }
+        }
     }
+
 }
 

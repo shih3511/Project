@@ -10,13 +10,21 @@
     --color-gray: #C5C2C2;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* ========  卡片  =======*/
 .card-link {
-    padding: 3px 8px;
+    padding: 3px;
 }
+
 h3 {
     letter-spacing: normal;
 }
+
 .card {
     /* ========  卡片翻轉效果  
     1. 設定卡片的初始狀態 (還沒滑到的時候) 
@@ -27,9 +35,9 @@ h3 {
     transition: all 1s ease-out;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     position: relative;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     background-color: #fff;
     margin: 1.5rem 0;
     padding-bottom: 2.5rem;
@@ -40,7 +48,7 @@ h3 {
     .cardPic {
         margin-top: .5rem;
         margin-left: .5rem;
-        width: 55%;
+        /* width: 55%; */
     }
 
     .cardPic img {
@@ -55,30 +63,31 @@ h3 {
         .title {
             writing-mode: vertical-lr;
             margin: .75rem .75rem 0;
-            max-height: 75%;
+            max-height: 82px;
             color: var(--color-primary);
         }
 
         .tag {
             text-align: left;
             position: absolute;
-            /* bottom: 13%; */
-            top: 75%;
-            width: 100%;
+            width: 90%;
+            bottom: 13%;
             color: var(--color-text-dark);
             font-weight: 500;
             opacity: 0.6;
             margin-left: .75rem;
-            letter-spacing: 0.2rem;
+            letter-spacing: 2px;
         }
     }
 
     .txt {
+        width: 100%;
+        height: fit-content;
         position: absolute;
-        bottom: -0.25%;
+        bottom: -10%;
         color: var(--color-background-light);
-        padding: .3rem;
-        background-color: #00478Fbb;
+        padding: .5rem .5rem .2rem .5rem;
+        background-color: #00478Fdd;
         border-radius: 0 0 20px 20px;
         /* border: 1px solid #d3d3d3; */
 
@@ -86,6 +95,10 @@ h3 {
         -webkit-line-clamp: 2;
         display: -webkit-box;
         -webkit-box-orient: vertical;
+
+        p {
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -103,6 +116,7 @@ h3 {
 
     .card {
 
+        /* border-radius: 20px; */
         .cardTopRight {
             .title {
                 height: 93px;
@@ -114,8 +128,8 @@ h3 {
             }
         }
 
-        .txt {
-            bottom: 0%;
+        div.txt {
+            /* bottom: 0%; */
         }
 
     }
@@ -142,7 +156,13 @@ h3 {
         .cardTopRight {
             margin: 0 -2px;
 
+            .title {
+                margin-top: 5px;
+            }
+
             .tag {
+                width: 100%;
+                margin-left: 5px;
                 /* bottom: 8%; */
                 /* left: 0%; */
             }
@@ -150,7 +170,7 @@ h3 {
 
         .txt {
             transition: all .5s ease;
-            bottom: -5%;
+            bottom: -13%;
         }
 
     }
@@ -181,7 +201,7 @@ h3 {
     }
 
     .cardPic {
-        width: 100%;
+        /* width: 100%; */
         margin: .5rem;
     }
 }
@@ -223,12 +243,13 @@ h3 {
                 transform: none;
                 transition: none;
                 /* 手機版不需要過渡動畫 */
+                border-radius: 20px;
                 margin: .5rem 0;
                 flex-wrap: nowrap;
 
                 .cardPic {
                     margin: 0;
-                    width: 70%;
+                    /* width: 70%; */
                     padding: .5rem;
                 }
 
@@ -248,7 +269,7 @@ h3 {
 
                 .txt {
                     /* position: absolute; */
-                    /* bottom: 10%; */
+                    bottom: 0%;
                     padding: .3rem .8rem 0;
                 }
             }
@@ -269,8 +290,9 @@ h3 {
                     display: flex;
                     flex-wrap: nowrap;
 
+
                     .cardPic {
-                        width: 60%;
+                        /* width: 60%; */
                         padding: 0;
                         margin-top: .5rem;
                         margin-left: .5rem;
@@ -278,7 +300,7 @@ h3 {
                 }
 
                 .cardTopRight {
-                    width: 35%;
+                    /* width: 35%; */
 
                     .title {
                         max-width: 70%;
@@ -327,20 +349,36 @@ h3 {
     .txt {
         padding: 20px;
     }
+    .txt{
+        bottom: -3% !important;
+    }
 
     .content {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 }
+
+.wholeBioFish a.card-link:nth-of-type(3) {
+    display: none;
+}
 @media screen and (min-width: 768px){
-    .wholeBioFish a.card-link:nth-of-type(3){
-        display: none;
+    .content {
+        flex-wrap: wrap;
+    }
+    .wholeBioFish .txt {
+        bottom: -8% !important;
     }
 }
-@media screen and (min-width: 1024px){
-    .wholeBioFish a.card-link:nth-of-type(3){
+
+
+@media screen and (min-width: 1024px) {
+    .wholeBioFish a.card-link:nth-of-type(3) {
         display: block;
+    }
+    .wholeBioFish .txt {
+        bottom: -13% !important;
     }
 }
 
