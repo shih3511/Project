@@ -6,13 +6,9 @@
     --color-text-dark: #001f3f;
     --color-background-light: #f5f5f5;
     --color-white: #ffffff;
-    --color-lifhtBlue: #3721a6;
+    --color-lifhtBlue: #70A6CF;
     --color-gray: #C5C2C2;
-    /* --color-border-light: #eee; */
-    --spacing-medium: 30px;
-    --spacing-large: 50px;
-    --font-size-title-desktop: 48px;
-    --font-size-title-mobile: 36px;
+    --color-txt-bg: #5782b6;
 }
 
 .habiTat a {
@@ -55,7 +51,7 @@
 
     .habitat:hover {
         box-shadow: 0 15px 30px rgba(0, 71, 143, 0.2);
-        background-color: rgb(142, 173, 205);
+        background-color: #7A94AC;
     }
     
 }

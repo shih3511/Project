@@ -1,18 +1,14 @@
 :root {
-  --color-primary: #00478F;
-  /* 主要強調色 (深藍/紫色) */
-  --color-accent: #ff6f61;
-  /* 次要強調色/危險色 (橙紅) */
-  --color-text-dark: #001f3f;
-  --color-background-light: #f5f5f5;
-  --color-white: #ffffff;
-  --color-lightBlue: #78B6CE;
-  --color-gray: #C5C2C2;
-  /* --color-border-light: #eee; */
-  --spacing-medium: 30px;
-  --spacing-large: 50px;
-  --font-size-title-desktop: 48px;
-  --font-size-title-mobile: 36px;
+    --color-primary: #00478F;
+    /* 主要強調色 (深藍/紫色) */
+    --color-accent: #ff6f61;
+    /* 次要強調色/危險色 (橙紅) */
+    --color-text-dark: #001f3f;
+    --color-background-light: #f5f5f5;
+    --color-white: #ffffff;
+    --color-lifhtBlue: #70A6CF;
+    --color-gray: #C5C2C2;
+    --color-txt-bg: #5782b6;
 }
 
 
@@ -94,8 +90,8 @@ i {
 .search .hot button {
   padding: 0 10px;
   border: 0;
-  background-color: #78b6ce;
-  color: #f6fffe;
+  background-color: var(--color-lightBlue);
+  color: var(--color-background-light);
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 0;
   transition: all 0.5s ease;
@@ -104,19 +100,19 @@ i {
 }
 
 .search .hot button:hover {
-  background-color: #0f52ba;
+  background-color: var(--color-primary);
   box-shadow: inset;
 }
 
 /* =========================================
-   共用元件 (Button)
+    共用元件 (Button)
    ========================================= */
 
 button {
   border-radius: 40px;
   cursor: pointer;
   border: 3px solid var(--color-primary);
-  background-color: white;
+  background-color: var(--color-white);
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -126,7 +122,7 @@ button {
 
 button:hover {
   background-color: hsl(261deg 80% 48%);
-  color: hsl(0, 0%, 100%);
+  color: var(--color-white);
   /* box-shadow: rgb(93 24 220) 0px 7px 29px 0px; */
 }
 
@@ -209,7 +205,7 @@ label:nth-of-type(2n) .bioCard {
   /* 預設隱藏 */
   padding: 2rem 1%;
   border-radius: 20px;
-  background-color: #78B6CE;
+  background-color: var(--color-lightBlue);
 
 }
 

@@ -1,3 +1,15 @@
+:root {
+    --color-primary: #00478F;
+    /* 主要強調色 (深藍/紫色) */
+    --color-accent: #ff6f61;
+    /* 次要強調色/危險色 (橙紅) */
+    --color-text-dark: #001f3f;
+    --color-background-light: #f5f5f5;
+    --color-white: #ffffff;
+    --color-lifhtBlue: #70A6CF;
+    --color-gray: #C5C2C2;
+    --color-txt-bg: #5782b6;
+}
 .container {
 
     /* 標題 */

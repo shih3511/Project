@@ -6,8 +6,9 @@
     --color-text-dark: #001f3f;
     --color-background-light: #f5f5f5;
     --color-white: #ffffff;
-    --color-lifhtBlue: #78B6CE;
+    --color-lifhtBlue: #70A6CF;
     --color-gray: #C5C2C2;
+    --color-txt-bg: #5782b6;
 }
 
 *,
@@ -38,7 +39,7 @@ h3 {
     flex-wrap: nowrap;
     position: relative;
     border-radius: 20px 20px 0 0;
-    background-color: #fff;
+    background-color: var(--color-white);
     margin: 1.5rem 0;
     padding-bottom: 2.5rem;
 
@@ -87,8 +88,9 @@ h3 {
         bottom: -10%;
         color: var(--color-background-light);
         padding: .5rem .5rem .2rem .5rem;
-        background-color: #00478Fdd;
+        background-color: var(--color-txt-bg);
         border-radius: 0 0 20px 20px;
+        transition: all 1s ease-out;
         /* border: 1px solid #d3d3d3; */
 
         overflow: hidden;
@@ -146,7 +148,7 @@ h3 {
     }
 
     .card:hover .txt {
-        background-color: #00478F;
+        background-color: var(--color-primary);
     }
 }
 
@@ -185,12 +187,16 @@ h3 {
 .start {
     .content {
         display: flex;
+
+        .card {
+            padding: 0;
+            margin: 0;
+            border-radius: 20px;
+            flex-wrap: wrap;
+        }
     }
 
-    .card {
-        padding: 0;
-        margin: 0;
-    }
+
 
     .title {
         writing-mode: horizontal-tb;
@@ -273,6 +279,10 @@ h3 {
                     bottom: 0%;
                     padding: .3rem .8rem;
                 }
+            }
+
+            .card:hover .txt {
+                background-color: var(--color-primary);
             }
         }
     }
@@ -363,12 +373,15 @@ h3 {
         justify-content: space-around;
     }
 }
+
 .wholeBioFish .content .card-link .card {
     padding-bottom: 2.75rem;
 }
+
 .wholeBioFish .content .card-link .card .cardTopRight .tag {
     bottom: 7%;
 }
+
 .wholeBioFish a.card-link:nth-of-type(3) {
     display: none;
 }
