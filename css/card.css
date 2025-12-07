@@ -71,7 +71,7 @@ h3 {
             text-align: left;
             position: absolute;
             width: 90%;
-            bottom: 13%;
+            bottom: 3%;
             color: var(--color-text-dark);
             font-weight: 500;
             opacity: 0.6;
@@ -246,6 +246,7 @@ h3 {
                 border-radius: 20px;
                 margin: .5rem 0;
                 flex-wrap: nowrap;
+                padding-bottom: 2rem;
 
                 .cardPic {
                     margin: 0;
@@ -260,8 +261,8 @@ h3 {
                     }
 
                     .tag {
-                        /* bottom: 14%; */
-                        /* left: 17%; */
+                        padding-left: .5rem;
+                        bottom: 15%;
                         margin: 0 auto;
                         width: max-content;
                     }
@@ -270,7 +271,7 @@ h3 {
                 .txt {
                     /* position: absolute; */
                     bottom: 0%;
-                    padding: .3rem .8rem 0;
+                    padding: .3rem .8rem;
                 }
             }
         }
@@ -289,6 +290,7 @@ h3 {
                     transition: all 0.8s ease-out;
                     display: flex;
                     flex-wrap: nowrap;
+                    padding-bottom: 2.55rem;
 
 
                     .cardPic {
@@ -297,22 +299,23 @@ h3 {
                         margin-top: .5rem;
                         margin-left: .5rem;
                     }
+
+                    .cardTopRight {
+                        /* width: 35%; */
+
+                        .title {
+                            max-width: 70%;
+                            margin: .75rem .75rem 0;
+                        }
+
+                        .tag {
+                            letter-spacing: 1px;
+                            bottom: 12%;
+                        }
+                    }
                 }
 
-                .cardTopRight {
-                    /* width: 35%; */
 
-                    .title {
-                        max-width: 70%;
-                        margin: .75rem .75rem 0;
-                    }
-
-                    .tag {
-                        letter-spacing: 1px;
-                        padding-left: 0;
-                        top: 70%;
-                    }
-                }
 
                 .txt {
                     position: absolute;
@@ -349,7 +352,8 @@ h3 {
     .txt {
         padding: 20px;
     }
-    .txt{
+
+    .txt {
         bottom: -3% !important;
     }
 
@@ -359,14 +363,21 @@ h3 {
         justify-content: space-around;
     }
 }
-
+.wholeBioFish .content .card-link .card {
+    padding-bottom: 2.75rem;
+}
+.wholeBioFish .content .card-link .card .cardTopRight .tag {
+    bottom: 7%;
+}
 .wholeBioFish a.card-link:nth-of-type(3) {
     display: none;
 }
-@media screen and (min-width: 768px){
+
+@media screen and (min-width: 768px) {
     .content {
         flex-wrap: wrap;
     }
+
     .wholeBioFish .txt {
         bottom: -8% !important;
     }
@@ -377,6 +388,7 @@ h3 {
     .wholeBioFish a.card-link:nth-of-type(3) {
         display: block;
     }
+
     .wholeBioFish .txt {
         bottom: -13% !important;
     }

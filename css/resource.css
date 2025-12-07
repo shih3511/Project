@@ -62,7 +62,6 @@
                 top: 0%;
                 left: 40%;
                 background-color: #ff6f6111;
-                border: 1px dotted var(--color-accent);
                 border-radius: 10px;
                 transition: all .5s .1s ease-in;
             }
@@ -70,7 +69,7 @@
 
             .card {
                 display: flex;
-                justify-content: space-between;
+                /* justify-content: space-between; */
                 align-items: center;
                 border-radius: 20px;
                 border: 2px solid #d3d3d3;
@@ -81,19 +80,21 @@
             }
 
             .pic {
-                padding: .1rem;
-                width: 60%;
+                padding: .5rem;
+                min-width: 110px;
             }
 
             .rightTxt {
                 padding-top: 1rem;
-                padding-left: .5rem;
             }
 
             .pTitle {
                 border-bottom: 2px solid var(--color-primary);
                 width: fit-content;
                 margin-left: 0;
+            }
+            .rightTxt .txt p{
+                padding: 0 .5rem 0 0;
             }
         }
 
@@ -157,7 +158,7 @@
                     min-height: 150px;
                 }
                 .pic {
-                    padding: .5rem;
+                    padding: .5rem .8rem;
                 }
             }
         }

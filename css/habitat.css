@@ -6,7 +6,7 @@
     --color-text-dark: #001f3f;
     --color-background-light: #f5f5f5;
     --color-white: #ffffff;
-    --color-lifhtBlue: #78B6CE;
+    --color-lifhtBlue: #3721a6;
     --color-gray: #C5C2C2;
     /* --color-border-light: #eee; */
     --spacing-medium: 30px;
@@ -19,14 +19,15 @@
 
     .habitat {
         display: flex;
+        flex-wrap: wrap;
         position: relative;
         /* ======= 卡片內容上下排序 ========= */
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin: 1.5rem 0;
         background-color: var(--color-lifhtBlue);
         padding: 1.5rem;
         border-radius: 10px;
-        color: #f5f5f5;
+        color: var(--color-background-light);
         align-items: center;
         transition: all .5s ease-in;
 
@@ -38,6 +39,7 @@
             .txt {
                 /* ======= 顯眼的顏色，避免被背景色吃掉 ========= */
                 color: var(--color-background-light);
+                padding: 10px 0 0;
             }
 
             .txt.txtTitle {
@@ -60,12 +62,12 @@
 
 /* 淺灰色卡片 Hover */
 .habiTat a:nth-child(2n+1) .habitat:hover {
-    background-color: #b0b0b0; /* 稍微變深一點的灰色 */
+    background-color: #C5C2C2; /* 稍微變深一點的灰色 */
 }
 
-/* ======= 第二跟第四個 字的顏色改變========= */
+/* ======= 第二跟第四個顏色改變========= */
 .habiTat a:nth-child(2n+1) .habitat {
-    background-color: #C5C2C2;
+    background-color: #eee;
     color: var(--color-text-dark);
 }
 
@@ -74,11 +76,22 @@
 }
 
 .habiTat a:nth-child(2n+1) .habitat .txt {
+    /* padding-right:0; */
+    /* padding-left: .25rem; */
     color: var(--color-text-dark);
 }
 
 /* ======= 第二跟第四個 的左右排序相反 ========= */
 @media screen and (min-width: 768px) {
+    .habiTat a .habitat .txt {
+    padding-right: .25rem;
+}
+    .habiTat .subtitle {
+        margin-bottom: 0;
+    }
+    .habiTat .pTitle {
+        margin: 0;
+    }
     .txt.txtTitle {
         font-weight: 500;
         padding-bottom: 0px;
@@ -92,7 +105,11 @@
         flex-direction: row-reverse;
     }
 
-    .habiTat a:nth-child(2n+1) .habitat .content {
-        margin-left: 2rem;
+    .habiTat a:nth-child(2n) .habitat .content {
+        padding-left: 1rem;
     }
+    .habiTat a:nth-child(2n+1) .habitat .content {
+    padding-left:0;
+    padding-right: .75rem;
+}
 }

@@ -20,8 +20,8 @@
 
             /* 照片部分 */
             .pic {
-                padding: 10px;
                 margin: 0 auto;
+                padding: 8px;
             }
 
             /* 背景部分 */
@@ -29,11 +29,11 @@
                 background-color: var(--color-white);
                 height: 70%;
                 border-radius: 20px;
-                padding: 5px;
+                padding: 15px;
 
                 /* 文字部分 */
-                .inner {
-                    margin: 5px;
+                .txt {
+                    padding-bottom: 0;
                 }
 
             }
@@ -47,10 +47,10 @@
         }
 
         /* 第二區背井位置調整 */
-        .card:nth-child(even) .cardContent .inner {
+        /* .card:nth-child(even) .cardContent .inner {
             margin-left: 0;
             padding-left: 2rem;
-        }
+        } */
     }
 }
 
@@ -66,10 +66,9 @@
 
                 /* 照片部分位置調整 */
                 .pic {
-                    padding: 10px;
                     position: absolute;
                     left: -6%;
-                    bottom: 6%;
+                    bottom: 4%;
                     width: 45%;
                 }
 
@@ -86,7 +85,13 @@
             }
 
             /* 第二區順序相反 */
-            .card:nth-child(2) {
+            .card:nth-child(2)  {
+                .cardContent{
+                    .inner {
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
                 .pic {
                     position: absolute;
                     left: 60%;
@@ -106,7 +111,7 @@
                 /* 照片部分位置調整 */
                 .pic {
                     left: -15%;
-                    bottom: 0%;
+                    bottom: 8%;
                     width: 50%;
                 }
 
