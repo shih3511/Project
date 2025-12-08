@@ -90,7 +90,7 @@ i {
 .search .hot button {
   padding: 0 10px;
   border: 0;
-  background-color: var(--color-lightBlue);
+  background-color: var(--color-lifhtBlue);
   color: var(--color-background-light);
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 0;
@@ -205,7 +205,7 @@ label:nth-of-type(2n) .bioCard {
   /* 預設隱藏 */
   padding: 2rem 1%;
   border-radius: 20px;
-  background-color: var(--color-lightBlue);
+  background-color: var(--color-lifhtBlue);
 
 }
 
