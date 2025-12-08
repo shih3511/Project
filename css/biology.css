@@ -16,21 +16,19 @@
   overflow: hidden;
 }
 
-/* -------------------         search         --------------------- */
+/* -------------------         top         --------------------- */
 
 
-.search {
+.top {
   display: inline-block;
   flex-wrap: wrap;
   grid-row: 4/5;
   grid-column: 1/4;
-  margin: 2rem 0;
-  /* 拉大距離 */
   position: relative;
   /* 讓i標籤可以定位 */
 }
 
-.search .search_bar input.searchBar {
+.top .search_bar input.searchBar {
   text-indent: 23px;
   background-image: url('');
   width: 100%;
@@ -77,17 +75,17 @@ i {
   position: relative;
 }
 
-.search .hot {
+.top .hot {
   display: flex;
   margin-top: 1rem;
   color: var(--color-text-dark);
 }
 
-.search .hot p {
+.top .hot p {
   margin-right: 10px;
 }
 
-.search .hot button {
+.top .hot button {
   padding: 0 10px;
   border: 0;
   background-color: var(--color-lifhtBlue);
@@ -99,7 +97,7 @@ i {
   text-align: center;
 }
 
-.search .hot button:hover {
+.top .hot button:hover {
   background-color: var(--color-primary);
   box-shadow: inset;
 }
@@ -109,15 +107,17 @@ i {
    ========================================= */
 
 button {
-  border-radius: 40px;
-  cursor: pointer;
-  border: 3px solid var(--color-primary);
-  background-color: var(--color-white);
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 1rem;
-  transition: all 0.5s ease;
+    padding: 0 5px;
+    border: 0;
+    border-radius: 20px;
+    background-color: var(--color-lifhtBlue);
+    color: var(--color-white);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    height: 30px;
+    margin: 0 1%;
+    text-align: center;
 }
 
 button:hover {

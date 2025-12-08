@@ -147,6 +147,75 @@
         text-align: center;
       }
     }
+
+    /* =========================================
+   海浪動畫專用樣式
+   ========================================= */
+
+    .wave-container {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      /* 波浪的高度，可自由調整 */
+      margin-bottom: -1px;
+      /* 【關鍵】消除波浪與 footer 之間的微小縫隙 */
+      overflow: hidden;
+      background: transparent;
+      /* 背景透明，讓它融入上一層 */
+    }
+
+    /* SVG 設定 */
+    .waves {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-bottom: -7px;
+      /* 修正 SVG 預設底部的間隙 */
+    }
+
+    /* 動畫設定 */
+    .parallax>use {
+      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+
+    /* 設定每一層波浪的延遲與速度，製造層次感 */
+    .parallax>use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+
+    .parallax>use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    .parallax>use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+
+    .parallax>use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+
+    /* 波浪移動的關鍵影格 */
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
+    }
+
+    /* RWD 手機版調整：讓波浪變矮一點，比較不佔空間 */
+    @media screen and (max-width: 768px) {
+      .wave-container {
+        height: 60px;
+      }
+    }
   </style>
 </head>
 
@@ -190,19 +259,79 @@
       </nav>
     </div>
   </header>
+  <div class="subtitle">I. 深度學習與數據追蹤</div>
+  <div class="content firstPart col-12 col-md-12">
 
-  <script>
-    const hbSwitch = document.querySelector(".hb");
-    const mainMenu = document.querySelector(".main-menu");
-    if (hbSwitch) {
-      hbSwitch.addEventListener("click", function () {
-        hbSwitch.classList.toggle("switchFish");
-        mainMenu.classList.toggle("switchFish")
+    <div class="txt">
+      <p>
+        您的每一次選擇都是對海洋的支持。這份指南將提供四個可以在日常生活中實踐的行動。
+      </p>
+    </div>
+    <div class="list">
+      <a href="https://www.iucnredlist.org/" class="newLink col-12 col-md-6" target="_blank">
+        <span class="hover-tip">這將會在新分頁開啟！</span>
+        <div class="card ">
+          <div class="rightTxt">
+            <div class="pTitle ">IUCN 紅色名錄</div>
+            <div class="txt">
+              <p>
+                全球最權威的物種受威脅狀態資料庫，瀕危物種的最新狀態
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
 
-      });
-    }
+    <div class="wave-container">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0, 71, 143, 0.1)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0, 71, 143, 0.2)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(237, 245, 255, 0.6)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#EDF5FF" />
+        </g>
+      </svg>
+    </div>
 
-  </script>
+    <footer class="footer col-12 col-md-12 col-lg-12">
+      <div class="socialLink col-6">
+        <div class="socialMedia">
+          <a href="#">
+            <i class="fa-brands fa-twitter fa-2xl"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-square-facebook fa-2xl"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-youtube fa-2xl"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-square-threads fa-2xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <p>© 2025 潮覓 All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script>
+      const hbSwitch = document.querySelector(".hb");
+      const mainMenu = document.querySelector(".main-menu");
+      if (hbSwitch) {
+        hbSwitch.addEventListener("click", function () {
+          hbSwitch.classList.toggle("switchFish");
+          mainMenu.classList.toggle("switchFish")
+
+        });
+      }
+
+    </script>
 </body>
 
-</html> 
+</html>

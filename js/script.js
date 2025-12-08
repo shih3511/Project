@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         img.classList.add("trash-item");
 
         const duration = getRandomFloat(1.5, 4.0);
-        const xEnd = getRandomInt(-150, 150);
+        const xEnd = getRandomInt(-180, 100);
         const rEnd = getRandomInt(-360, 360);
         const yEnd = getRandomInt(70, 95);
 
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
             bubble.style.width = `${size}px`;
             bubble.style.height = `${size}px`;
             // 向左偏移
-            const left = Math.random() * 80 + 10;
+            const left = Math.random() * 70 + 10;
             bubble.style.left = `${left}%`;
 
             //  泡泡上升速度 (10秒 ~ 20秒)
@@ -403,6 +403,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
+
+    // ==========================================
+    // 功能十：自動標示當前頁面
+    // ==========================================
+    
+    // 1. 取得目前網頁的網址路徑
+    const currentPath = window.location.pathname;
+    
+    // 2. 取得所有導覽列的連結
+    const menuLinks = document.querySelectorAll('.main-menu a');
+
+    menuLinks.forEach(link => {
+        // 3. 比對連結的 href 是否包含當前的檔案名稱
+        // 使用 getAttribute('href') 抓取 HTML 寫的相對路徑 (例如 biology.html)
+        const linkHref = link.getAttribute('href');
+
+        // 判斷邏輯：
+        // A. 如果網址路徑「包含」這個連結的檔名 (例如 /biology.html 包含 biology.html)
+        // B. 或是處理首頁的特殊情況 (網址是 / 或 /index.html 時，對應 index.html)
+        
+        if (currentPath.includes(linkHref) && linkHref !== "") {
+            link.classList.add('active');
+        } 
+        // 特殊處理首頁：如果目前路徑以 / 結尾 (代表在首頁)，且連結是 index.html
+        else if (currentPath.endsWith('/') && linkHref === 'index.html') {
+            link.classList.add('active');
+        }
+    });
     
 });
 

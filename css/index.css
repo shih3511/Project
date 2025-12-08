@@ -200,7 +200,6 @@ button:hover {
     color: var(--color-white);
     padding-bottom: 0px;
     text-align: center;
-    z-index: 100;
 }
 
 .about .content {

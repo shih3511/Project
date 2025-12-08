@@ -10,6 +10,7 @@
     --color-gray: #C5C2C2;
     --color-txt-bg: #5782b6;
 }
+
 .container {
 
     /* 標題 */
@@ -122,14 +123,27 @@
 
                 /* 照片部分位置調整 */
                 .pic {
-                    left: -15%;
-                    bottom: 8%;
-                    width: 50%;
+                    left: -10%;
+                    bottom: 10%;
+                    width: 45%;
                 }
 
                 /* 背景部分位置調整 */
                 .cardContent {
                     margin: 3rem 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1280px) {
+    .container {
+
+        .list {
+            .card {
+                .pic {
+                    left: -1%;
+                    width: 40%;
                 }
             }
         }

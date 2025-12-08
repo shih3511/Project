@@ -5,6 +5,7 @@ body {
     color: #001f3f;
     background-color: #f5f5f5;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
@@ -25,6 +26,7 @@ p {
     position: fixed;
     z-index: 100;
     width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +54,7 @@ p {
         position: absolute;
         display: none;
         background-color: #00478F;
-        height: calc(100svh - 30px);
+        height: calc(100vh - 30px);
         width: 100%;
         top: 100%;
         left: 0;
@@ -185,8 +187,12 @@ p {
         text-decoration: none;
         font-size: 18px;
         padding: 5px 10px;
-        /* 確保 a 標籤上的過渡效果存在 */
         transition: all 0.3;
+    }
+
+    .main-menu a.active {
+        color: var(--color-primary);
+        font-weight: 750;
     }
 
     .main-menu a::after {
@@ -267,51 +273,24 @@ container
 footer    
  ================= */
 
-.foot {
+.footer {
     display: flex;
-    background-color: #EDF5FF;
-    padding: 5%;
+    flex-wrap: wrap;
+    background-color: var(--color-lifhtBlue);
+    padding: 15px;
     justify-content: space-between;
-}
-
-.footerPageLink {
-    .subTitle {
-        font-weight: 500;
-        font-size: 1.15rem;
-    }
-
-    .txt {
-        margin: 10px;
-        padding: 10px;
-    }
-}
-
-.txt a:hover {
-    text-decoration-line: underline;
-    border-radius: 2px solid var(--color-primary);
+    padding-bottom: 0;
+    position: relative;
 }
 
 .socialLink {
     margin: auto;
 }
 
-.socialLink .logo {
-    padding: 0;
-}
-
-.socialLink .logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-
 .socialMedia {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    margin-top: 15px;
 }
 
 .socialMedia a {
@@ -321,6 +300,7 @@ footer
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    color: var(--color-white);
 }
 
 .socialMedia a img {
@@ -330,28 +310,47 @@ footer
     padding: 0;
 }
 
-@media screen and (min-width: 768px) {
-    .foot {
-        padding: 3%;
+.right {
+    width: 100%;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    text-align: right;
+    display: block;
+    opacity: 0.6;
+    padding-top: 5px;
+}
+
+/* =========================================
+   海浪動畫 (背景圖片平移法)
+   ========================================= */
+
+.wave-bg {
+    width: 100%;
+    height: 150px; 
+    background-image: url('../Mockup/wave.svg');
+    background-repeat: repeat-x; 
+    background-position: bottom;
+    animation: wave-move 10s linear infinite;
+    margin-bottom: -1px;
+}
+
+@keyframes wave-move {
+    0% {
+        background-position-x: 0px;
     }
-
-    .footerPageLink {
-        display: flex;
-
-        .list {
-            margin: 0 20px;
-        }
-
-        .txt {
-            margin: 0;
-            padding: 5px 0;
-        }
-
-        a {
-            margin: 15px 0;
-        }
+    100% {
+        background-position-x: 1440px;
     }
 }
+
+/* RWD 手機版調整 */
+@media screen and (max-width: 768px) {
+    .wave-bg {
+        height: 80px; /* 手機版波浪矮一點 */
+    }
+}
+
 
 /* -------    footer   --------- */
 
@@ -466,8 +465,8 @@ footer
 /* =========   泡泡設定   ========= */
 .bubble-container {
     position: fixed;
-    width: 95%;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     z-index: -1;
     top: 0;
     left: 0;
