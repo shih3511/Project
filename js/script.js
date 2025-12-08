@@ -6,24 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // 1. 選取要觀察的按鈕
     const buttons = document.querySelectorAll(".read-more-btn");
     // 2. 當任一按鈕被點案的時候
-    // forEach 是一個迴圈，意思是指：「對於清單裡的每一個 button，都做一次以下動作...」
     buttons.forEach(button => {
 
         button.addEventListener("click", function () {
-            // 'this' 代表「現在被點到的這顆按鈕」
             // getAttribute("data-target") 會去讀取 HTML 裡寫的 data-target屬性 
             const targetId = this.getAttribute("data-target");
             const newsCard = document.getElementById(targetId);
 
             const btnText = button.querySelector("p");
             if (newsCard.classList.contains("expanded")) {
-                // 執行「收起」動作
+                // 收起
                 newsCard.classList.remove("expanded");
-                btnText.innerText = "查看更多"; // 改回查看更多
+                btnText.innerText = "查看更多";
             } else {
-                // 執行「展開」動作
+                //展開
                 newsCard.classList.add("expanded");
-                btnText.innerText = "收起"; // 改成收起
+                btnText.innerText = "收起"; 
             }
         });
     });
@@ -46,25 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const animals = document.querySelectorAll(".about .pic, .about .inner");
 
     // 2. 設定觀察器
-    // 使用「Intersection Observer API」(交會觀察器)，像是裝了監視器
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // isIntersecting 是一個 true/false 的值
-            // true 代表「東西跑進畫面裡了」
-            // false 代表「東西還在畫面外」
+            // isIntersecting 是布林值
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
             }
         });
     }, {
         // 3. 設定門檻 (Option)
-        // threshold: 0.3 代表「當物件有 30% 的面積進入視窗」時，才算「看見了」，觸發上面的動作。
-        // 如果設為 0，一碰到邊緣就會觸發；設為 1，要整隻都進來才觸發。
         threshold: 0.3 // 當物件出現 30% 時觸發
     });
 
     // 4. 開始監視
-    // 告訴監視器 (observer) 要去盯著哪些東西 (animals)
     animals.forEach(animal => {
         observer.observe(animal);
     });
@@ -94,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, {
         // 3. 設定門檻 (Option)
-        threshold: 0.2 // 當物件出現 30% 時觸發
+        threshold: 0.2 // 當物件出現 20% 時觸發
     });
     // 4. 開始監視
     cards.forEach(card => {
@@ -108,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const trashContainer = document.querySelector('.trash-group'); // 
     const maxTrashCount = 50;
 
-    // const trashItems = document.querySelectorAll('.trash-item[class*=" item"');
     // 2. 定義隨機整數函式 (用來算角度、距離)
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -150,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let isDumping = false; // 開關，避免重複啟動
     let dumpInterval;      // 計時器
 
-    const actionSection = document.querySelector('.actionPart'); // 抓取 actionPart 區塊
+    const actionSection = document.querySelector('.actionPart'); 
 
     const trashObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -158,14 +149,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 1. 進入畫面：打開開關
                 isDumping = true;
 
-                // 2. 啟動計時器：每 0.3 秒產生一個垃圾 (你可以調整速度)
+                // 2. 啟動計時器：每 0.3 秒產生一個垃圾
                 dumpInterval = setInterval(createTrash, 300);
 
-            } else if (!entry.isIntersecting && isDumping) {
-                // (選用) 離開畫面時要暫停嗎？如果不暫停可以把下面這段註解掉
-                // clearInterval(dumpInterval);
-                // isDumping = false;
-            }
+            } 
         });
     }, { threshold: 0.3 });
 
@@ -180,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
 
     const numberElement = document.querySelector('.count-number');
-    const actionSectionStat = document.querySelector('.actionPart'); // 監聽整個 action 區塊
+    const actionSectionStat = document.querySelector('.actionPart'); 
     let hasCounted = false; // 開關：確保動畫只跑一次，不會重複跑
 
     // 定義動畫函式
@@ -193,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // 計算當前數值
             const currentVal = Math.floor(progress * (end - start) + start);
 
-            // 更新文字 (使用 toLocaleString() 自動加上千分位逗號 1,100)
+            //  toLocaleString() 自動加上千分位逗號 1,100)
             obj.innerHTML = currentVal.toLocaleString();
 
             if (progress < 1) {
@@ -232,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // ==========================================
-    // 功能六：Chart.js 圓餅圖 (進階動畫版：先跑軌道，再跑數據)
+    // 功能六：Chart.js 圓餅圖 (先跑軌道，再跑數據)
     // ==========================================
 
     const coralChart1 = document.getElementById('chartCoralArea');
@@ -240,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (coralChart1 && coralChart2) {
 
-        // --- 1. 定義一個「畫灰色背景軌道」的外掛 (Plugin) ---
+        //  1. 畫灰色背景軌道 
         const backgroundCirclePlugin = {
             id: 'backgroundCircle',
             beforeDraw(chart) {
@@ -264,9 +251,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 ctx.beginPath();
                 // 畫在圓心，半徑取「內外半徑的中間值」
                 ctx.arc(centerX, centerY, (outerRadius + innerRadius) / 2, 0, 2 * Math.PI);
-                // 線條寬度 = 外半徑 - 內半徑 (剛好填滿甜甜圈的厚度)
+                // 線條寬度 = 外半徑 - 內半徑 
                 ctx.lineWidth = outerRadius - innerRadius;
-                ctx.strokeStyle = '#e0e0e0'; // 設定軌道顏色 (淺灰)
+                ctx.strokeStyle = '#e0e0e0'; //軌道顏色:淺灰
                 ctx.stroke();
                 ctx.restore();
             }
@@ -278,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
             animation: {
                 duration: 2000,
                 easing: 'easeOutQuart',
-                delay: 500 // 【關鍵】延遲 0.5 秒才開始跑數據，讓使用者先看到灰色軌道
+                delay: 500 // 延遲 0.5 秒才開始跑數據，讓使用者先看到灰色軌道
             },
             plugins: {
                 legend: { display: false },
@@ -299,15 +286,15 @@ document.addEventListener("DOMContentLoaded", function () {
                             datasets: [{
                                 data: [1, 99],
                                 backgroundColor: [
-                                    '#00478F',    // 數據顏色 (深藍)
+                                    '#00478F',    // 數據顏色 : 深藍
                                     'transparent' // 【關鍵】剩餘部分設為透明，透出底下的灰色軌道
                                 ],
                                 borderWidth: 0,
-                                borderRadius: 10 // (選用) 讓數據條的頭尾變圓角，看起來更精緻
+                                borderRadius: 10 
                             }]
                         },
                         options: commonOptions,
-                        plugins: [backgroundCirclePlugin] // 啟用我們寫的灰色軌道外掛
+                        plugins: [backgroundCirclePlugin]
                     });
 
                     // 產生圖表 2 (25%)
@@ -318,8 +305,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             datasets: [{
                                 data: [25, 75],
                                 backgroundColor: [
-                                    '#ff6f61',    // 數據顏色 (珊瑚紅)
-                                    'transparent' // 【關鍵】設為透明
+                                    '#ff6f61',    // 顏色:珊瑚紅
+                                    'transparent' // 設為透明
                                 ],
                                 borderWidth: 0,
                                 borderRadius: 10
@@ -343,7 +330,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // 功能七：searchBar focus
     // ==========================================
     const searchBar = document.querySelector(".searchBar");
-    // 確保搜尋框存在才執行 (避免在沒有搜尋框的頁面報錯)
     if (searchBar) {
         searchBar.addEventListener("focus", function () {
             searchBar.classList.add("-on");
@@ -354,19 +340,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // 熱門搜索點按，文字進入input框中
-        // 先找到tag的button 跟 searchBar
         const tagBtns = document.querySelectorAll(".tag_btn");
 
-        //對每個按鈕加上監聽器
         tagBtns.forEach((tagBtn) => {
 
-            // 【優化關鍵 】阻止按鈕在「滑鼠按下時」搶走焦點
-            // 這樣就不會觸發 searchBar 的 blur 事件，樣式就不會閃爍
             tagBtn.addEventListener("mousedown", function (e) {
                 e.preventDefault();
             });
 
-            // 對 tagBtn (按鈕自己) 加監聽，不是 document
             tagBtn.addEventListener("click", function () {
                 //把button中的文字放入searchBar中
                 searchBar.value = tagBtn.value;
@@ -378,8 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 功能八：泡泡出現及軌跡
     // ==========================================
 
-    const bubbleContainer = document.querySelector('.bubble-container'); // 
-    const maxBubbleCount = 10;
+    const bubbleContainer = document.querySelector('.bubble-container'); 
     // 定義隨機小數函式(用來算泡泡出現的位置、大小) 
 
     if (bubbleContainer) {
@@ -402,14 +382,11 @@ document.addEventListener("DOMContentLoaded", function () {
             //  加入容器
             bubbleContainer.appendChild(bubble);
 
-            // 6. 清理機制：動畫結束後移除 DOM 元素，避免網頁變卡
-            // 時間設為 duration 稍微多一點點確保跑完
+            // 6. 清理
             setTimeout(() => {
                 bubble.remove();
             }, duration * 1000);
         }
-
-        // 每 300 毫秒產生一顆泡泡 (數字越小泡泡越多)
         setInterval(createBubble, 5000);
     }
 
